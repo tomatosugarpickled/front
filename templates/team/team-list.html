@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./teamlist.css">
+</head>
+
+<body>
+    <div class="teamlist-container">
+        <div class="teamlist-main-section">
+            <div class="teamlist-header-section">
+                <div class="teamlist-header-background-section">
+                    <div class="teamlist-header-inner-section">
+                        <div class="keyword-section">
+                            <div class="keyword">
+                                <label for="keyword-input" class="keyword-input">키워드
+                                </label>
+                                <div class="keyword-icon">
+                                    <div draggable="false" class="keyword-icon-svg">
+                                        <!-- 직접 path를 넣은 SVG -->
+                                        <svg viewBox="0 0 24 24" fill="currentColor" height="12" width="12">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="tooltip-div-section">
+                                        <div class="tooltip-inner-section">
+                                            <div class="tooltip-title-section">
+                                                <div class="tooltip-title">
+                                                    <p class="tooltip-title-text">키워드 검색</p>
+                                                    <p class="tooltip-body-text">기업명, 직무명을 비롯해 공고 내 포함된 단어를 찾을 수 있습니다.
+                                                        쉼표(,)를 이용해 여러 키워드를 한 번에 검색할 수 있습니다.</p>
+                                                    <p class="tooltip-example-text">예) Next.js, 파워포인트, 점심식대, 대출이자지원, 성과급
+                                                        등</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="keyword-text-input" placeholder="기업명, 직무명, 기술 스택, 담당 업무" type="text"
+                                class="keyword-text-input">
+                        </div>
+                        <div class="button-selector-1">
+                            <p class="selector1">직군</p>
+                            <p class="selector1-specific">전체</p>
+                        </div>
+                        <div class="button-selector-2">
+                            <p class="selector2">숙련도</p>
+                            <p class="selector2-specific">전체</p>
+                        </div>
+                        <div class="button-selector-3">
+                            <p class="selector3">기업 규모</p>
+                            <p class="selector3-specific">전체</p>
+                        </div>
+                        <div class="button-selector-4">
+                            <p class="selector4">근무 방식</p>
+                            <p class="selector4-specific">전체</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 툴팁 동작을 위한 JavaScript -->
+    <script>
+        // DOM 로딩 완료 후 실행
+        document.addEventListener('DOMContentLoaded', function () {
+            // 요소 가져오기
+            const keywordIcon = document.querySelector('.keyword-icon');
+            const tooltip = document.querySelector('.tooltip-div-section');
+
+            // 에러 방지: 요소가 없으면 종료
+            if (!keywordIcon || !tooltip) {
+                console.error('키워드 아이콘 또는 툴팁을 찾을 수 없습니다.');
+                return;
+            }
+
+            // 마우스를 아이콘에 올렸을 때 -> 툴팁 보이기
+            keywordIcon.addEventListener('mouseenter', function () {
+                tooltip.classList.add('active');
+            });
+
+            // 마우스를 아이콘에서 뗐을 때 -> 툴팁 숨기기
+            keywordIcon.addEventListener('mouseleave', function () {
+                tooltip.classList.remove('active');
+            });
+
+            console.log('툴팁 JavaScript 초기화 완료');
+        });
+    </script>
+</body>
+
+</html>
