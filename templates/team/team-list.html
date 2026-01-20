@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./teamlist.css">
+</head>
+
+<body>
+    <div class="teamlist-container">
+        <div class="teamlist-main-section">
+            <div class="teamlist-header-section">
+                <div class="teamlist-header-background-section">
+                    <div class="teamlist-header-inner-section">
+                        <div class="keyword-section">
+                            <div class="keyword">
+                                <label for="keyword-input" class="keyword-input">키워드
+                                </label>
+                                <div class="keyword-icon">
+                                    <div draggable="false" class="keyword-icon-svg">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" height="12" width="12">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                                        </svg>
+                                    </div>
+                                    <div class="tooltip-div-section">
+                                        <div class="tooltip-inner-section">
+                                            <div class="tooltip-title-section">
+                                                <div class="tooltip-title">
+                                                    <p class="tooltip-title-text">키워드 검색</p>
+                                                    <p class="tooltip-body-text">기업명, 직무명을 비롯해 공고 내 포함된 단어를 찾을 수 있습니다.
+                                                        쉼표(,)를 이용해 여러 키워드를 한 번에 검색할 수 있습니다.</p>
+                                                    <p class="tooltip-example-text">예) Next.js, 파워포인트, 점심식대, 대출이자지원, 성과급
+                                                        등</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="keyword-text-input" placeholder="기업명, 직무명, 기술 스택, 담당 업무" type="text"
+                                class="keyword-text-input">
+                        </div>
+                        <div class="button-selector-1">
+                            <p class="selector1">직군</p>
+                            <p class="selector1-specific">전체</p>
+                        </div>
+                        <div class="button-selector-2">
+                            <p class="selector2">숙련도</p>
+                            <p class="selector2-specific">전체</p>
+                        </div>
+                        <div class="button-selector-3">
+                            <p class="selector3">기업 규모</p>
+                            <p class="selector3-specific">전체</p>
+                        </div>
+                        <div class="button-selector-4">
+                            <p class="selector4">근무 방식</p>
+                            <p class="selector4-specific">전체</p>
+                        </div>
+                        <div class="button-section">
+                            <button class="search-button" type="button">
+                                <div draggable="false" class="search-button-svg">
+                                    <svg aria-label="icon" role="img">
+                                        <use href="#search-outline"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-main-container">
+                <div class="list-container">
+                    <div class="list-left-section">
+                        <div class="list-header-section">
+                            <div class="list-category-section">
+                                <div class="list-category-left-section">
+                                    <div class="list-category-selector1 active">
+                                        <p class="list-category-text">적합순</p>
+                                    </div>
+                                    <div class="list-category-selector2">
+                                        <p class="list-category-text">인기순</p>
+                                    </div>
+                                    <div class="list-category-selector3">
+                                        <p class="list-category-text">최신순</p>
+                                    </div>
+                                    <div class="list-category-selector4">
+                                        <p class="list-category-text">규모순</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-search-container">
+                            <div class="team-search-list">
+                                <div class="teamlist-style">
+                                    <div class="team-style-left-section">
+                                        <div data-index="0">
+                                            <div class="cursor_pointer">
+                                                <div class="team-select">
+                                                    <div class="team-data">
+                                                        <div class="team-logo">
+                                                            <div class="team-logo-image">
+                                                                <img src="https://api.dicebear.com/7.x/shapes/svg?seed=Hero&backgroundColor=4f46e5" alt="Hero Company Logo">
+                                                            </div>
+                                                        </div>
+                                                        <div class="team-info">
+                                                            <div class="team-info-left-section">
+                                                                <div class="team-info-left-section-top">
+                                                                    <p class="team-name">JBS</p>
+                                                                </div>
+                                                                <p class="team-major">World saver</p>
+                                                                <p class="team-position">President of the world</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specific-info">
+                                                        <div class="specific-info-selector1">
+                                                            <p class="specific-info-text">직군</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="specific-info-selector2">
+                                                            <p class="specific-info-text">숙련도</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="specific-info-selector3">
+                                                            <p class="specific-info-text">규모</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="specific-info-selector4">
+                                                            <p class="specific-info-text">근무 방식</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="team-separate-line">
+                                                <div class="separate-line"></div>
+                                            </div>
+                                        </div>
+                                        <div data-index="1">
+                                            <div class="cursor_pointer">
+                                                <div class="team-select">
+                                                    <div class="team-data">
+                                                        <div class="team-logo">
+                                                            <div class="team-logo-image">
+                                                                <img src="https://api.dicebear.com/7.x/shapes/svg?seed=Rocket&backgroundColor=ec4899" alt="Rocket Company Logo">
+                                                            </div>
+                                                        </div>
+                                                        <div class="team-info">
+                                                            <div class="team-info-left-section">
+                                                                <div class="team-info-left-section-top">
+                                                                    <p class="team-name">로켓펀치</p>
+                                                                </div>
+                                                                <p class="team-major">Frontend Engineer</p>
+                                                                <p class="team-position">Frontend Engineer</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="specific-info">
+                                                        <div class="specific-info-selector1">
+                                                            <p class="specific-info-text">직군</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="specific-info-selector2">
+                                                            <p class="specific-info-text">숙련도</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="specific-info-selector3">
+                                                            <p class="specific-info-text">규모</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="specific-info-selector4">
+                                                            <p class="specific-info-text">근무 방식</p>
+                                                            <div draggable="false" class="check-svg">
+                                                                <svg aria-label="icon" role="img">
+                                                                    <use href="#check-thick-outline"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="team-separate-line">
+                                                <div class="separate-line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="advertisement-main-container">
+                    <div class="advertisement-container">
+                        <div class="advertisement-sticky-wrapper">
+                            <div class="advertisement-content">
+                                <div class="ad-card-section">
+                                    <div class="ad-cards">
+                                        <div class="ad-card">
+                                                <div class="ad-text-container">
+                                                    <p class="ad-content">대학교 재학인증 <span class="nowrap">기능 테스트</span> 지원자 모집</p>
+                                                    <p class="ad-sub-content">선착순 모집 · $20 리워드 지급</p>
+                                                </div>
+                                                <div class="ad-card-bottom">
+                                                    <div class="ad-card-bottom-image">
+                                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F1%2F2025%2F11%2F11%2Flogo-1762842900936.jpg&w=64&q=75" alt="Rocket Punch Logo" style="color: transparent; cursor: default; object-fit: cover;">
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="ad-cards">
+                                        <div class="ad-card">
+                                                <div class="ad-text-container">
+                                                    <p class="ad-content">로켓펀치 2026년도 <span class="nowrap">Product · Tech</span> 집중채용</p>
+                                                    <p class="ad-sub-content">2026년 1월 25일 접수 마감</p>
+                                                </div>
+                                                <div class="ad-card-bottom">
+                                                    <div class="ad-card-bottom-image">
+                                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fcompany_profile%2F1%2F2025%2F11%2F11%2Flogo-1762842900936.jpg&w=64&q=75" alt="Rocket Punch Logo" style="color: transparent; cursor: default; object-fit: cover;">
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <svg>
+        <symbol id="search-outline" viewBox="0 0 24 24">
+            <path fill-rule="evenodd"
+                d="M11 4.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4M3.2 11a7.8 7.8 0 1 1 13.852 4.92l3.514 3.514a.8.8 0 1 1-1.132 1.132l-3.513-3.514A7.77 7.77 0 0 1 11 18.8 7.8 7.8 0 0 1 3.2 11m14 0a6.2 6.2 0 1 0-12.4 0 6.2 6.2 0 0 0 12.4 0m1.6 0q0 .088-.002.174a7.77 7.77 0 0 1-1.747 4.745l3.515 3.515a.8.8 0 1 1-1.132 1.132L15.92 17.05A7.77 7.77 0 0 1 11 18.8a7.8 7.8 0 1 1 7.8-7.8M11 3.2a7.8 7.8 0 1 0 4.919 13.85l.002.002 3.513 3.514a.8.8 0 1 0 1.132-1.132l-3.514-3.513-.001-.002A7.77 7.77 0 0 0 18.8 11 7.8 7.8 0 0 0 11 3.2M4.8 11a6.2 6.2 0 1 1 12.4 0 6.2 6.2 0 0 1-12.4 0"
+                clip-rule="evenodd"></path>
+        </symbol>
+
+        <symbol id="check-thick-outline" viewBox="0 0 24 24">
+            <path d="M18.651 5.651A1.2 1.2 0 0 1 20.35 7.35l-11 11a1.2 1.2 0 0 1-1.698 0l-4-4a1.2 1.2 0 0 1 1.698-1.7l3.15 3.153z"></path>
+        </symbol>
+    </svg>
+</body>
+
+</html>
