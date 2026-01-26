@@ -4,84 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>funding-regist</title>
+    <!-- 펀딩 등록 페이지 전용 스타일시트 -->
     <link rel="stylesheet" href="../../static/css/funding/funding-regist-page.css">
 </head>
 <body data-iframe-size="true">
     <div id="__next">
+        <!-- 펀딩 등록 메인 컨테이너 -->
         <div class="funding-regist-container">
             <main class="funding-regist-wrapper">
+                <!-- 상단 배너 영역 -->
                 <div class="funding-regist-banner-container">
                     <img src="../../static/image/funding/Black background wit.png" alt="" class="funding-regist-banner">
                 </div>
+                
+                <!-- 펀딩 등록 폼 섹션 -->
                 <section class="funding-regist-section">
+                    <!-- 파일 업로드를 포함한 멀티파트 폼 -->
                     <form id="funding-regist-form" action="" enctype="multipart/form-data">
+                        <!-- 진행률 표시 바 (현재 1/2 페이지) -->
                         <progress max="2" value="1">1 / 2 페이지</progress>
+                        
                         <div class="funding-regist-from-container">
+                            <!-- 폼 제목 영역 -->
                             <div class="funding-regist-form-title-wrapper">
                                 <h1 class="funding-regist-form-title">
                                     새로운 프로젝트 : 
                                     스타트업 프로젝트 펀딩 등록
                                 </h1>
                             </div>
+                            
+                            <!-- 폼 설명 영역 -->
                             <div class="funding-regist-form-content-wrapper">
                                 <h4 class="funding-regist-form-content">
                                     프로젝트 펀딩을 등록하시는가요?
                                     펀딩을 등록하려면 펀딩 양식에 맞춰 내용을 작성해주세요.
                                 </h4>
                             </div>
+                            
+                            <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
                             </div>
-                            <!-- 작성 폼 start -->
+                            
+                            <!-- 작성 폼 시작 -->
+                            
+                            <!-- 1. 프로젝트명 입력 필드 -->
                             <h3 class="funding-regist-form-tab-title fist-tab-title">
-                                    1. 프로젝트명
+                                1. 프로젝트명
                             </h3>
+                            <!-- 입력 예시 안내 -->
                             <div class="funding-regist-form-ex-wrapper">
-                            <span class="funding-regist-form-ex">(예시)</span><span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 커밋앤머지</span>
+                                <span class="funding-regist-form-ex">(예시)</span>
+                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 커밋앤머지</span>
                             </div>
-                            <input class="funding-regist-form-input" type="text" name="" id="input01" placeholder="프로젝트 이름을 입력하시오" value="">
+                            <input class="funding-regist-form-input" type="text" name="" id="input01" placeholder="프로젝트 이름을 입력하시오" value="" autocomplete="none">
                             
+                            <!-- 2. 기업 프로필 URL 입력 필드 -->
                             <h3 class="funding-regist-form-tab-title">
-                                    2. C&M내 기업 프로필 URL 
+                                2. C&M내 기업 프로필 URL 
                             </h3>
                             <div class="funding-regist-form-ex-wrapper">
-                            <span class="funding-regist-form-ex">(예시)</span><span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> www.rocketpunch.com/companies/samsung-electronics</span>
+                                <span class="funding-regist-form-ex">(예시)</span>
+                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> www.rocketpunch.com/companies/samsung-electronics</span>
                             </div>
-                            <input class="funding-regist-form-input" type="text" name="" id="input02" placeholder="프로젝트 이름을 입력하시오" value="">
+                            <input class="funding-regist-form-input" type="text" name="" id="input02" placeholder="프로젝트 이름을 입력하시오" value="" autocomplete="none">
                             
+                            <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
                             </div>
+                            
+                            <!-- 3. 담당자 직책/직급 입력 필드 (필수) -->
                             <div class="funding-regist-form-tab-title-icon-wrap">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title">
                                     3. 담당자(신청자) 직책 또는 직급
                                 </h3>
+                                <!-- 필수 항목 아이콘 및 툴팁 -->
                                 <div class="funding-regist-form-tab-title-icon">
                                     <div>
-                                    <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                    <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
-                                        <span>필수항목</span>
-                                    </div>
+                                        <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
+                                        <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
+                                            <span>필수항목</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="funding-regist-form-ex-wrapper">
-                            <span class="funding-regist-form-ex">(예시)</span><span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 대표, 인사담당자, 채용담당자, 마케팅담당자</span>
+                                <span class="funding-regist-form-ex">(예시)</span>
+                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 대표, 인사담당자, 채용담당자, 마케팅담당자</span>
                             </div>
+                            <!-- 유효성 검사 포함 입력 필드 -->
                             <div class="funding-regist-form-input-finalvalue-wrapper">
-                                <input class="funding-regist-form-input data-validata" type="text" name="user" id="input03" placeholder="프로젝트 이름을 입력하시오" value="">
+                                <input class="funding-regist-form-input data-validata" type="text" name="user" id="input03" placeholder="프로젝트 이름을 입력하시오" value="" autocomplete="none">
+                                <!-- 유효성 검사 실패 시 표시되는 메시지 -->
                                 <div class="funding-regist-form-input-finalvalue">
                                     <span>값을 입력하세요</span>
                                 </div>
                             </div>
-                             <div class="funding-regist-form-tab-title-icon-wrap">
+                            
+                            <!-- 4. 담당자 연락처 입력 필드 (필수) -->
+                            <div class="funding-regist-form-tab-title-icon-wrap">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title" style="margin-top: 40px;">
                                     4. 담당자(신청자) 직책 또는 직급
                                 </h3>
+                                <!-- 필수 항목 표시 -->
                                 <div class="funding-regist-form-tab-title-icon">
                                     <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
                                     <div class="funding-regist-form-tab-title-alter" style="top: -29.562px;left: -20.539px;">
@@ -90,19 +120,24 @@
                                 </div>
                             </div>
                             <div class="funding-regist-form-ex-wrapper">
-                            <span class="funding-regist-form-ex">(예시)</span><span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> www.rocketpunch.com/companies/samsung-electronics</span>
+                                <span class="funding-regist-form-ex">(예시)</span>
+                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> www.rocketpunch.com/companies/samsung-electronics</span>
                             </div>
                             <div class="funding-regist-form-input-finalvalue-wrapper">
-                                <input class="funding-regist-form-input data-validata" type="text" name="email" id="input04" placeholder="프로젝트 이름을 입력하시오" value="">
+                                <input class="funding-regist-form-input data-validata" type="text" name="email" id="input04" placeholder="프로젝트 이름을 입력하시오" value="" autocomplete="none">
                                 <div class="funding-regist-form-input-finalvalue">
                                     <span>값을 입력하세요</span>
                                 </div>
                             </div>                            
+                            
+                            <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
                             </div>
+                            
+                            <!-- 5. 재직 증명 서류 업로드 (필수) -->
                             <div class="funding-regist-form-tab-title-icon-wrap">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title" style="margin-top: 40px;">
                                     5. 담당자(신청자) 직책 또는 직급
@@ -114,26 +149,29 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- 필요 서류 안내 -->
                             <div class="funding-regist-form-tab-spanBox">
-                                
                                 <span style="tag: span; font-weight: bold;">
-                                -  <span style="tag: span; color: rgb(128, 189, 255);">재직증명서</span>
+                                    -  <span style="tag: span; color: rgb(128, 189, 255);">재직증명서</span>
                                 </span>
-                                 
                                 <span style="tag: span; font-weight: bold;">
-                                -  <span style="tag: span; color: rgb(128, 189, 255);">4대보험 가입내역확인서</span>
+                                    -  <span style="tag: span; color: rgb(128, 189, 255);">4대보험 가입내역확인서</span>
                                 </span>
-                                
                                 <span style="tag: span; font-weight: bold;">
-                                -  <span style="tag: span; color: rgb(128, 189, 255);">재직 여부를 확인할 수 있는 기타 문서</span>
+                                    -  <span style="tag: span; color: rgb(128, 189, 255);">재직 여부를 확인할 수 있는 기타 문서</span>
                                 </span>
-                                
                                 * 폐업한 경우에도 대표 또는 권한이 있음을 증빙할 수 있는 서류를 첨부하세요.
                             </div>
+                            
+                            <!-- 파일 업로드 영역 (첫 번째) -->
                             <div class="funding-regist-form-fileUpload-wrapper" style="position: relative;">
                                 <div class="funding-regist-form-fileUpload">
-                                    <input  class="data-validata" multiple type="file" name="file" id="input05" style="border:0;clip:rect(0, 0, 0, 0);clip-path:inset(50%);height:1px;margin:0 -1px -1px 0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" value="" >
+                                    <!-- 숨겨진 파일 입력 필드 (다중 파일 선택 가능) -->
+                                    <input class="data-validata" multiple type="file" name="file" id="input05" style="border:0;clip:rect(0, 0, 0, 0);clip-path:inset(50%);height:1px;margin:0 -1px -1px 0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" value="" autocomplete="none">
+                                    <!-- 파일 업로드 버튼 UI -->
                                     <button type="button" id="upload_button01" class="funding-regist-form-fileUpload-inner">
+                                        <!-- 업로드 아이콘 -->
                                         <i class="funding-regist-form-fileUpload-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" class="bi bi-upload" viewBox="0 0 24 24">
                                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
@@ -143,23 +181,29 @@
                                         <span class="funding-regist-form-fileUpload-inner-span">클릭하여 파일을 선택하거나 여기로 드래그 하세요</span>
                                         <span></span>
                                     </button>
+                                    <!-- 이미지 미리보기 영역 -->
                                     <div class="funding-regist-form-preview" id="imagePreviewF"></div>
                                 </div>
+                                <!-- 파일 업로드 필수 안내 메시지 -->
                                 <div class="funding-regist-form-input-finalvalue" style="position: absolute; left: -16%; bottom: 27px;">
                                     <span>파일을 업로드하세요</span>
                                 </div>
                             </div>
-                             <div class="funding-regist-form-tab-title-icon-wrap">
+                            
+                            <!-- 6. 추가 서류 업로드 (선택) -->
+                            <div class="funding-regist-form-tab-title-icon-wrap">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title">
                                     5. 담당자(신청자) 직책 또는 직급
                                 </h3>
-                             </div>
-                             <div style="margin-top: 10px;">
+                            </div>
+                            <div style="margin-top: 10px;">
                                 <span>* 폐업한 경우에도 대표 또는 권한이 있음을 증빙할 수 있는 서류를 첨부하세요.</span>
-                             </div>
+                            </div>
+                            
+                            <!-- 파일 업로드 영역 (두 번째) -->
                             <div class="funding-regist-form-fileUpload-wrapper">
                                 <div class="funding-regist-form-fileUpload">
-                                    <input multiple type="file" name="file" id="input06" style="border:0;clip:rect(0, 0, 0, 0);clip-path:inset(50%);height:1px;margin:0 -1px -1px 0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" value="">
+                                    <input multiple type="file" name="file" id="input06" style="border:0;clip:rect(0, 0, 0, 0);clip-path:inset(50%);height:1px;margin:0 -1px -1px 0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" value="" autocomplete="none">
                                     <button type="button" id="upload_button02" class="funding-regist-form-fileUpload-inner">
                                         <i class="funding-regist-form-fileUpload-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" class="bi bi-upload" viewBox="0 0 24 24">
@@ -170,14 +214,19 @@
                                         <span class="funding-regist-form-fileUpload-inner-span">클릭하여 파일을 선택하거나 여기로 드래그 하세요</span>
                                         <span></span>
                                     </button>
+                                    <!-- 이미지 미리보기 영역 -->
                                     <div class="funding-regist-form-preview" id="imagePreviewS"></div>
                                 </div>
                             </div>
+                            
+                            <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
                             </div>   
+                            
+                            <!-- 메모 입력 영역 (선택사항) -->
                             <div class="funding-regist-form-memo-wrapper">
                                 <h3 class="funding-regist-form-memo">메모</h3>
                             </div>
@@ -186,61 +235,71 @@
                             </div>
                             <div class="funding-regist-form-memo-value-wrappper" style="margin-bottom: 40px;">
                                 <div class="funding-regist-form-memo-value-area">
+                                    <!-- 메모 입력 텍스트 영역 -->
                                     <textarea name="" id="funding-regist-form-memo" style="height: 218px;" class="funding-regist-form-memo-value"></textarea>
                                 </div>
                             </div>
+                            
+                            <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
                             </div>   
+                            
+                            <!-- 7. 이메일 입력 필드 (필수) -->
                             <div class="funding-regist-form-tab-title-icon-wrap">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title">
                                     3. 담당자(신청자) 직책 또는 직급
                                 </h3>
                                 <div class="funding-regist-form-tab-title-icon">
                                     <div>
-                                    <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                    <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
-                                        <span>필수항목</span>
-                                    </div>
+                                        <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
+                                        <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
+                                            <span>필수항목</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="funding-regist-form-ex-wrapper">
-                            <span class="funding-regist-form-ex">(예시)</span><span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 대표, 인사담당자, 채용담당자, 마케팅담당자</span>
+                                <span class="funding-regist-form-ex">(예시)</span>
+                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 대표, 인사담당자, 채용담당자, 마케팅담당자</span>
                             </div>
+                            <!-- 이메일 형식 유효성 검사 포함 -->
                             <div class="funding-regist-form-input-finalvalue-wrapper" style="margin-bottom: 30px;">
-                                <input class="funding-regist-form-input data-validata" type="text" name="email" id="input07" placeholder="프로젝트 이름을 입력하시오" value="">
+                                <input class="funding-regist-form-input data-validata" type="text" name="email" id="input07" placeholder="프로젝트 이름을 입력하시오" value="" autocomplete="none">
+                                <!-- 빈 값 유효성 검사 메시지 -->
                                 <div class="funding-regist-form-input-finalvalue">
                                     <span>값을 입력하세요</span>
                                 </div>
+                                <!-- 이메일 형식 유효성 검사 메시지 -->
                                 <div class="funding-regist-form-input-finalvalue finalvalue-email" style="display: none;">
                                     <span>이메일 양식에 맞게 입력하세요</span>
                                 </div>
                             </div>
                             
+                            <!-- 폼 제출 버튼 영역 -->
                             <div class="funding-regist-form-submit-wrapper">
                                 <div>
                                     <button type="submit" tabindex="0" class="funding-regist-form-submit">
                                         <span class="funding-regist-form-submit-text">제출하기</span>
+                                        <!-- 화살표 아이콘 -->
                                         <i class="funding-regist-form-submit-icon-wrapper">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 13 13">
                                                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
                                             </svg>
                                         </i>
+                                        <!-- 로딩 인디케이터 (제출 중 표시) -->
                                         <span class="funding-regist-form-submit-loading">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader sc-500dd495-0 leDWoT activity-indicator" aria-hidden="true" data-sentry-element="Loader" data-sentry-component="ActivityIndicator" data-sentry-source-file="index.tsx">
                                                 <path d="M12 2v4"></path>
                                                 <path d="m16.2 7.8 2.9-2.9"></path>
                                                 <path d="M18 12h4"></path>
-                                                <path d="m16.2 16.2 2.9 2.9">
-
-                                                </path><path d="M12 18v4"></path>
+                                                <path d="m16.2 16.2 2.9 2.9"></path>
+                                                <path d="M12 18v4"></path>
                                                 <path d="m4.9 19.1 2.9-2.9"></path>
-                                                <path d="M2 12h4"></path><path d="m4.9 4.9 2.9 2.9">
-
-                                                </path>
+                                                <path d="M2 12h4"></path>
+                                                <path d="m4.9 4.9 2.9 2.9"></path>
                                             </svg>
                                         </span>
                                     </button>
@@ -254,5 +313,6 @@
         </div>
     </div>
 </body>
+<!-- 펀딩 등록 페이지 JavaScript 파일 -->
 <script src="../../static/js/funding/funding-regist-page.js"></script>
 </html>

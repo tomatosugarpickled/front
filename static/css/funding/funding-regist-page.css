@@ -1,52 +1,73 @@
+/* ========================================
+   전역 리셋 및 기본 설정
+   ======================================== */
+
+/* 모든 요소의 기본 패딩과 마진 제거 */
 * {
     padding: 0px;
     margin: 0px;
 }
 
+/* HTML 기본 텍스트 색상 설정 (흰색) */
 html {
     color: #ffffff;
 }
 
+/* Body 전체 크기 설정 */
 body {
     height: 100%;
     width: 100%;
 }
 
+/* Body 마진 제거 */
 body {
     margin: 0px;
 }
 
+/* Body 폰트 패밀리 및 기본 폰트 크기 설정 */
 body {
     --font-family: 'Inter', 'Inter Fallback';
     font-family: var(--font-family), sans-serif;
     font-size: 14px;
 }
 
+/* 이미지 기본 테두리 스타일 제거 */
 img {
     border-style: none;
 }
 
+/* h1 요소 블록 표시 */
 h1 {
     display: block;
 }
 
+/* Next.js 루트 컨테이너 높이 설정 */
 [id="__next"] {
     height: auto;
     min-height: 100%;
 }
 
+/* 버튼 요소들의 기본 appearance 설정 */
 button, [type="button"], [type="reset"], [type="submit"] {
     appearance: button;
 }
 
+/* 버튼 text-transform 제거 */
 button {
     text-transform: none;
 }
 
+/* Textarea 오버플로우 자동 처리 */
 textarea {
     overflow: auto;
 }
 
+
+/* ========================================
+   메인 컨테이너 레이아웃
+   ======================================== */
+
+/* 펀딩 등록 최상위 컨테이너 - 검은 배경, 좌우 스크롤 숨김 */
 .funding-regist-container {
     display: flex;
     background: rgb(0, 0, 0);
@@ -55,6 +76,7 @@ textarea {
     scrollbar-width: none;
 }
 
+/* 펀딩 등록 메인 래퍼 - 세로 방향 플렉스, 최소 전체 화면 높이 */
 .funding-regist-wrapper {
     display: flex;
     flex-direction: column;
@@ -63,12 +85,19 @@ textarea {
     min-height: 100vh;
 }
 
+
+/* ========================================
+   배너 영역
+   ======================================== */
+
+/* 배너 컨테이너 - 상단 고정 위치 */
 .funding-regist-banner-container {
     position: relative;
     z-index: 1;
     text-align: center;
 }
 
+/* 배너 이미지 - 중앙 정렬, 반응형 크기 */
 .funding-regist-banner {
     object-fit: cover;
     object-position: center 50%;
@@ -76,6 +105,12 @@ textarea {
     height: 25vh;
 }
 
+
+/* ========================================
+   폼 섹션 레이아웃
+   ======================================== */
+
+/* 펀딩 등록 섹션 - 중앙 정렬, 최대 너비 제한 */
 .funding-regist-section {
     flex: 1 1 0%;
     display: flex;
@@ -84,9 +119,10 @@ textarea {
     margin-top: 50px;
     width: 100%;
     margin: 0px auto;
-    max-width: min(600px, -200px + 100vw);
+    max-width: min(600px, -200px + 100vw); /* 최대 600px 또는 뷰포트 기반 계산 */
 }
 
+/* 진행률 바 - 스크린리더용으로 화면 밖으로 숨김 (접근성) */
 progress {
     position: absolute;
     left: -10000px;
@@ -97,10 +133,17 @@ progress {
     vertical-align: baseline;
 }
 
+/* 폼 메인 컨테이너 - 하단 여백 */
 .funding-regist-from-container {
     margin-bottom: 100px;
 }
 
+
+/* ========================================
+   폼 헤더 (제목 및 설명)
+   ======================================== */
+
+/* 폼 제목 래퍼 - 절대 위치 기준점 */
 .funding-regist-form-title-wrapper {
     position: relative;
     padding: 1px 0px;
@@ -109,6 +152,7 @@ progress {
     height: 121px;
 }
 
+/* 폼 제목 - 큰 굵은 텍스트, 절대 위치 */
 .funding-regist-form-title {
     position: absolute;
     font-size: 2.5rem;
@@ -117,10 +161,10 @@ progress {
     padding-bottom: 2.5rem;
     margin: 0px;
     height: 119px;
-    top: -35%
+    top: -35%; /* 상단으로 35% 이동 */
 }
 
-
+/* 폼 설명 래퍼 */
 .funding-regist-form-content-wrapper {
     padding: 1px 0px;
     white-space: pre-wrap;
@@ -129,6 +173,7 @@ progress {
     position: relative;
 }
 
+/* 폼 설명 텍스트 - 절대 위치로 조정 */
 .funding-regist-form-content {
     position: absolute;
     line-height: 1.5;
@@ -136,12 +181,16 @@ progress {
     padding-top: 3px;
     padding-bottom: 8px;
     height: 53px;
-    top: -31%;
-    left: -19%;
-    
-
+    top: -31%; /* 상단으로 31% 이동 */
+    left: -19%; /* 좌측으로 19% 이동 */
 }
 
+
+/* ========================================
+   구분선
+   ======================================== */
+
+/* 구분선 래퍼 */
 .funding-regist-form-separator-wrapper {
     position: relative;
     padding: 1px 0px;
@@ -150,6 +199,7 @@ progress {
     height: 37px;
 }
 
+/* 구분선 컨테이너 - 절대 위치 */
 .funding-regist-form-separator {
     padding: 17px 0px;
     height: 35px;
@@ -158,6 +208,7 @@ progress {
     top: -30%;
 }
 
+/* 구분선 라인 - 반투명 흰색 수평선 */
 .funding-regist-form-separator-line {
     position: absolute;
     width: 600px;
@@ -168,6 +219,11 @@ progress {
 }
 
 
+/* ========================================
+   폼 섹션 제목 및 예시
+   ======================================== */
+
+/* 폼 탭 제목 - 각 입력 필드 그룹의 제목 */
 .funding-regist-form-tab-title {
     margin: 0px;
     margin-top: 20px;
@@ -177,10 +233,12 @@ progress {
     padding-right: 5px;
 }
 
+/* 예시 래퍼 */
 .funding-regist-form-ex-wrapper {
     margin-top: 10px;
 }
 
+/* 예시 텍스트 스타일 */
 .funding-regist-form-ex {
     line-height: 1.5;
     min-height: 35px;
@@ -188,6 +246,12 @@ progress {
     padding-bottom: 8px;
 }
 
+
+/* ========================================
+   입력 필드
+   ======================================== */
+
+/* 입력 필드 래퍼 */
 .funding-regist-form-input-wrapper {
     padding: 1px 0px;
     white-space: pre-wrap;
@@ -195,23 +259,27 @@ progress {
     margin-bottom: 8px;
 }
 
+/* 텍스트 입력 필드 - 다크 테마, 둥근 모서리, 그림자 효과 */
 .funding-regist-form-input {
-    margin-top:15px;
+    margin-top: 15px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* 긴 텍스트 ... 처리 */
     width: 95%;
     height: 48px;
     padding: 0px 16px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
+                rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
     border: 0px;
     border-radius: 12px;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.055);
+    background-color: rgba(255, 255, 255, 0.055); /* 반투명 흰색 배경 */
     color: rgb(255, 255, 255);
-    caret-color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255); /* 커서 색상 */
 }
 
+/* 유효성 검사 메시지 포함 입력 필드 래퍼 */
 .funding-regist-form-input-finalvalue-wrapper {
     position: relative;
     display: inline-block;
@@ -220,27 +288,36 @@ progress {
     min-width: 100%;
 }
 
+/* 유효성 검사 오류 메시지 - 기본적으로 숨김 */
 .funding-regist-form-input-finalvalue {
     display: flex;
     justify-content: space-between;
     padding-top: 5px;
     font-size: 12px;
     line-height: 15px;
-    color: rgb(217, 128, 136);
+    color: rgb(217, 128, 136); /* 연한 빨간색 */
 }
 
+/* 기본 상태에서 오류 메시지 숨김 */
 .funding-regist-form-input-finalvalue {
     display: none;
 }
 
+
+/* ========================================
+   필수 항목 표시 아이콘 및 툴팁
+   ======================================== */
+
+/* 필수 항목 아이콘 래퍼 */
 .funding-regist-form-tab-title-icon-wrap {
     position: relative;
     width: 48%;
 }
 
+/* 필수 항목 아이콘 (별표 *) - 원형 배경 */
 .funding-regist-form-tab-title-icon {
     position: absolute;
-    inset: 6px -8px auto auto;
+    inset: 6px -8px auto auto; /* 우측 상단 배치 */
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -249,7 +326,7 @@ progress {
     height: 16px;
     min-width: 16px;
     min-height: 16px;
-    border-radius: 50%;
+    border-radius: 50%; /* 원형 */
     background-color: rgb(15, 15, 15);
     color: rgb(255, 255, 255);
     font-size: 14px;
@@ -258,6 +335,7 @@ progress {
     cursor: pointer;
 }
 
+/* 필수 항목 툴팁 - 호버 시 표시 */
 .funding-regist-form-tab-title-alter {
     position: absolute;
     display: inline-block;
@@ -266,12 +344,12 @@ progress {
     border-radius: 4px;
     padding: 4px 8px;
     transition: opacity 0.2s ease-out;
-    pointer-events: none;
+    pointer-events: none; /* 마우스 이벤트 무시 */
     line-height: 16px;
     font-family: var(--font-family), sans-serif;
     text-transform: none;
     text-align: center;
-    opacity: 0;
+    opacity: 0; /* 기본적으로 투명 */
     visibility: visible;
     font-size: 13px !important;
     font-weight: 600 !important;
@@ -280,6 +358,12 @@ progress {
     white-space: nowrap !important;
 }
 
+
+/* ========================================
+   서류 안내 박스
+   ======================================== */
+
+/* 필요 서류 목록 박스 */
 .funding-regist-form-tab-spanBox {
     line-height: 0.5;
     min-height: 35px;
@@ -290,6 +374,12 @@ progress {
     word-break: break-word;
 }
 
+
+/* ========================================
+   파일 업로드 영역
+   ======================================== */
+
+/* 파일 업로드 래퍼 */
 .funding-regist-form-fileUpload-wrapper {
     padding: 1px 0px;
     white-space: pre-wrap;
@@ -298,6 +388,7 @@ progress {
     margin-bottom: 8px;
 }
 
+/* 파일 업로드 드래그 앤 드롭 영역 - 점선 테두리 */
 .funding-regist-form-fileUpload {
     position: relative;
     display: flex;
@@ -307,17 +398,20 @@ progress {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.055);
     cursor: pointer;
-    border: 1px dashed rgb(87, 87, 87);
+    border: 1px dashed rgb(87, 87, 87); /* 점선 테두리 */
     border-radius: 12px;
 }
 
+/* 파일 업로드 버튼 - 투명 배경 */
 .funding-regist-form-fileUpload-inner {
     flex-shrink: 1;
     min-width: 0px;
     max-width: 100%;
     position: relative;
     cursor: pointer;
-    transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out, outline 100ms ease-in-out;
+    transition: background-color 100ms ease-in-out, 
+                border-color 100ms ease-in-out, 
+                outline 100ms ease-in-out;
     line-height: 1;
     display: inline-flex;
     flex-shrink: 0;
@@ -338,12 +432,14 @@ progress {
     background: transparent;
 }
 
+/* 업로드된 파일 미리보기 영역 - 플렉스 랩 */
 .funding-regist-form-preview {
     display: flex;
     margin-top: 4px;
     flex-wrap: wrap;
 }
 
+/* 파일 업로드 아이콘 (SVG) */
 .funding-regist-form-fileUpload-icon {
     font-style: normal;
     display: inline-flex;
@@ -351,15 +447,17 @@ progress {
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    transition: opacity 100ms ease-in-out, 
+                color 100ms ease-in-out;
     font-weight: 600;
     transform: translateZ(0px);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6); /* 반투명 흰색 */
     margin-bottom: -0.1em;
     overflow: initial !important;
     flex-shrink: 0 !important;
 }
 
+/* 파일 업로드 안내 텍스트 */
 .funding-regist-form-fileUpload-inner-span {
     flex-shrink: 1;
     min-width: 0px;
@@ -371,6 +469,12 @@ progress {
     color: rgba(255, 255, 255, 0.6);
 }
 
+
+/* ========================================
+   메모 입력 영역
+   ======================================== */
+
+/* 메모 제목 래퍼 */
 .funding-regist-form-memo-wrapper {
     position: relative;
     display: inline-flex;
@@ -378,6 +482,7 @@ progress {
     padding-bottom: 0.625rem;
 }
 
+/* 메모 제목 */
 .funding-regist-form-memo {
     margin: 0px;
     font-size: 1.25rem;
@@ -386,6 +491,7 @@ progress {
     padding-right: 5px;
 }
 
+/* 메모 설명 텍스트 */
 .funding-regist-form-memo-nxt {
     line-height: 1.5;
     min-height: 35px;
@@ -393,12 +499,14 @@ progress {
     padding-bottom: calc(8px);
 }
 
+/* 메모 값 래퍼 */
 .funding-regist-form-memo-value-wrapper {
     position: relative;
     display: flex;
     margin-bottom: 8px;
 }
 
+/* 메모 입력 영역 컨테이너 */
 .funding-regist-form-memo-value-area {
     position: relative;
     display: inline-flex;
@@ -407,40 +515,53 @@ progress {
     width: 100%;
 }
 
+/* 메모 텍스트영역 - 크기 조절 가능, 다크 테마 */
 .funding-regist-form-memo-value {
     width: 100%;
     max-width: 100%;
-    resize: vertical;
+    resize: vertical; /* 세로 방향으로만 크기 조절 가능 */
     min-height: 96px;
     padding: 17px 16px;
     color: rgb(255, 255, 255);
     caret-color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.055);
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
+                rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
     border: 0px;
     border-radius: 12px;
     outline: none;
 }
 
+
+/* ========================================
+   제출 버튼
+   ======================================== */
+
+/* 제출 버튼 래퍼 */
 .funding-regist-form-submit-wrapper {
     justify-content: space-between;
     margin: 10px 0px;
     display: block;
 }
 
+/* 제출 버튼 내부 래퍼 */
 .funding-regist-form-submit-wrapper>div {
     display: flex;
     min-width: 0px;
 }
 
+/* 제출 버튼 - 흰색 배경, 전체 너비, 둥근 모서리 */
 .funding-regist-form-submit {
     width: 100%;
-    border-radius: 999px !important;
+    border-radius: 999px !important; /* 완전히 둥근 모서리 */
     height: 48px !important;
     appearance: button;
     position: relative;
     cursor: pointer;
-    transition: background-color 100ms ease-in-out, border-color 100ms ease-in-out, outline 100ms ease-in-out;
+    transition: background-color 100ms ease-in-out, 
+                border-color 100ms ease-in-out, 
+                outline 100ms ease-in-out;
     line-height: 1;
     display: inline-flex;
     flex-shrink: 0;
@@ -459,9 +580,10 @@ progress {
     border-radius: 8px;
     padding: 0px 0.9em;
     gap: 0.5em;
-    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255); /* 흰색 배경 */
 }
 
+/* 제출 버튼 텍스트 - 검은색 */
 .funding-regist-form-submit-text {
     color: rgb(0, 0, 0);
     gap: 0.5em;
@@ -470,11 +592,13 @@ progress {
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    transition: opacity 100ms ease-in-out, 
+                color 100ms ease-in-out;
     font-weight: 600;
     transform: translateZ(0px);
 }
 
+/* 제출 버튼 화살표 아이콘 래퍼 */
 .funding-regist-form-submit-icon-wrapper {
     margin-right: -0.15em;
     margin-left: -0.1em;
@@ -486,23 +610,26 @@ progress {
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    transition: opacity 100ms ease-in-out, 
+                color 100ms ease-in-out;
     font-weight: 600;
     transform: translateZ(0px);
 }
 
+/* 화살표 아이콘 크기 */
 .bi-arrow-right-short {
     width: 1.2em;
     height: 1.2em;
 }
 
+/* 제출 중 로딩 인디케이터 - 기본적으로 숨김 */
 .funding-regist-form-submit-loading {
     color: rgb(0, 0, 0);
     gap: 0.5em;
     position: absolute;
     inset: 0px;
     gap: 0px;
-    opacity: 0;
+    opacity: 0; /* 투명 상태 */
     pointer-events: none;
     transform: translateZ(0px);
     display: inline-flex;
@@ -510,24 +637,30 @@ progress {
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    transition: opacity 100ms ease-in-out, color 100ms ease-in-out;
+    transition: opacity 100ms ease-in-out, 
+                color 100ms ease-in-out;
     font-weight: 600;
     transform: translateZ(0px);
 }
 
 
+/* ========================================
+   애니메이션
+   ======================================== */
+
+/* 로딩 스피너 회전 애니메이션 정의 */
 @keyframes bqrFYP {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
 }
 
+/* 로딩 스피너 아이콘에 회전 애니메이션 적용 */
 .leDWoT {
-    animation: 1.618s linear 0s infinite normal none running bqrFYP;
+    animation: 1.618s linear 0s infinite normal none running bqrFYP; /* 무한 회전 */
     transform-origin: center center;
     transform: translateZ(0px);
     width: 1.2em;
@@ -535,22 +668,35 @@ progress {
     font-size: inherit;
 }
 
+
+/* ========================================
+   호버 효과 (마우스를 지원하는 기기)
+   ======================================== */
+
 @media (hover:hover) {
+    /* 파일 업로드 영역 호버 시 그림자 강화 */
     .funding-regist-form-fileUpload:hover {
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                    rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
+                    rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, 
+                    rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
     }
 
+    /* 입력 필드 호버 시 그림자 강화 */
     .funding-regist-form-input:hover {
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                    rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
+                    rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, 
+                    rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
     }
 
+    /* 파일 업로드 래퍼 호버 시 버튼 배경 변경 */
     .funding-regist-form-fileUpload-wrapper:hover .funding-regist-form-fileUpload-inner {
         background: rgba(255, 255, 255, 0.055);
     }
 
+    /* 필수 항목 아이콘 호버 시 툴팁 표시 */
     .funding-regist-form-tab-title-icon:hover .funding-regist-form-tab-title-alter {
-        opacity: 1;
+        opacity: 1; /* 불투명하게 변경하여 표시 */
     }
 }
-
-

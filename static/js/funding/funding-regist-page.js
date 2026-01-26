@@ -90,6 +90,15 @@ inputNone.forEach((input, i) => {
         } else {
             errordiv[i].style.display = "none";
         }
+
+        if (
+            input.name === "email" &&
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)
+        ) {
+            emailForm.style.display = "block";
+        } else {
+            emailForm.style.display = "none";
+        }
     });
 });
 
