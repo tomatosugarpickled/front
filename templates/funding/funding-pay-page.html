@@ -78,7 +78,7 @@
                                         <span class="funding-pay-body-info-content">2026.03.05</span>
                                     </div>
                                 </div>
-                                 <div class="funding-pay-body-info-wrapper">
+                                <div class="funding-pay-body-info-wrapper">
                                     <div class="funding-pay-body-info-plus">
                                         <span class="funding-pay-body-info-plus-text">추가 후원금</span>
                                         <span class="funding-pay-body-info-choice-text">(선택)</span>
@@ -87,6 +87,19 @@
                                         <input id="funding-plus-price" type="text" value="" class="funding-pay-body-info-input" placeholder="0" autocapitalize="off" autocomplete="off"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
                                         <div>원</div>
                                     </div>
+                                </div>
+                                <div class="funding-pay-body-info-wrapper-post">
+                                    <div class="funding-pay-body-info">
+                                        <span class="funding-pay-body-info-text">배송지 입력</span>
+                                    </div>
+                                    <div class="find-postnum-wrapper">
+                                        <input type="text" id="sample4_postcode" placeholder="우편번호" class="find-post-input" autocomplete="off" readonly>
+                                        <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기" class="find-postNum">
+                                    </div>
+                                    <input type="text" id="sample4_roadAddress" placeholder="도로명주소" class="find-post-input" autocomplete="off" readonly>
+                                    <input type="text" id="sample4_jibunAddress" placeholder="지번주소" class="find-post-input" autocomplete="off" readonly>
+                                    <span id="guide" style="color:#999;display:none"></span>
+                                    <input type="text" id="sample4_detailAddress" placeholder="상세주소" class="find-post-input" autocomplete="off">
                                 </div>
                             </div>
  
@@ -101,4 +114,13 @@
     </div>
 </body>
 <script src="../../static/js/funding/funding-pay-page.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<!-- <script>
+    new daum.Postcode({
+        oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+            // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+        }
+    }).open();
+</script> -->
 </html>

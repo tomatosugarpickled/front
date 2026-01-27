@@ -69,6 +69,7 @@ button {
     background-color: #121314;
 }
 
+
 .funding-pay-area  {
     flex-direction: column;
     width: 480px;
@@ -180,7 +181,13 @@ button {
     flex: 1;
     width: 100%;
     display: flex;
+    overflow-y: auto;
 }
+
+.funding-pay-body-container::-webkit-scrollbar {
+    display: none;
+}
+
 
 .funding-pay-body-wrapper {
     align-self: stretch;
@@ -432,4 +439,54 @@ button {
 
 .funding-pay-body-info-input:focus::placeholder {
     color: transparent;
+}
+
+/* 주소 */
+
+.find-postNum {
+    background-color: #ffffff1f;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    transition: transform .15s cubic-bezier(.68, -.55, .265, 1.55);
+    max-height: 42px;
+    min-height: 36px;
+    border-radius: 9px;
+    display: inline-flex;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    width: 150px;
+    height: 42px;
+}
+
+.find-post-input {
+    flex: 1;
+    padding: 12px 16px;
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    color: #E0E0E0;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.funding-pay-body-info-wrapper-post {
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 5px;
+    gap: 12px;
+    display: inline-grid;
+    margin-bottom: 30px;
+}
+
+.find-postnum-wrapper {
+    gap: 10px;
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
 }
