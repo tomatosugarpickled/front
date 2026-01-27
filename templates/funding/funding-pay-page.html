@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/funding/funding-pay-page.css">
+</head>
+<body>
+    <div class="funding-pay-container" style="z-index: 1001;opacity: 1;">
+        <div class="funding-pay-wrapper" style="backdrop-filter: blur(calc(var(60px) / 2)); opacity: 1; transform: none;" >
+            <div class="funding-pay-area">
+                <div class="funding-pay-header-container">
+                    <div class="funding-pay-header-area">
+                        <div class="funding-pay-header-area-text">
+                            <p class="funding-pay-header-text">프로젝트 후원하기</p>
+                        </div>
+                        <div class="funding-pay-header-gap"></div>
+                        <div class="funding-pay-header-area-close-wrapper">
+                            <button class="funding-pay-header-area-close-button">
+                                <p class="funding-pay-header-area-close-text">닫기</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="funding-pay-body-container">
+                    <div class="funding-pay-body-wrapper">
+                        <div class="funding-pay-body-area">
+                            <div class="funding-pay-body-banner-container">
+                                <img src="https://www.rocketpunch.com/rocketpunch-wallet.png" alt="" height="0" width="100">
+                            </div>
+                            <div class="funding-pay-body-price-container">
+                                <div class="funding-pay-body-price-wrapper">
+                                    <div class="funding-pay-body-price">
+                                        <p class="funding-pay-primary-text primary-title">최종 금액</p>
+                                        <p class="funding-pay-primary-text primary-title funding-total-price">₩0</p>
+                                    </div>
+                                </div>
+                                <div class="funding-pay-body-price-reset-wrapper">
+                                    <div class="funding-pay-body-price-reset">
+                                        <button class="funding-pay-body-price-reset-button">
+                                            <div class="funding-pay-body-price-reset-icon" style="border-radius: 0px; cursor: inherit; height: 16px; padding: 0px;">
+                                                <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="16" role="img" width="16" viewBox="0 0 24 24">
+                                                    <path clip-rule="evenodd" d="M20.102 3.207a.8.8 0 0 0-.896.691l-.334 2.605a8.8 8.8 0 0 0-3.45-2.612A8.8 8.8 0 0 0 12 3.2a8.78 8.78 0 0 0-6.223 2.577A8.78 8.78 0 0 0 3.2 12a8.78 8.78 0 0 0 2.577 6.223A8.78 8.78 0 0 0 12 20.8a8.78 8.78 0 0 0 6.222-2.577 8.8 8.8 0 0 0 1.887-2.8.8.8 0 0 0-1.474-.623A7.21 7.21 0 0 1 12 19.2a7.17 7.17 0 0 1-5.091-2.109A7.18 7.18 0 0 1 4.8 12a7.18 7.18 0 0 1 2.109-5.091A7.18 7.18 0 0 1 12 4.8a7.18 7.18 0 0 1 5.09 2.109c.359.358.68.754.956 1.18H14.5a.8.8 0 0 0 0 1.6h4.872a.8.8 0 0 0 .794-.698l.627-4.89a.8.8 0 0 0-.691-.894" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="funding-pay-body-button-container">
+                                <button type="button" class="funding-pay-body-button-wrapper" style="backdrop-filter: blur(calc(var(60px) / 2));">
+                                    <span class="funding-pay-body-button">후원하기</span>
+                                </button>
+                            </div>
+                            <div class="funding-pay-body-info-container">
+                                <div class="funding-pay-body-info-wrapper">
+                                    <div class="funding-pay-body-info">
+                                        <span class="funding-pay-body-info-text">서비스 정보</span>
+                                    </div>
+                                    <div class="funding-pay-body-info-content-wrapper">
+                                        <span class="funding-pay-body-info-content">[LIGHT] 라인 브러시 세트 30종 40,000원 (x1)</span>
+                                    </div>
+                                </div>
+                                <div class="funding-pay-body-info-wrapper">
+                                    <div class="funding-pay-body-info">
+                                        <span class="funding-pay-body-info-text">서비스 금액</span>
+                                    </div>
+                                    <div class="funding-pay-body-info-content-wrapper">
+                                        <span class="funding-pay-body-info-content funding-price">150,000원</span>
+                                    </div>
+                                </div>
+                                <div class="funding-pay-body-info-wrapper">
+                                    <div class="funding-pay-body-info">
+                                        <span class="funding-pay-body-info-text">예상 전달일</span>
+                                    </div>
+                                    <div class="funding-pay-body-info-content-wrapper">
+                                        <span class="funding-pay-body-info-content">2026.03.05</span>
+                                    </div>
+                                </div>
+                                <div class="funding-pay-body-info-wrapper">
+                                    <div class="funding-pay-body-info-plus">
+                                        <span class="funding-pay-body-info-plus-text">추가 후원금</span>
+                                        <span class="funding-pay-body-info-choice-text">(선택)</span>
+                                    </div>
+                                    <div class="funding-pay-body-info-input-wrapper">
+                                        <input id="funding-plus-price" type="text" value="" class="funding-pay-body-info-input" placeholder="0" autocapitalize="off" autocomplete="off"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                        <div>원</div>
+                                    </div>
+                                </div>
+                                <div class="funding-pay-body-info-wrapper-post">
+                                    <div class="funding-pay-body-info">
+                                        <span class="funding-pay-body-info-text">배송지 입력</span>
+                                    </div>
+                                    <div class="find-postnum-wrapper">
+                                        <input type="text" id="sample4_postcode" placeholder="우편번호" class="find-post-input" autocomplete="off" readonly>
+                                        <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기" class="find-postNum">
+                                    </div>
+                                    <input type="text" id="sample4_roadAddress" placeholder="도로명주소" class="find-post-input" autocomplete="off" readonly>
+                                    <input type="text" id="sample4_jibunAddress" placeholder="지번주소" class="find-post-input" autocomplete="off" readonly>
+                                    <span id="guide" style="color:#999;display:none"></span>
+                                    <input type="text" id="sample4_detailAddress" placeholder="상세주소" class="find-post-input" autocomplete="off">
+                                </div>
+                            </div>
+ 
+                            </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../static/js/funding/funding-pay-page.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<!-- <script>
+    new daum.Postcode({
+        oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+            // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+        }
+    }).open();
+</script> -->
+</html>

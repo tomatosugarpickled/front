@@ -1,0 +1,288 @@
+.chat-widget {
+    position: relative;
+}
+
+.chat-widget-container {
+    position: absolute;
+    width: 400px !important;
+    height: 730px !important;
+    right: 24px !important;
+}
+
+.chat-widget-wrapper {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100%;
+}
+
+.chat-widget-chat-area {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100%;
+    width: 100% !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 12px !important;
+}
+
+.chat-widget-chat-area:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 12px !important;
+}
+
+.chat-widget-header {
+    display: block !important;
+}
+
+.chat-widget-header-inner {
+    background-color : #000000;
+    height: 90px;
+    text-align: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
+
+.chat-widget-header-inner-content {
+    padding-inline: 33px !important;
+    padding: 10px 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+    position: relative !important;
+}
+
+.chat-widget-header-inner-FAQ {
+    line-height: 30px;
+    padding: 0 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+}
+
+.chat-widget-header-inner-FAQ-icon {
+    background-color: #000000;
+    color: #ffffff;
+    margin-right: 3px;
+}
+
+.chat-widget-header-inner-FAQ-text {
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    font-size: 12px !important;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.chat-widget-header-inner-question {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.chat-widget-header-inner-question-text {
+    cursor: pointer !important;
+    display: block !important;
+    flex: 1 !important;
+}
+
+.chat-widget-header-inner-question-text-style {
+    line-height: 18px;
+    text-align: center !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    font-size: 12.8px !important;
+    color: #ffffff;
+}
+
+.chat-widget-header-inner-close {
+    cursor: pointer !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 0 !important;
+}
+
+.chat-widget-header-inner-close-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 21px !important;
+    height: 21px;
+    position: absolute !important;
+    inset-inline-end: 12px !important;
+    top: 10px !important;
+    border-radius: 5px !important;
+    color: #ffffff;
+}
+
+.chat-widget-body {
+    position: relative !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    overflow: hidden !important;
+}
+
+.chat-widget-body-wrap {
+    position: relative !important;
+    background: rgb(var(--crisp-color-base-white-normal)) !important;
+    z-index: 1 !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    overflow: hidden !important;
+}
+
+.chat-widget-body-area {
+    display: flex !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    flex: 1 !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    overflow: hidden !important;
+}
+
+.chat-widget-body-inner {
+    display: block !important;
+}
+
+.chat-widget-body-ul {
+    margin: 0 !important;
+    padding: 9px !important;
+    top: 0 !important;
+    bottom: 58px !important;
+    z-index: 1 !important;
+    background: #ffffff;
+    position: absolute !important;
+    inset-inline: 0 !important;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.chat-widget-body-li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-position: inside !important;
+} 
+
+.chat-widget-body-a {
+    display: block !important;
+    background-color: transparent !important;
+    padding-block: 11px !important;
+    padding-inline: 16px 25px !important;
+    position: relative !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    outline-style: none !important;
+}
+
+.chat-widget-body-a-title {
+    color: #000000 !important;
+    line-height: 17px;
+    font-size: 13.2px !important;
+}
+
+.chat-widget-body-bookicon {
+    vertical-align: middle !important;
+    margin-top: -2px !important;
+    margin-inline-end: 9px !important;
+    display: inline-block !important;
+}
+
+.chat-widget-body-a-content {
+    color: #37516c;
+    line-height: 17px;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    max-height: 34px;
+    margin-top: 6px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    font-size: 12px !important;
+}
+
+li:before {
+    content: "" !important;
+}
+
+li:after {
+   content: "" !important; 
+}
+
+.chat-widget-body-a:after {
+    content: "" !important;
+    width: 8px !important;
+    height: 11px;
+    position: absolute !important;
+    inset-inline-end: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%2212%22%20viewBox%3D%220%200%208%2012%22%3E%3Cpath%20fill%3D%22%2366788a%22%20d%3D%22M4.402%206%20.33%2010.071a1.13%201.13%200%200%200%201.598%201.598l4.916-4.916a1.064%201.064%200%200%200%200-1.506L1.929.33A1.13%201.13%200%200%200%20.331%201.929z%22%2F%3E%3C%2Fsvg%3E) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    display: inline-block !important;
+}
+
+.chat-widget-search-form {
+    height: 58px;
+    padding: 0 12px !important;
+    bottom: 0 !important;
+    z-index: 2 !important;
+    background: #ffffff !important;
+    position: absolute !important;
+    inset-inline: 0 !important;
+}
+
+.chat-widget-search-form:before {
+    content: "" !important;
+    background-color: #e9eef3 !important;
+    height: 1px;
+    margin-top: -1px !important;
+    display: block !important;
+}
+
+.chat-widget-search-form-wrap {
+    position: relative !important;
+    height: 54px
+}
+
+.chat-widget-search-form-icon {
+    width: 16px !important;
+    height: 16px;
+    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%2366788a%22%20d%3D%22M11.435%2010.063h-.723l-.256-.247a5.92%205.92%200%200%200%201.437-3.87%205.946%205.946%200%201%200-5.947%205.947%205.92%205.92%200%200%200%203.87-1.437l.247.256v.723L14.637%2016%2016%2014.637zm-5.489%200c-2.278%200-4.116-1.839-4.116-4.117S3.668%201.83%205.946%201.83s4.117%201.838%204.117%204.116-1.839%204.117-4.117%204.117%22%2F%3E%3C%2Fsvg%3E) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    display: inline-block !important;
+}
+
+.chat-widget-search-bar{
+    color: #1c293b;
+    background: transparent !important;
+    border: 0 none !important;
+    padding-block: 0 !important;
+    line-height: 54px;
+    letter-spacing: 0 !important;
+    font-size: 13.6px !important;
+    height: 54px;
+}
+
+.wedget-close {
+    display: none;
+}

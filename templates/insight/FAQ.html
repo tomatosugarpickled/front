@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계정 및 프로필 | C&M 가이드</title>
+    <link rel="stylesheet" href="../../static/css/insight/FAQ.css">
+</head>
+<body>
+     <!-- 
+    ============================================================================
+    C&M 가이드북 - FAQ 페이지
+    ============================================================================
+    
+    페이지 개요:
+    - 헬프 센터 / FAQ 페이지
+    - 카테고리별 도움말 문서 목록
+    - 검색 기능 제공
+    
+    주요 구성:
+    1. Header: 로고, 검색바, 배경 배너
+    2. Navigation: 카테고리 정보, 뒤로가기
+    3. Main Content: 사이드바(카테고리) + 본문(도움말 목록)
+    4. Footer: 문의하기, 저작권 정보
+    
+    클래스 네이밍 규칙:
+    - BEM 방식 사용
+    - 프리픽스: guide-
+    - 블록: guide-{component}
+    - 요소: guide-{component}__{element}
+    - 수정자: guide-{component}--{modifier}
+    
+    ============================================================================
+    -->
+
+    <!-- ========================================================================
+         헤더 영역
+         ======================================================================== 
+         
+         구성 요소:
+         - 로고 및 메인 사이트 링크
+         - 검색창
+         - 배경 배너 이미지
+    -->
+    <header role="banner">
+          <!-- 헤더 내용 래퍼 -->
+        <div class="guide-wrapper">
+               <!-- ========== 헤더 메인 영역 ========== 
+                 로고와 액션 버튼 영역
+            -->
+            <div class="guide-header-main">
+                   <!-- 로고 -->
+                <a href="#" role="none" class="guide-header-main-logo">
+                    <img src="../../static/image/insight/networking.png" alt="" style="height: 28px; margin-top: 5px; display: block;">
+                </a>
+                    <!-- 헤더 액션 버튼 영역 -->
+                <div role="none" class="guide-header-main-actions">
+                           <!-- 메인 사이트로 이동 버튼 -->
+                    <a href="#" target="_blank" role="none" class="guide-header-main-actions-websites">
+                        <span class="guide-header-main-actions-websites-itself">파트존 메인</span>
+                    </a>
+                </div>
+            </div>
+               <!-- ========== 검색 폼 ========== 
+                 도움말 검색 기능
+                 - 자동완성 지원
+                 - 포커스 상태 트래킹
+            -->
+            <form action="#" role="search" class="guide-header-search" data-has-focus="false">
+                <span class="guide-header-search-field">
+                    <input data-has-focus="false" type="search" name="search-query" autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="100" placeholder="파트존 셀프 헬프 검색..." 
+                    role="searchbox" class="guide-header-search-input guide-font-sans-regular">
+                </span>
+                   <!-- 검색 결과 표시 영역 (동적 생성) -->
+                <div></div>
+            </form>
+        </div>
+          <!-- ========== 헤더 배경 ========== 
+             배경 배너 이미지
+             - 시각적 브랜딩 요소
+        -->
+        <div class="guide-header-background">
+            <span style="background-image: url('../../static/image/insight/FAQ-background.png');" class="guide-header-background-banner"></span>
+        </div>
+    </header>
+        <!-- ========================================================================
+         네비게이션 영역
+         ======================================================================== 
+         
+         기능:
+         - 현재 카테고리 표시
+         - 뒤로가기 버튼
+         - 카테고리 설명
+    -->
+    <nav role="navigation" class="guide-nav">
+        <div class="guide-wrapper">
+            <div class="guide-navigation-wrap">
+                <!-- ========== 뒤로가기 버튼 ========== -->
+                <a href="#" class="guide-navigation-back guide-font-sans-medium">뒤로 가기</a>
+                <!-- ========== 네비게이션 타이틀 영역 ========== -->
+                <div class="guide-navigation-title guide-navigation-title-list">
+                    <div class="guide-navigation-title-list-wrap">
+                          <!-- 카테고리 배지 -->
+                        <span class="guide-navigation-title-list-subject">
+                            <span class="guide-navigation-title-list-subject-label guide-font-sans-regular">관련 질문 : </span>
+                            <span id="categories" class="guide-category-badge guide-font-sans-medium">계정 및 프로필</span>
+                        </span>
+                         <!-- 구분선 -->
+                        <span class="guide-navigation-title-list-separator-wrap">
+                            <span class="guide-navigation-title-list-separator"></span>
+                        </span>
+                        <!-- 카테고리 설명 -->
+                        <div class="guide-navigation-title-list-description-wrap guide-text-wrap guide-font-sans-regular">
+                            <div class="guide-navigation-title-list-description">
+                                <h6 id="guide-categories-text" class="guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                    C&M 계정과 프로필의 생성, 접근, 관리, 삭제 등 기본적인 이용 설정과 정책을 안내합니다.
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 패딩 영역 (레이아웃 조정용) -->
+                <span class="guide-navigation-pad"></span>
+            </div>
+        </div>
+    </nav>
+       <!-- ========================================================================
+         본문 영역
+         ======================================================================== 
+         
+         구성:
+         - 좌측: 카테고리 사이드바
+         - 우측: 도움말 문서 목록
+    -->
+    <div id="body" class="guide-theme-background-color-light">
+        <div class="guide-wrapper">
+            <div role="main" class="guide-category">
+                 <!-- ========== 사이드바 (카테고리 목록) ========== -->
+                <aside role="complementary">
+                    <div class="guide-aside">
+                        <!-- 사이드바 제목 -->
+                        <p class="guide-aside-title guide-text-wrap guide-font-sans-bold">카테고리</p>
+                         <!-- 카테고리 목록 -->
+                        <ul role="list">
+                            <li role="listitem">
+                                <a href="#" value="false" role="link" class="guide-aside-single-line guide-font-sans-regular">공지 사항 및 업데이트 안내</a>
+                            </li>
+                            <li role="listitem">
+                                <a href="#" role="link" value="false" class="guide-aside-single-line guide-font-sans-regular">계정 및 프로필</a>
+                            </li>
+                            <li role="listitem">
+                                <a href="#" role="link" value="false" class="guide-aside-single-line guide-font-sans-regular">소셜 및 네트워킹</a>
+                            </li>
+                            <li role="listitem">
+                                <a href="#" role="link" value="false" class="guide-aside-single-line guide-font-sans-regular">사용자 경험 보호 및 설정</a>
+                            </li>
+                            <li role="listitem">
+                                <a href="#" role="link" value="false" class="guide-aside-single-line guide-font-sans-regular">구독 및 광고 상품</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- ========== 메인 콘텐츠 (도움말 목록) ========== -->
+                 <section class="guide-categories categories-on">
+                    <!-- ========== 카테고리 섹션 1: 계정 및 로그인 관리 ========== -->
+                    <div class="guide-category-section">
+                         <!-- 섹션 제목 -->
+                        <h6 class="guide-category-section-title guide-text-wrap guide-font-sans-medium">공지 사항 및 업데이트 안내</h6>
+                        <!-- 도움말 문서 목록 -->
+                        <ul role="list" class="guide-category-section-list">
+                             <!-- ========== 도움말 항목 1 ========== 
+                                 기업 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                     <!-- 제목 -->
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <!-- 아이콘 -->
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        기존 기업 명의로 관리하던 계정이 있는 경우는 어떻게 하나요?
+                                    </h6>
+                                    <!-- 메타 정보 (설명 + 인기도) -->
+                                    <span class="guide-category-item-meta">
+                                          <!-- 미리보기 설명 (2줄 말줄임) -->
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            기존 C&M에서 기업 명의로 관리하던 계정이 있는 경우, 하단의 프로세스에 따라 기업 프로필 권한을 취득할 수 있습니다.
+                                            신규로 C&M에 로그인하여 기업 프로필 권한을 취득하고자 하는 경우, 이 페이지를 참고해 주십시오.
+                                            기존 계정(Google, 이메일 등)으로 로그인하세요.
+                                            본인인증 페이지가 표시되는 경우 대표 또는 담당자의 명의로 진행해주세요.
+                                            기존 해당 계정에 기업 관리자 권한이 있던 경우,&nbsp;엔터프라이즈 콘솔에서 이어서 관리할 수 있습니다.           
+                                            만약 권한이 확인되지 않는 경우&nbsp; 폼을 작성 
+                                        </span>
+                                         <!-- 구분선 -->
+                                        <span class="guide-category-item-meta-separator"></span>
+                                         <!-- 인기도 표시 -->
+                                        <span class="guide-category-item-meta-popularity">
+                                            <!-- 인기도 레이블 -->
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 바 (5단계) -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                              <!-- ========== 도움말 항목 2 ========== 
+                                 계정 명의 변경 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        로그인한 계정의 명의를 변경할 수 있나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            로그인한 계정의 정보는 본인인증을 통해 직접 변경하실 수 있습니다.
+                                            예를 들어, 이름을 개명하셨거나 휴대폰 번호가 변경된 경우, 정보 수정을 진행하실 수 있습니다.
+                                            설정   내 정보 에서 이름 또는 전화번호 항목에서  수정  버튼을 클릭하신 후, 본인인증을 완료하면 변경이 가능합니다.
+                                            단, 현재 로그인된 계정이 본인의 것이 아니라 타인의 본인인증으로 생성된 경우에는 직접 변경하실 수 없습니다.
+                                            이러한 경우에는 C&M 지원센터로 문의해 주시면 안내해 드리겠습니다.
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <span class="guide-popularity">
+                                                 <!-- 인기도 1/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- ========== 도움말 항목 3 ========== 
+                                 공용 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        채용, 광고, 콘텐츠 관리를 위해 기업 공용 계정으로 가입할 수는 없나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            새로운 C&M은 1인 1계정 원칙을 기반으로 운영됩니다. 공용 계정 사용은 지양되며, 인증된 회원 만이 활동할 수 있습니다.
+                                            여러 사람이 사용할 수 있는 계정으로 로그인하지 말아 주세요. 내 지원이력, 메시지 내역 등 소중한 정보가 원치 않게 노출될 수 있습니다. 
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 2/5 -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                               <!-- ========== 도움말 항목 4 ========== 
+                                 계정 삭제 안내 (인기 문서)
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        C&M 계정을 삭제하고 싶습니다.
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            C&M 계정 삭제(탈퇴)하는 방법
+                                            이용자는 자유롭게 C&M 계정을 삭제(탈퇴)할 수 있습니다.
+                                            계정 삭제 시 개인정보 처리에 대한 자세한 내용은  개인정보 처리방침 을 참고해 주시기 바랍니다.
+                                            계정 삭제를 원하는 경우 로그인 후 설정 → 내 정보 및 로그인 → 계정 관리 → 계정 삭제하기로 삭제를 요청할 수 있습니다.
+                                            계정 삭제를 요청하면 즉시 내 프로필이 삭제되며, 7일 뒤에는 내 모든 정보가 완전히 삭제됩니다. (Google, 네이버 등 검색엔진 반영까지는 최대 30일이 소요될 수 있습니다.)
+                                            계정 해킹이나 도용 등 의도치 않은 데이터 삭제를 방지하기 위해 요청일로부터 7일간 계정이 보존됩니다. 계정 삭제 전에 다시 로그인하면 계정을 안전하게 복구할 수 있습니다.
+                                            C&M 계정/프로필을 대신 삭제해 줄 수 있나요?
+                                            로그인은 자신이 계정에 대한 적격한 권한이 있는 것을 증명하는 방법입니다. 이를 기반으로 계정이나 콘텐츠를 제어할
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">인기 많음</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 5/5 (최고 인기) -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </section>
+                <section class="guide-categories">
+                    <!-- ========== 카테고리 섹션 1: 계정 및 로그인 관리 ========== -->
+                    <div class="guide-category-section">
+                         <!-- 섹션 제목 -->
+                        <h6 class="guide-category-section-title guide-text-wrap guide-font-sans-medium">계정 및 로그인 관리</h6>
+                        <!-- 도움말 문서 목록 -->
+                        <ul role="list" class="guide-category-section-list">
+                             <!-- ========== 도움말 항목 1 ========== 
+                                 기업 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                     <!-- 제목 -->
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <!-- 아이콘 -->
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        기존 기업 명의로 관리하던 계정이 있는 경우는 어떻게 하나요?
+                                    </h6>
+                                    <!-- 메타 정보 (설명 + 인기도) -->
+                                    <span class="guide-category-item-meta">
+                                          <!-- 미리보기 설명 (2줄 말줄임) -->
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            기존 C&M에서 기업 명의로 관리하던 계정이 있는 경우, 하단의 프로세스에 따라 기업 프로필 권한을 취득할 수 있습니다.
+                                            신규로 C&M에 로그인하여 기업 프로필 권한을 취득하고자 하는 경우, 이 페이지를 참고해 주십시오.
+                                            기존 계정(Google, 이메일 등)으로 로그인하세요.
+                                            본인인증 페이지가 표시되는 경우 대표 또는 담당자의 명의로 진행해주세요.
+                                            기존 해당 계정에 기업 관리자 권한이 있던 경우,&nbsp;엔터프라이즈 콘솔에서 이어서 관리할 수 있습니다.           
+                                            만약 권한이 확인되지 않는 경우&nbsp; 폼을 작성 
+                                        </span>
+                                         <!-- 구분선 -->
+                                        <span class="guide-category-item-meta-separator"></span>
+                                         <!-- 인기도 표시 -->
+                                        <span class="guide-category-item-meta-popularity">
+                                            <!-- 인기도 레이블 -->
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 바 (5단계) -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                              <!-- ========== 도움말 항목 2 ========== 
+                                 계정 명의 변경 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        로그인한 계정의 명의를 변경할 수 있나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            로그인한 계정의 정보는 본인인증을 통해 직접 변경하실 수 있습니다.
+                                            예를 들어, 이름을 개명하셨거나 휴대폰 번호가 변경된 경우, 정보 수정을 진행하실 수 있습니다.
+                                            설정   내 정보 에서 이름 또는 전화번호 항목에서  수정  버튼을 클릭하신 후, 본인인증을 완료하면 변경이 가능합니다.
+                                            단, 현재 로그인된 계정이 본인의 것이 아니라 타인의 본인인증으로 생성된 경우에는 직접 변경하실 수 없습니다.
+                                            이러한 경우에는 C&M 지원센터로 문의해 주시면 안내해 드리겠습니다.
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <span class="guide-popularity">
+                                                 <!-- 인기도 1/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- ========== 도움말 항목 3 ========== 
+                                 공용 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        채용, 광고, 콘텐츠 관리를 위해 기업 공용 계정으로 가입할 수는 없나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            새로운 C&M은 1인 1계정 원칙을 기반으로 운영됩니다. 공용 계정 사용은 지양되며, 인증된 회원 만이 활동할 수 있습니다.
+                                            여러 사람이 사용할 수 있는 계정으로 로그인하지 말아 주세요. 내 지원이력, 메시지 내역 등 소중한 정보가 원치 않게 노출될 수 있습니다. 
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 2/5 -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                               <!-- ========== 도움말 항목 4 ========== 
+                                 계정 삭제 안내 (인기 문서)
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        C&M 계정을 삭제하고 싶습니다.
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            C&M 계정 삭제(탈퇴)하는 방법
+                                            이용자는 자유롭게 C&M 계정을 삭제(탈퇴)할 수 있습니다.
+                                            계정 삭제 시 개인정보 처리에 대한 자세한 내용은  개인정보 처리방침 을 참고해 주시기 바랍니다.
+                                            계정 삭제를 원하는 경우 로그인 후 설정 → 내 정보 및 로그인 → 계정 관리 → 계정 삭제하기로 삭제를 요청할 수 있습니다.
+                                            계정 삭제를 요청하면 즉시 내 프로필이 삭제되며, 7일 뒤에는 내 모든 정보가 완전히 삭제됩니다. (Google, 네이버 등 검색엔진 반영까지는 최대 30일이 소요될 수 있습니다.)
+                                            계정 해킹이나 도용 등 의도치 않은 데이터 삭제를 방지하기 위해 요청일로부터 7일간 계정이 보존됩니다. 계정 삭제 전에 다시 로그인하면 계정을 안전하게 복구할 수 있습니다.
+                                            C&M 계정/프로필을 대신 삭제해 줄 수 있나요?
+                                            로그인은 자신이 계정에 대한 적격한 권한이 있는 것을 증명하는 방법입니다. 이를 기반으로 계정이나 콘텐츠를 제어할
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">인기 많음</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 5/5 (최고 인기) -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                     <!-- ========== 카테고리 섹션 2: 프로필 관리 ========== -->
+                    <div class="guide-category-section">
+                         <h6 class="guide-category-section-title guide-text-wrap guide-font-sans-medium">프로필 관리</h6>
+                        <ul role="list" class="guide-category-section-list">
+                            <!-- ========== 도움말 항목 5 ========== 
+                                 기업 프로필 생성 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        기업 프로필은 어떻게 생성하나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            로켓펀치는 기업이 효과적으로 기업의 인지도를 높이고, 인재 채용 및 기타 활동을 활발히 이어갈 수 있도록 기업 전용 프로필을 제공합니다.
+                                            기업 프로필을 통해 채용 공고 등록, 기업 브랜딩, 콘텐츠 작성 등을 자유롭게 진행할 수 있습니다.
+                                            이 문서에서는 신규로 기업 프로필을 등록하는 절차를 안내합니다.
+                                            ※ PC 웹 환경에서 진행하시면 원활하게 진행하실 수 있습니다.
+                                            로켓펀치 사이트에서 로그인을 진행해 주세요.
+                                            좌측 사이드 메뉴에서  기업용 서비스 를 클릭해 주세요.
+                                            이후  새 기업 생성  섹션에서  새 기업 생성하기  버튼을 클릭해 주세요.
+                                            신규로 등록할 기업 프로필의 정보를 입력한 후  기업 생성  버튼을 클릭하면, 기업 프로필 생성이 완료됩니다.
+                                            로켓펀치는 보안과 개인정보 보호를 위해, 기업 공용 계정 사용을 지양하고 있습니다.
+                                            여러 사람이 사용할 수 있는 계정으로 로그인하지 말아 주세요. 내 지원이력, 메시지 내역 등 소중한 정보가 원치 않게 노출될 수
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">일부 독자</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 3/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                             <!-- ========== 도움말 항목 6 ========== 
+                                 기업 프로필 권한 취득 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        기업 프로필 관리 권한은 어떻게 취득할 수 있나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            로켓펀치는 기업이 효과적으로 기업의 인지도를 높이고, 인재 채용 및 기타 활동을 활발히 이어갈 수 있도록 기업 전용 프로필을 제공합니다.
+                                            기업 프로필을 통해 채용 공고 등록, 기업 브랜딩, 콘텐츠 작성 등을 자유롭게 진행할 수 있으며, 담당자 인증을 통해 안전하게 권한을 취득하고 관리할 수 있습니다.
+                                            이 문서에서는 안전하게 기업 프로필 관리 권한을 취득하는 방법과 기업 프로필로 게시글을 작성하는 방법을 안내합니다.
+                                            기업 프로필 관리 권한 취득 방법
+                                            기업의 채용, 광고, 콘텐츠를 관리하기 위해서는 기업을 새로 생성하거나, 이미 기업이 있는 경우 관리자로부터 관리자 초대를 요청하여 기업 기능을 사용할 수 있습니다. (이미 기업 프로필이 존재하지만 누가 관리자인지 알 수 없는 경우 기업 담당자에게 문의하세요.)
+                                            담당자가 누군지 알 수 없거나 퇴사 등의 기타 이유로 관리자 권한을 부여받을 수 없는 경우  기업 프로필 관리 권한 취득 양식 
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                           <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">일부 독자</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 3/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- ========== 도움말 항목 7 ========== 
+                                 프로필 액세스 문제 해결
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        이전에 만들었던 내 프로필에 액세스할 수 없습니다.
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            이전에 만든 내 프로필에 액세스할 수 없는 경우, 현재 계정으로 권한을 받을 수 있습니다. 이를 위해서는 권한을 받을 계정이 필요합니다.
+                                            로그인하는 과정에서 이전 프로필을 가져올 것인지 물어보는 팝업이 표시될 수 있습니다.
+                                            이 경우 즉시 권한을 부여받아 현재 계정에 정보를 병합할 수 있습니다.
+                                            로그인한 뒤에도 팝업이 표시되지 않는다면, 이전에 만든 프로필의 URL을 복사하여 소유권 프로필 관리 권한 취득 양식을 작성합니다.
+                                            이때, 해당 프로필에 있는 정보가 본인임을 증명할 수 있는 증빙 서류가 필요합니다.
+                                            증빙이 완료되는 경우 해당 계정을 새 로켓펀치 계정에 병합하거나 삭제하도록 요청할 수 있습니다.
+                                            제출한 양식을 통해서도 본인임을 특정할 수 없는 경우 추가 자료가 요구되거나 권한 부여가 반려될 수 있습니다.
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">일부 독자</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 3/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>               
+                        </ul>
+                    </div>
+                </section>
+                <section class="guide-categories">
+                    <!-- ========== 카테고리 섹션 1: 계정 및 로그인 관리 ========== -->
+                    <div class="guide-category-section">
+                         <!-- 섹션 제목 -->
+                        <h6 class="guide-category-section-title guide-text-wrap guide-font-sans-medium">소셜 및 네트워킹</h6>
+                        <!-- 도움말 문서 목록 -->
+                        <ul role="list" class="guide-category-section-list">
+                             <!-- ========== 도움말 항목 1 ========== 
+                                 기업 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                     <!-- 제목 -->
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <!-- 아이콘 -->
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        기존 기업 명의로 관리하던 계정이 있는 경우는 어떻게 하나요?
+                                    </h6>
+                                    <!-- 메타 정보 (설명 + 인기도) -->
+                                    <span class="guide-category-item-meta">
+                                          <!-- 미리보기 설명 (2줄 말줄임) -->
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            기존 C&M에서 기업 명의로 관리하던 계정이 있는 경우, 하단의 프로세스에 따라 기업 프로필 권한을 취득할 수 있습니다.
+                                            신규로 C&M에 로그인하여 기업 프로필 권한을 취득하고자 하는 경우, 이 페이지를 참고해 주십시오.
+                                            기존 계정(Google, 이메일 등)으로 로그인하세요.
+                                            본인인증 페이지가 표시되는 경우 대표 또는 담당자의 명의로 진행해주세요.
+                                            기존 해당 계정에 기업 관리자 권한이 있던 경우,&nbsp;엔터프라이즈 콘솔에서 이어서 관리할 수 있습니다.           
+                                            만약 권한이 확인되지 않는 경우&nbsp; 폼을 작성 
+                                        </span>
+                                         <!-- 구분선 -->
+                                        <span class="guide-category-item-meta-separator"></span>
+                                         <!-- 인기도 표시 -->
+                                        <span class="guide-category-item-meta-popularity">
+                                            <!-- 인기도 레이블 -->
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 바 (5단계) -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                              <!-- ========== 도움말 항목 2 ========== 
+                                 계정 명의 변경 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        로그인한 계정의 명의를 변경할 수 있나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            로그인한 계정의 정보는 본인인증을 통해 직접 변경하실 수 있습니다.
+                                            예를 들어, 이름을 개명하셨거나 휴대폰 번호가 변경된 경우, 정보 수정을 진행하실 수 있습니다.
+                                            설정   내 정보 에서 이름 또는 전화번호 항목에서  수정  버튼을 클릭하신 후, 본인인증을 완료하면 변경이 가능합니다.
+                                            단, 현재 로그인된 계정이 본인의 것이 아니라 타인의 본인인증으로 생성된 경우에는 직접 변경하실 수 없습니다.
+                                            이러한 경우에는 C&M 지원센터로 문의해 주시면 안내해 드리겠습니다.
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <span class="guide-popularity">
+                                                 <!-- 인기도 1/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- ========== 도움말 항목 3 ========== 
+                                 공용 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        채용, 광고, 콘텐츠 관리를 위해 기업 공용 계정으로 가입할 수는 없나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            새로운 C&M은 1인 1계정 원칙을 기반으로 운영됩니다. 공용 계정 사용은 지양되며, 인증된 회원 만이 활동할 수 있습니다.
+                                            여러 사람이 사용할 수 있는 계정으로 로그인하지 말아 주세요. 내 지원이력, 메시지 내역 등 소중한 정보가 원치 않게 노출될 수 있습니다. 
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 2/5 -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                               <!-- ========== 도움말 항목 4 ========== 
+                                 계정 삭제 안내 (인기 문서)
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        C&M 계정을 삭제하고 싶습니다.
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            C&M 계정 삭제(탈퇴)하는 방법
+                                            이용자는 자유롭게 C&M 계정을 삭제(탈퇴)할 수 있습니다.
+                                            계정 삭제 시 개인정보 처리에 대한 자세한 내용은  개인정보 처리방침 을 참고해 주시기 바랍니다.
+                                            계정 삭제를 원하는 경우 로그인 후 설정 → 내 정보 및 로그인 → 계정 관리 → 계정 삭제하기로 삭제를 요청할 수 있습니다.
+                                            계정 삭제를 요청하면 즉시 내 프로필이 삭제되며, 7일 뒤에는 내 모든 정보가 완전히 삭제됩니다. (Google, 네이버 등 검색엔진 반영까지는 최대 30일이 소요될 수 있습니다.)
+                                            계정 해킹이나 도용 등 의도치 않은 데이터 삭제를 방지하기 위해 요청일로부터 7일간 계정이 보존됩니다. 계정 삭제 전에 다시 로그인하면 계정을 안전하게 복구할 수 있습니다.
+                                            C&M 계정/프로필을 대신 삭제해 줄 수 있나요?
+                                            로그인은 자신이 계정에 대한 적격한 권한이 있는 것을 증명하는 방법입니다. 이를 기반으로 계정이나 콘텐츠를 제어할
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">인기 많음</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 5/5 (최고 인기) -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </section>
+                <section class="guide-categories">
+                    <!-- ========== 카테고리 섹션 1: 계정 및 로그인 관리 ========== -->
+                    <div class="guide-category-section">
+                         <!-- 섹션 제목 -->
+                        <h6 class="guide-category-section-title guide-text-wrap guide-font-sans-medium">사용자 경험 보호 및 설정</h6>
+                        <!-- 도움말 문서 목록 -->
+                        <ul role="list" class="guide-category-section-list">
+                             <!-- ========== 도움말 항목 1 ========== 
+                                 기업 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                     <!-- 제목 -->
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <!-- 아이콘 -->
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        기존 기업 명의로 관리하던 계정이 있는 경우는 어떻게 하나요?
+                                    </h6>
+                                    <!-- 메타 정보 (설명 + 인기도) -->
+                                    <span class="guide-category-item-meta">
+                                          <!-- 미리보기 설명 (2줄 말줄임) -->
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            기존 C&M에서 기업 명의로 관리하던 계정이 있는 경우, 하단의 프로세스에 따라 기업 프로필 권한을 취득할 수 있습니다.
+                                            신규로 C&M에 로그인하여 기업 프로필 권한을 취득하고자 하는 경우, 이 페이지를 참고해 주십시오.
+                                            기존 계정(Google, 이메일 등)으로 로그인하세요.
+                                            본인인증 페이지가 표시되는 경우 대표 또는 담당자의 명의로 진행해주세요.
+                                            기존 해당 계정에 기업 관리자 권한이 있던 경우,&nbsp;엔터프라이즈 콘솔에서 이어서 관리할 수 있습니다.           
+                                            만약 권한이 확인되지 않는 경우&nbsp; 폼을 작성 
+                                        </span>
+                                         <!-- 구분선 -->
+                                        <span class="guide-category-item-meta-separator"></span>
+                                         <!-- 인기도 표시 -->
+                                        <span class="guide-category-item-meta-popularity">
+                                            <!-- 인기도 레이블 -->
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 바 (5단계) -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                              <!-- ========== 도움말 항목 2 ========== 
+                                 계정 명의 변경 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        로그인한 계정의 명의를 변경할 수 있나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            로그인한 계정의 정보는 본인인증을 통해 직접 변경하실 수 있습니다.
+                                            예를 들어, 이름을 개명하셨거나 휴대폰 번호가 변경된 경우, 정보 수정을 진행하실 수 있습니다.
+                                            설정   내 정보 에서 이름 또는 전화번호 항목에서  수정  버튼을 클릭하신 후, 본인인증을 완료하면 변경이 가능합니다.
+                                            단, 현재 로그인된 계정이 본인의 것이 아니라 타인의 본인인증으로 생성된 경우에는 직접 변경하실 수 없습니다.
+                                            이러한 경우에는 C&M 지원센터로 문의해 주시면 안내해 드리겠습니다.
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <span class="guide-popularity">
+                                                 <!-- 인기도 1/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- ========== 도움말 항목 3 ========== 
+                                 공용 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        채용, 광고, 콘텐츠 관리를 위해 기업 공용 계정으로 가입할 수는 없나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            새로운 C&M은 1인 1계정 원칙을 기반으로 운영됩니다. 공용 계정 사용은 지양되며, 인증된 회원 만이 활동할 수 있습니다.
+                                            여러 사람이 사용할 수 있는 계정으로 로그인하지 말아 주세요. 내 지원이력, 메시지 내역 등 소중한 정보가 원치 않게 노출될 수 있습니다. 
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 2/5 -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                               <!-- ========== 도움말 항목 4 ========== 
+                                 계정 삭제 안내 (인기 문서)
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        C&M 계정을 삭제하고 싶습니다.
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            C&M 계정 삭제(탈퇴)하는 방법
+                                            이용자는 자유롭게 C&M 계정을 삭제(탈퇴)할 수 있습니다.
+                                            계정 삭제 시 개인정보 처리에 대한 자세한 내용은  개인정보 처리방침 을 참고해 주시기 바랍니다.
+                                            계정 삭제를 원하는 경우 로그인 후 설정 → 내 정보 및 로그인 → 계정 관리 → 계정 삭제하기로 삭제를 요청할 수 있습니다.
+                                            계정 삭제를 요청하면 즉시 내 프로필이 삭제되며, 7일 뒤에는 내 모든 정보가 완전히 삭제됩니다. (Google, 네이버 등 검색엔진 반영까지는 최대 30일이 소요될 수 있습니다.)
+                                            계정 해킹이나 도용 등 의도치 않은 데이터 삭제를 방지하기 위해 요청일로부터 7일간 계정이 보존됩니다. 계정 삭제 전에 다시 로그인하면 계정을 안전하게 복구할 수 있습니다.
+                                            C&M 계정/프로필을 대신 삭제해 줄 수 있나요?
+                                            로그인은 자신이 계정에 대한 적격한 권한이 있는 것을 증명하는 방법입니다. 이를 기반으로 계정이나 콘텐츠를 제어할
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">인기 많음</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 5/5 (최고 인기) -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </section>
+                <section class="guide-categories">
+                    <!-- ========== 카테고리 섹션 1: 계정 및 로그인 관리 ========== -->
+                    <div class="guide-category-section">
+                         <!-- 섹션 제목 -->
+                        <h6 class="guide-category-section-title guide-text-wrap guide-font-sans-medium">구독 및 광고 상품</h6>
+                        <!-- 도움말 문서 목록 -->
+                        <ul role="list" class="guide-category-section-list">
+                             <!-- ========== 도움말 항목 1 ========== 
+                                 기업 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                     <!-- 제목 -->
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <!-- 아이콘 -->
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        기존 기업 명의로 관리하던 계정이 있는 경우는 어떻게 하나요?
+                                    </h6>
+                                    <!-- 메타 정보 (설명 + 인기도) -->
+                                    <span class="guide-category-item-meta">
+                                          <!-- 미리보기 설명 (2줄 말줄임) -->
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            기존 C&M에서 기업 명의로 관리하던 계정이 있는 경우, 하단의 프로세스에 따라 기업 프로필 권한을 취득할 수 있습니다.
+                                            신규로 C&M에 로그인하여 기업 프로필 권한을 취득하고자 하는 경우, 이 페이지를 참고해 주십시오.
+                                            기존 계정(Google, 이메일 등)으로 로그인하세요.
+                                            본인인증 페이지가 표시되는 경우 대표 또는 담당자의 명의로 진행해주세요.
+                                            기존 해당 계정에 기업 관리자 권한이 있던 경우,&nbsp;엔터프라이즈 콘솔에서 이어서 관리할 수 있습니다.           
+                                            만약 권한이 확인되지 않는 경우&nbsp; 폼을 작성 
+                                        </span>
+                                         <!-- 구분선 -->
+                                        <span class="guide-category-item-meta-separator"></span>
+                                         <!-- 인기도 표시 -->
+                                        <span class="guide-category-item-meta-popularity">
+                                            <!-- 인기도 레이블 -->
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 바 (5단계) -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                              <!-- ========== 도움말 항목 2 ========== 
+                                 계정 명의 변경 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        로그인한 계정의 명의를 변경할 수 있나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            로그인한 계정의 정보는 본인인증을 통해 직접 변경하실 수 있습니다.
+                                            예를 들어, 이름을 개명하셨거나 휴대폰 번호가 변경된 경우, 정보 수정을 진행하실 수 있습니다.
+                                            설정   내 정보 에서 이름 또는 전화번호 항목에서  수정  버튼을 클릭하신 후, 본인인증을 완료하면 변경이 가능합니다.
+                                            단, 현재 로그인된 계정이 본인의 것이 아니라 타인의 본인인증으로 생성된 경우에는 직접 변경하실 수 없습니다.
+                                            이러한 경우에는 C&M 지원센터로 문의해 주시면 안내해 드리겠습니다.
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <span class="guide-popularity">
+                                                 <!-- 인기도 1/5 -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <!-- ========== 도움말 항목 3 ========== 
+                                 공용 계정 관련 안내
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        채용, 광고, 콘텐츠 관리를 위해 기업 공용 계정으로 가입할 수는 없나요?
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            새로운 C&M은 1인 1계정 원칙을 기반으로 운영됩니다. 공용 계정 사용은 지양되며, 인증된 회원 만이 활동할 수 있습니다.
+                                            여러 사람이 사용할 수 있는 계정으로 로그인하지 말아 주세요. 내 지원이력, 메시지 내역 등 소중한 정보가 원치 않게 노출될 수 있습니다. 
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">소수 독자</span>
+                                            <!-- 인기도 2/5 -->
+                                            <span class="guide-popularity">
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                                <span data-active="false" class="guide-popularity-bar"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                               <!-- ========== 도움말 항목 4 ========== 
+                                 계정 삭제 안내 (인기 문서)
+                            -->
+                            <li role="listitem" class="guide-category-item">
+                                <a href="#" class="guide-box guide-box-link">
+                                    <h6 class="guide-category-item-title guide-font-sans-semibold guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2">
+                                        <span class="guide-category-item-title-icon guide-theme-background-color-default"></span>
+                                        C&M 계정을 삭제하고 싶습니다.
+                                    </h6>
+                                    <span class="guide-category-item-meta">
+                                        <span class="guide-category-item-meta-description guide-text-wrap guide-text-ellipsis-multiline guide-text-ellipsis-multiline-lines-2 guide-font-sans-regular">
+                                            C&M 계정 삭제(탈퇴)하는 방법
+                                            이용자는 자유롭게 C&M 계정을 삭제(탈퇴)할 수 있습니다.
+                                            계정 삭제 시 개인정보 처리에 대한 자세한 내용은  개인정보 처리방침 을 참고해 주시기 바랍니다.
+                                            계정 삭제를 원하는 경우 로그인 후 설정 → 내 정보 및 로그인 → 계정 관리 → 계정 삭제하기로 삭제를 요청할 수 있습니다.
+                                            계정 삭제를 요청하면 즉시 내 프로필이 삭제되며, 7일 뒤에는 내 모든 정보가 완전히 삭제됩니다. (Google, 네이버 등 검색엔진 반영까지는 최대 30일이 소요될 수 있습니다.)
+                                            계정 해킹이나 도용 등 의도치 않은 데이터 삭제를 방지하기 위해 요청일로부터 7일간 계정이 보존됩니다. 계정 삭제 전에 다시 로그인하면 계정을 안전하게 복구할 수 있습니다.
+                                            C&M 계정/프로필을 대신 삭제해 줄 수 있나요?
+                                            로그인은 자신이 계정에 대한 적격한 권한이 있는 것을 증명하는 방법입니다. 이를 기반으로 계정이나 콘텐츠를 제어할
+                                        </span>
+                                        <span class="guide-category-item-meta-separator"></span>
+                                        <span class="guide-category-item-meta-popularity">
+                                            <span class="guide-category-item-meta-popularity-label guide-font-sans-medium">인기 많음</span>
+                                            <span class="guide-popularity">
+                                                <!-- 인기도 5/5 (최고 인기) -->
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                                <span data-active="true" class="guide-popularity-bar guide-theme-background-color-default"></span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+      <!-- ========================================================================
+         푸터 영역
+         ======================================================================== 
+         
+         구성:
+         - 문의하기 섹션
+         - 저작권 정보
+    -->
+    <footer role="contentinfo">
+         <!-- ========== 문의하기 섹션 ========== 
+             찾는 정보가 없을 때 이메일 문의 유도
+        -->
+        <div class="guide-footer-ask">
+            <div class="guide-wrapper">
+                 <!-- 안내 텍스트 -->
+                <div class="guide-footer-ask-text">
+                    <p class="guide-footer-ask-text-title guide-text-wrap guide-font-sans-bold">찾으시는게 없나요?</p>
+                    <p class="guide-footer-ask-text-label guide-text-wrap guide-font-sans-regular">이메일로 연락주세요.</p>
+                </div>
+                  <!-- 이메일 문의 버튼 -->
+                <ul class="guide-footer-ask-button">
+                    <li>
+                        <a href="#" role="button" class="guide-button guide-button-accent guide-button-icon-email guide-button-has-left-icon guide-font-sans-regular">
+                            이메일을 써주세요
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+          <!-- ========== 저작권 정보 ========== -->
+        <div class="guide-footer-copyright guide-footer-copyright-separated">
+            <div class="guide-wrapper">
+                <span class="guide-footer-copyright-brand">
+                    <span class="guide-font-sans-regular">© 2026</span>
+                    <img src="../../static/image/insight/fair.png" alt="" width="18px" height="18px">
+                </span>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../../static/js/insight/FAQ.js"></script>
+</html>

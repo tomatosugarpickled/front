@@ -1,0 +1,840 @@
+* {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+
+svg {
+    display: block;
+    vertical-align: middle;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgba(18,19,20,1);
+}
+
+.main-border {
+     /* ì¢Œì¸¡ ì‚¬ì´ë“œë°” ê³µê°„ í™•ë³´ */
+       /* ìƒë‹¨ ì—¬ë°± */
+    width: 1614px;
+    height: 893px;
+    border: solid 1px; 
+    border-radius: 16px;
+    border-color: rgba(255,255,255,0.0800);
+    background-color: #0e0f10;
+    overflow: hidden;
+}
+
+.div-header {
+    width: 1614px;
+    height: 52px;
+    flex-direction: column;
+    border-color: rgba(255,255,255,0.0800);
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.0800);
+    width: 100%;
+    display: flex;
+}
+
+.div-container {
+    flex: 1 0 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    outline: none;
+    position: relative;
+}
+
+.div-content-wrap {
+    flex-direction: column;
+    max-width: 1000px;
+    gap: 16px;
+    flex: 1 0 0;
+    width: 100%;
+    display: flex;
+}
+
+.banner-container {
+    align-items: flex-end;
+    border: 1px solid;
+    border-color: rgba(255,255,255,0.0800);
+    border-radius: 12px;
+    min-height: fit-content;
+    max-width: 1000px;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    background-color: #121314;
+    overflow-y: auto;
+}
+
+.banner-content-wrap {
+    align-self: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    gap: 6px;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.banner-content {
+    width: 100%;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-content-text01 {
+    color: #ffffff;
+    white-space: pre-wrap;
+    letter-spacing: -.36px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.banner-content-text02 {
+    font-size: 8px;
+    font-family: Pretendard Variable;
+    color: #ffffff66;
+}
+
+.banner-content-image {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.banner-image {
+    color: transparent;
+    border-radius: 12px;
+    height: 84px;
+    object-fit: cover;
+    width: 117px;
+}
+
+.funding-container {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff14;
+    border-radius: 16px;
+    flex-direction: column;
+    background-color: #121314;
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.search-text-area {
+    align-items: flex-end;
+    gap: 8px;
+    width: 97%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.search-text {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 8px;
+    width: 100%;
+    gap: 4px;
+    display: flex;
+}
+
+.search-text-inner {
+    align-items: flex-end;
+    white-space: pre-line;
+    gap: 8px;
+    width: 100%;
+    display: flex;
+}
+
+.search-content {
+    color: #ffffff;
+    letter-spacing: -.36px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+
+.funding-wrap {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    display: flex;
+}
+
+.funding-image-area {
+    scrollbar-width: none;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.funding-image-wrap {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
+    padding: 20px;
+    gap: 12px;
+    display: grid;
+}
+
+.funding-image-wrap {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: transform 0.25s ease
+}
+
+.funding-image-wrap:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translateY(-6px)
+}
+
+.funding-image {
+    position: relative;
+    width: 100%;
+}
+
+.funding-image-inner {
+    color: transparent;
+    border-radius: 8px;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.primary-text-inner {
+    letter-spacing: -.44999999999999996px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+
+.secondary-text-inner {
+    color: #ffffff99;
+    letter-spacing: -.24px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.funding-image {
+    position: relative;
+    width: 228px;
+}
+
+.funding-image-inner {
+    color: transparent;
+    border-radius: 8px;
+    height: 152px;
+    object-fit: cover;
+    width: 228px;
+}
+
+.funding-image-text {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.image-text-header {
+    gap: 6px;
+    display: flex;
+}
+
+.header-icon {
+    cursor: default;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+.header-icon-inner {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.header-text {
+    color: #ffffff;
+    letter-spacing: -.24px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.image-text-middle {
+    align-items: center;
+    gap: 6px;
+    display: flex;
+}
+
+.image-text-middle-inner {
+    color: #ffffff;
+    letter-spacing: -.26px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.image-text-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-text-footer-inner1 {
+    
+    color: #ffffff99;
+    letter-spacing: -.24px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.image-text-footer-inner2 {
+    text-align: right;
+    color: #ffffff;
+    letter-spacing: -.24px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.image-text-footer-inner3 {
+    text-align: right;
+    color: #ffffff;
+    letter-spacing: -.24px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* ========================================================================
+   10. 모달 (상세 보기)
+   ======================================================================== */
+
+/**
+ * 모달 오버레이
+ * - 배경 딤 처리
+ * - 초기 상태 숨김 (opacity: 0)
+ * - .open 클래스로 표시
+ */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 998;
+}
+
+/**
+ * 모달 창
+ * - 우측에서 슬라이드 인 애니메이션
+ * - 초기 위치: 화면 밖 (translateX(150%))
+ * - .open 클래스로 표시
+ */
+.modal {
+    position: fixed;
+    top: 0%;
+    left: 67%;
+    width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+    transform: translateX(150%);
+    transition: all 0.35s ease;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/**
+ * 모달 활성화 상태
+ * - overlay와 modal에 .open 클래스 추가
+ */
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.modal.open {
+    transform: translate(0);
+    pointer-events: auto;
+}
+
+/**
+ * 모달 컨테이너
+ * - 수직 스크롤 가능
+ * - 최대 높이 설정
+ */
+.modal-container {
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    scrollbar-width: none;
+    height: 97vh;
+}
+
+/**
+ * 모달 래퍼
+ * - 카드 스타일
+ */
+.modal-wrap {
+    border-width: 1px;
+    border-style: solid;
+    height: 100%;
+    border-color: #ffffff14;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #121314;
+    display: flex;
+    scrollbar-width: none;
+}
+
+/**
+ * 모달 헤더
+ * - 고정 헤더 (sticky)
+ * - 닫기 버튼 + 공유 버튼
+ */
+.modal-header {
+    justify-content: space-between;
+    top: 0;
+    align-items: center;
+    min-height: 56px;
+    height: 56px;
+    padding-inline: 8px;
+    position: sticky;
+    width: 96%;
+    display: flex;
+}
+
+.modal-header-icon {
+    gap: 8px;
+    width: 100%;
+    display: flex;
+}
+
+/**
+ * 닫기 버튼
+ */
+.modal-icon {
+    background-color: #ffffff1f;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    max-height: 36px;
+    border-radius: 9px;
+    min-height: 36px;
+    display: inline-flex;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.modal-icon-inner {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: #ffffff99;
+}
+
+/**
+ * 액션 버튼 영역
+ */
+.modal-inner-context {
+    justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+    display: flex;
+}
+
+/**
+ * 공유 버튼
+ */
+.modal-inner-share {
+    background-color: #ffffff1f;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    max-height: 36px;
+    border-radius: 9px;
+    min-height: 36px;
+    display: inline-flex;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* 모달 배너 부분 */
+.modal-image-banner {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    overflow: hidden;
+}
+
+.modal-banner-image-wrap {
+    position: relative;
+    display: flex;
+    width: 2870px;
+    height: 350px;
+    gap: 10px;
+}
+
+.modal-banner-image {
+    color: transparent;
+    border-radius: 8px;
+    height: auto; 
+    max-width: 576px; 
+    min-height: 350px; 
+    width: 100%;
+}
+
+.modal-banner-icon {
+    background-color: #121314;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    max-height: 36px;
+    border-radius: 9px;
+    min-height: 36px;
+    display: inline-flex;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+}
+
+#left-btn {
+    top: 45%;
+    left: 2px;
+    /* transform: translate(0, -50%); */
+}
+
+
+
+#right-btn {
+     bottom: 45%;
+    left: 538px;
+    /* transform: translate(0, -50%); */
+}
+
+
+
+
+/*  */
+
+.modal-inner-span {
+    padding-inline: 6px;
+    white-space: nowrap;
+    display: flex;
+    letter-spacing: -.26px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+/**
+ * 등록 버튼 (필요 시 활성화)
+ */
+.modal-inner-regist {
+     background-color: #ffffff1f;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    max-height: 36px;
+    border-radius: 9px;
+    min-height: 36px;
+    display: inline-flex;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/**
+ * 모달 본문
+ * - 스크롤 가능 영역
+ */
+.modal-body {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.modal-body-wrap {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+    display: flex;
+    width: 100%;
+}
+
+/**
+ * 태그 영역
+ */
+.modal-body-inner01 {
+    padding: 4px;
+    width: 100%;
+    gap: 4px;
+    display: flex;
+}
+
+.modal-body-nwcf {
+    justify-content: center;
+    align-items: center;
+    padding: 3px 8px;
+    min-width: 24px;
+    background: #ffffff1f;
+    gap: 3px;
+    border-radius: 6px;
+    display: inline-flex;
+}
+
+.nwcf-span {
+    white-space: nowrap;
+    color: #ffffff;
+    letter-spacing: -.24px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+/**
+ * 모달 제목
+ */
+.modal-body-title {
+    align-items: flex-end;
+    gap: 8px;
+    width: 100%;
+    display: flex;
+}
+
+.modal-body-title-start {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 8px;
+    width: 100%;
+    gap: 4px;
+    display: flex;
+}
+
+.modal-body-title-end {
+    align-items: flex-end;
+    white-space: pre-line;
+    gap: 8px;
+    width: 100%;
+    display: flex;
+}
+
+.modal-body-title-content {
+    color: #ffffff;
+    letter-spacing: -.48px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+/**
+ * 이벤트 정보 리스트
+ * - 호스트, 날짜, 주제 등
+ */
+.modal-body-column {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+}
+
+.modal-body-column-inner {
+    cursor: pointer;
+    align-items: flex-start;
+    min-width: 240px;
+    padding: 12px 8px;
+    flex: 1 0 0;
+    width: 100%;
+    gap: 12px;
+    display: flex;
+}
+
+/**
+ * 정보 레이블
+ */
+.hdlt {
+    max-width: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.hdlt-text {
+    color: #ffffff99;
+    font-weight: 400;
+    letter-spacing: -.26px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+/**
+ * 정보 내용
+ */
+.hdlt-content {
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1 0 0;
+    gap: 8px;
+    display: flex;
+}
+
+.hdlt-content-column {
+    flex-direction: column;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.hdlt-content-p {
+    white-space: pre-wrap;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: -.26px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.hdlt-content-p-second {
+    color: #ffffff99;
+    letter-spacing: -.24px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/**
+ * 상세 내용 섹션
+ * - 공지사항 내용, 관련 콘텐츠, 주최자 정보 등
+ */
+.modal-body-elh {
+    flex-direction: column;
+    width: 100%;
+    padding: 12px;
+    gap: 12px;
+    display: flex;
+}
+
+/**
+ * 섹션 제목
+ */
+.elh-title {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+}
+
+.elh-title-inner {
+    cursor: default;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+}
+
+.elh-title-content {
+    align-items: center;
+    gap: 6px;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.elh-span {
+    align-items: center;
+    color: #ffffff99;
+    white-space: nowrap;
+    gap: 4px;
+    display: flex;
+    letter-spacing: -.26px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+/**
+ * 구분선
+ */
+.elh-underbar {
+    align-self: stretch;
+    align-items: flex-start;
+    flex-direction: column;
+    background: #ffffff14;
+    height: 1px;
+    display: flex;
+    width: 95%;
+}
+
+/**
+ * 섹션 내용
+ */
+.elh-content-wrap {
+    flex-direction: column;
+    max-height: none;
+    width: 95%;
+    display: flex;
+}
+
+.elt-content {
+    white-space: pre-line;
+    flex-direction: column;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.elt-content-span {
+    text-align: left;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    color: #ffffff;
+    width: 100%;
+    letter-spacing: -.3px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.elt-content-p {
+    text-align: left;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    color: #ffffff99;
+    width: 100%;
+    letter-spacing: -.3px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+}
