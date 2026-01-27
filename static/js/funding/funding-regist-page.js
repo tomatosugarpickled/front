@@ -148,3 +148,52 @@ form.addEventListener("submit", (e) => {
         e.preventDefault();
     }
 });
+
+// 드롭다운
+document.querySelectorAll(".custom-select-container").forEach((container) => {
+    const input = container.querySelector(".funding-regist-form-input");
+    const dropdown = container.querySelector(".custom-dropdown");
+    const items = dropdown.querySelectorAll(".dropdown-item");
+
+    // Input 클릭 시 드롭다운 토글
+    input.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        // 다른 드롭다운 모두 닫기
+        document.querySelectorAll(".custom-dropdown").forEach((dd) => {
+            if (dd !== dropdown) {
+                dd.classList.remove("show");
+            }
+        });
+
+        // 현재 드롭다운 토글
+        dropdown.classList.toggle("show");
+    });
+
+    // 아이템 선택
+    items.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            // 선택된 값을 input에 설정
+            const value = item.textContent;
+            const dataValue = item.dataset.value;
+
+            input.value = value;
+            input.setAttribute("data-value", dataValue); // 실제 값 저장
+
+            // 드롭다운 닫기
+            dropdown.classList.remove("show");
+
+            // 선택 이벤트 발생 (필요시 사용)
+            input.dispatchEvent(new Event("change"));
+        });
+    });
+});
+
+// 외부 클릭 시 모든 드롭다운 닫기
+document.addEventListener("click", () => {
+    document.querySelectorAll(".custom-dropdown").forEach((dropdown) => {
+        dropdown.classList.remove("show");
+    });
+});

@@ -279,6 +279,7 @@ progress {
     caret-color: rgb(255, 255, 255); /* 커서 색상 */
 }
 
+
 /* 유효성 검사 메시지 포함 입력 필드 래퍼 */
 .funding-regist-form-input-finalvalue-wrapper {
     position: relative;
@@ -699,4 +700,95 @@ progress {
     .funding-regist-form-tab-title-icon:hover .funding-regist-form-tab-title-alter {
         opacity: 1; /* 불투명하게 변경하여 표시 */
     }
+}
+
+/* 드롭다운 div */
+/* 커스텀 셀렉트 컨테이너 */
+.custom-select-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Input 스타일 (기존 스타일 유지하면서 커서 추가) */
+.custom-select-container .funding-regist-form-input {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+.custom-select-container .funding-regist-form-input:focus {
+    outline: none;
+    border-color: rgb(128, 189, 255);
+}
+
+/* 드롭다운 리스트 */
+.custom-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #121314;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-height: 240px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+}
+
+.custom-dropdown.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 드롭다운 아이템 */
+.dropdown-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(128, 189, 255, 0.1);
+    color: rgb(128, 189, 255);
+}
+
+.dropdown-item:active {
+    background-color: rgba(128, 189, 255, 0.2);
+}
+
+.dropdown-item:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-item:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+/* 스크롤바 스타일 */
+.custom-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-dropdown::-webkit-scrollbar-track {
+    background: #ffffff13;
+    border-radius: 3px;
+}
+
+.custom-dropdown::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.custom-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
 }
