@@ -1927,7 +1927,7 @@ a {
     line-height: var(--texts--line-heights--body-m);
 }
 /* 로그인 전후 공통 */
-.login-icon2, .login-icon2-modal {
+.login-icon2 {
     align-items: center;
     gap: 12px;
     display: flex;
