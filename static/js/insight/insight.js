@@ -1,11 +1,20 @@
 // 공지사항 이미지 클릭시 modal 오른쪽에서 나오는 js
 const openBtn = document.querySelectorAll(".event-image");
+const clickBoxes = document.querySelectorAll(".find-box-body");
 const modal = document.getElementById("modal");
 const overlay = document.getElementById("modalOverlay");
 const closeBtn = document.querySelector(".modal-icon");
 
 openBtn.forEach((openBtn) =>
     openBtn.addEventListener("click", (e) => {
+        modal.classList.add("open");
+        overlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+    }),
+);
+
+clickBoxes.forEach((clickBox) =>
+    clickBox.addEventListener("click", (e) => {
         modal.classList.add("open");
         overlay.classList.add("open");
         document.body.style.overflow = "hidden";
@@ -34,12 +43,6 @@ inputButton.addEventListener("click", (e) => {
 // 모든 유형을 클릭하면 밑에 div박스 나오게 하는 js
 const selects = document.querySelectorAll(".selectEvent");
 const selectBoxes = document.querySelectorAll(".shadow-menu");
-
-// selects.forEach((select, i) => {
-//     select.addEventListener("click", (e) => {
-//         selectCategory[i].style.opacity = 1;
-//     });
-// });
 
 selects.forEach((select, i) => {
     select.addEventListener("click", (e) => {

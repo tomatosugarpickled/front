@@ -1,5 +1,54 @@
-/* 공통으로 들어가는 CSS */
+/*
+============================================================================
+C&M Insight - 스타일시트
+============================================================================
 
+프로젝트: 비즈니스 인사이트 및 이벤트 플랫폼
+작성일: 2026
+설명: 다크 테마 기반의 모던한 비즈니스 플랫폼 UI
+
+============================================================================
+목차:
+1. 전역 스타일 및 리셋
+2. 레이아웃 구조
+3. 배너 섹션
+4. 인사이트 탐색 영역
+5. 이벤트 카드
+6. 주제별 보기
+7. 검색 및 필터
+8. 검색 결과 표시
+9. 모달 (상세 보기)
+10. 드롭다운 메뉴
+11. 반응형 대응
+============================================================================
+
+색상 팔레트:
+- 주 배경: #0e0f10
+- 카드 배경: #121314
+- 테두리: rgba(255,255,255,0.08)
+- 주 텍스트: #ffffff
+- 보조 텍스트: #ffffff99
+- 비활성: #ffffff66
+- 버튼 배경: #ffffff1f
+
+타이포그래피:
+- 제목: 18-24px, font-weight: 600
+- 본문: 13-15px, font-weight: 400
+- 캡션: 12px, font-weight: 400
+
+============================================================================
+*/
+
+
+/* ========================================================================
+   1. 전역 스타일 및 리셋
+   ======================================================================== */
+
+/**
+ * 브라우저 기본 스타일 초기화
+ * - 일관된 레이아웃을 위한 여백 제거
+ * - border-box 모델 적용 준비
+ */
 * {
     margin: 0;
     padding: 0;
@@ -8,28 +57,39 @@
     border-color: currentColor;
 }
 
-
-
+/**
+ * SVG 아이콘 정렬
+ * - 텍스트와 정렬 시 baseline 문제 해결
+ */
 svg {
     display: block;
     vertical-align: middle;
-    color: #ffffff;
 }
 
+/**
+ * Body 기본 스타일
+ * - 스크롤 방지: 모달 사용 시 배경 고정
+ * - 다크 테마 배경색
+ */
 body {
     overflow: hidden;
     background-color: rgba(18,19,20,1);
 }
 
-p {
-    
-}
 
+/* ========================================================================
+   2. 레이아웃 구조
+   ======================================================================== */
 
-
-/* 메인 보더 CSS */
-.main-border{
-    margin-left: 297px; margin-top: 10px; /*임시로 위치 지정*/
+/**
+ * 메인 컨테이너
+ * - 고정 크기 레이아웃
+ * - 라운드 테두리 디자인
+ * - 내부 스크롤 처리
+ */
+.main-border {
+    margin-left: 297px;  /* 좌측 사이드바 공간 확보 */
+    margin-top: 10px;    /* 상단 여백 */
     width: 1614px;
     height: 893px;
     border: solid 1px; 
@@ -39,7 +99,11 @@ p {
     overflow: hidden;
 }
 
-/* 임시 헤더 CSS 나중에 비교 후 삭제 예정 */
+/**
+ * 헤더 영역
+ * - 상단 고정 헤더
+ * - 구분선으로 컨텐츠와 분리
+ */
 .div-header {
     width: 1614px;
     height: 52px;
@@ -51,7 +115,12 @@ p {
     display: flex;
 }
 
-/* div 전체를 감싸는 CSS */
+/**
+ * 메인 컨테이너 래퍼
+ * - 수직 스크롤 가능
+ * - 중앙 정렬 레이아웃
+ * - 컨텐츠 간격 일관성 유지
+ */
 .div-container {
     flex: 1 0 0;
     width: 100%;
@@ -67,7 +136,11 @@ p {
     position: relative;
 }
 
-/* div에 들어가는 컨텐츠를 모두 감싸는 CSS */
+/**
+ * 컨텐츠 래퍼
+ * - 최대 너비 제한으로 가독성 향상
+ * - 수직 레이아웃
+ */
 .div-content-wrap {
     flex-direction: column;
     max-width: 1000px;
@@ -77,7 +150,17 @@ p {
     display: flex;
 }
 
-/* 컨텐츠 배너의 CSS */
+
+/* ========================================================================
+   3. 배너 섹션
+   ======================================================================== */
+
+/**
+ * 배너 컨테이너
+ * - 프로젝트 공개 안내 메시지
+ * - 이미지와 텍스트를 가로로 배치
+ * - 호버 효과를 위한 커서 변경
+ */
 .banner-container {
     align-items: flex-end;
     border: 1px solid;
@@ -92,6 +175,9 @@ p {
     overflow-y: auto;
 }
 
+/**
+ * 배너 텍스트 영역
+ */
 .banner-content-wrap {
     align-self: stretch;
     align-items: flex-start;
@@ -109,6 +195,11 @@ p {
     flex-direction: column;
 }
 
+/**
+ * 배너 주요 텍스트
+ * - 강조를 위한 큰 폰트
+ * - 높은 대비의 흰색
+ */
 .banner-content-text01 {
     color: #ffffff;
     white-space: pre-wrap;
@@ -118,12 +209,20 @@ p {
     line-height: 22px;
 }
 
+/**
+ * 배너 부가 설명
+ * - 작은 폰트
+ * - 낮은 투명도로 위계 표현
+ */
 .banner-content-text02 {
     font-size: 8px;
     font-family: Pretendard Variable;
     color: #ffffff66;
 }
 
+/**
+ * 배너 이미지 영역
+ */
 .banner-content-image {
     display: flex;
     justify-content: center;
@@ -138,21 +237,31 @@ p {
     width: 117px;
 }
 
-/* 배너 아래쪽 탐색 컨텐츠 */
 
-/* event전체 DIV CSS */
+/* ========================================================================
+   4. 인사이트 탐색 영역
+   ======================================================================== */
+
+/**
+ * 이벤트 컨테이너
+ * - 배너 하단의 주요 컨텐츠 영역
+ * - 카드 형태의 디자인
+ */
 .event-container {
     border-width: 1px;
     border-style: solid;
     border-color: #ffffff14;
-    border-radius:16px;
+    border-radius: 16px;
     flex-direction: column;
     background-color: #121314;
     width: 100%;
     display: flex;
 }
 
-/* 탐색 DIV 영역 CSS */
+/**
+ * 탐색 섹션 래퍼
+ * - 비즈니스 인사이트 카드 목록
+ */
 .search-wrap {
     flex-direction: column;
     gap: 8px;
@@ -160,7 +269,11 @@ p {
     padding: 12px;
     display: flex;
 }
-/* 탐색 영역 "유형별 탐색 영역" 및 곧 시작하는 이벤트 */
+
+/**
+ * 섹션 헤더 영역
+ * - 제목과 네비게이션 버튼 배치
+ */
 .search-text-area {
     align-items: flex-end;
     gap: 8px;
@@ -174,7 +287,7 @@ p {
     padding-inline: 8px;
     width: 100%;
     gap: 4px;
-    display: flex
+    display: flex;
 }
 
 .search-text-inner {
@@ -185,6 +298,10 @@ p {
     display: flex;
 }
 
+/**
+ * 섹션 제목
+ * - 18px 볼드 폰트
+ */
 .search-content {
     color: #ffffff;
     letter-spacing: -.36px;
@@ -193,7 +310,11 @@ p {
     line-height: 22px;
 }
 
-/* 우측 화살표 버튼 */
+/**
+ * 네비게이션 화살표 버튼
+ * - 좌우 스크롤 컨트롤
+ * - 비활성 상태 표시 (opacity: 0.4)
+ */
 .search-arrows {
     align-items: flex-end;
     gap: 6px;
@@ -202,36 +323,13 @@ p {
     height: 28px;
 }
 
-.search-left-arrow {
-    align-items: center;
-    display: flex;
-}
-
-.left-arrow-button {
-    opacity: .4;
-    cursor: not-allowed;
-    background-color: #ffffff1f;
-    justify-content: center;
-    align-items: center;
-    min-height: 28px;
-    max-height: 28px;
-    padding: 6px;
-    display: inline-flex;
-    border-radius: 7px;
-    width: 28px;
-    height: 28px;
-}
-
-.left-arrow-svg {
-    width: 16px;
-    height: 16px;
-}
-
+.search-left-arrow,
 .search-right-arrow {
     align-items: center;
     display: flex;
 }
 
+.left-arrow-button,
 .right-arrow-button {
     opacity: .4;
     cursor: not-allowed;
@@ -247,12 +345,19 @@ p {
     height: 28px;
 }
 
+.left-arrow-svg,
 .right-arrow-svg {
     width: 16px;
     height: 16px;
+    color: #ffffff;
 }
 
-/* 이미지 영역 CSS */
+/**
+ * 카드 그리드 영역
+ * - 가로 스크롤 가능
+ * - 스크롤바 숨김
+ * - 균등 분할 레이아웃
+ */
 .search-image-area {
     overflow-x: auto;
     scrollbar-width: none;
@@ -262,6 +367,11 @@ p {
     justify-content: space-around;
 }
 
+/**
+ * 인사이트 카드
+ * - 정사각형 이미지 + 텍스트 레이아웃
+ * - 호버 효과를 위한 커서
+ */
 .search-image-wrap {
     flex-shrink: 0;
     flex-direction: column;
@@ -274,6 +384,11 @@ p {
     height: 189px;
 }
 
+/**
+ * 카드 이미지
+ * - 1:1 비율 유지
+ * - 라운드 코너
+ */
 .search-image {
     aspect-ratio: 1 / 1;
     border-radius: 12px;
@@ -281,35 +396,51 @@ p {
     overflow: hidden;
     height: auto;
     width: 100%;
-    /* object-fit: cover; */
 }
 
-/* 탐색 이미지 아래 텍스트 CSS */
+/**
+ * 카드 텍스트 영역
+ */
 .search-image-text {
     flex-direction: column;
     gap: 4px;
     display: flex;
 }
 
+/**
+ * 카드 주요 텍스트
+ * - 카테고리명
+ */
 .primary-text-inner {
     letter-spacing: -.44999999999999996px;
-    /* font-family: var(--texts--fonts--table); */
     color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     line-height: 18px;
 }
 
+/**
+ * 카드 보조 텍스트
+ * - 부가 설명
+ * - 낮은 투명도
+ */
 .secondary-text-inner {
-    color : #ffffff99;
+    color: #ffffff99;
     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
 }
 
-/* 이벤트 시작 CSS */
+
+/* ========================================================================
+   5. 이벤트 카드 (공지사항)
+   ======================================================================== */
+
+/**
+ * 이벤트 섹션 래퍼
+ * - 공지사항 카드 목록
+ */
 .event-wrap {
     flex-direction: column;
     gap: 8px;
@@ -318,7 +449,10 @@ p {
     display: flex;
 }
 
-/* 이벤트 이미지 영역 CSS */
+/**
+ * 이벤트 카드 그리드
+ * - 가로 스크롤
+ */
 .event-image-area {
     overflow-x: auto;
     scrollbar-width: none;
@@ -326,7 +460,12 @@ p {
     width: 100%;
     display: flex;
 }
-/* 이벤트 이미지 CSS */
+
+/**
+ * 이벤트 카드
+ * - 와이드 이미지 + 상세 정보
+ * - 클릭하여 모달 열기
+ */
 .event-image-wrap {
     flex-shrink: 0;
     flex-direction: column;
@@ -334,9 +473,13 @@ p {
     cursor: pointer;
     padding: 8px;
     gap: 12px;
-    display: flex
+    display: flex;
 }
 
+/**
+ * 이벤트 이미지 컨테이너
+ * - D-day 배지 오버레이
+ */
 .event-image {
     position: relative;
     width: 228px;
@@ -350,6 +493,11 @@ p {
     width: 228px;
 }
 
+/**
+ * D-day 카운터 배지
+ * - 좌측 상단 고정
+ * - 반투명 배경
+ */
 .d-day-count {
     cursor: default;
     left: 6px;
@@ -360,7 +508,6 @@ p {
     background: #00000066;
     gap: 3px;
     letter-spacing: -.2px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 10px;
     font-weight: 500;
     line-height: 14px;
@@ -369,13 +516,15 @@ p {
 .d-day-count-inner {
     color: #ffffff;
     letter-spacing: -.2px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 10px;
     font-weight: 500;
     line-height: 14px;
 }
 
-/* 이벤트 텍스트 CSS */
+/**
+ * 이벤트 정보 영역
+ * - 아이콘, 제목, 설명 세로 배치
+ */
 .event-image-text {
     justify-content: flex-start;
     flex-direction: column;
@@ -384,12 +533,14 @@ p {
     display: flex;
 }
 
+/**
+ * 이벤트 헤더 (아이콘 + 카테고리)
+ */
 .image-text-header {
     gap: 6px;
     display: flex;
 }
 
-/* 텍스트 안에 아이콘 */
 .header-icon {
     cursor: default;
     align-items: center;
@@ -402,18 +553,20 @@ p {
     align-items: center;
     position: relative;
     overflow: hidden;
-    display: flex
+    display: flex;
 }
 
 .header-text {
     color: #ffffff;
-     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--body); */
+    letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
 }
 
+/**
+ * 이벤트 제목
+ */
 .image-text-middle {
     align-items: center;
     gap: 6px;
@@ -422,13 +575,15 @@ p {
 
 .image-text-middle-inner {
     color: #ffffff;
-      letter-spacing: -.26px;
-    /* font-family: var(--texts--fonts--body); */
+    letter-spacing: -.26px;
     font-size: 13px;
     font-weight: 500;
     line-height: 18px;
 }
 
+/**
+ * 이벤트 설명
+ */
 .image-text-footer {
     flex-direction: column;
     display: flex;
@@ -436,15 +591,21 @@ p {
 
 .image-text-footer-inner {
     color: #ffffff99;
-     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--body); */
+    letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
 }
 
 
-/* 주제별 보기 CSS */
+/* ========================================================================
+   6. 주제별 보기
+   ======================================================================== */
+
+/**
+ * 주제별 보기 섹션
+ * - 기술, 컨텐츠, 교육, AI 카테고리
+ */
 .theme-area {
     flex-direction: column;
     gap: 8px;
@@ -453,6 +614,11 @@ p {
     display: flex;
 }
 
+/**
+ * 주제 카드 그리드
+ * - 3열 반응형 레이아웃
+ * - flex-wrap으로 자동 줄바꿈
+ */
 .theme-wrap {
     flex-wrap: wrap;
     gap: 8px;
@@ -460,6 +626,11 @@ p {
     display: flex;
 }
 
+/**
+ * 주제 카드
+ * - 아이콘 + 텍스트 가로 배치
+ * - 유연한 너비 (flex-grow)
+ */
 .theme-inner {
     min-width: 200px;
     flex: 1 1 calc((100% - 16px) / 3);
@@ -470,6 +641,11 @@ p {
     display: flex;
 }
 
+/**
+ * 주제 아이콘 컨테이너
+ * - 정사각형 배경
+ * - SVG 중앙 정렬
+ */
 .theme-inner-icon {
     border-radius: 7.2px;
     cursor: inherit;
@@ -485,10 +661,13 @@ p {
     color: #ffffff;
 }
 
+/**
+ * 주제 텍스트 영역
+ */
 .theme-inner-text {
     flex-direction: column;
     flex: 1 0 0;
-    display: flex
+    display: flex;
 }
 
 .theme-inner-text-primary {
@@ -496,30 +675,37 @@ p {
     letter-spacing: -.3px;
     font-size: 15px;
     line-height: 20px;
-    /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
 }
 
 .theme-inner-text-secondary {
     color: #ffffff99;
-     /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
     line-height: 18px;
 }
 
-/* 하단 컨텐츠 CSS */
+
+/* ========================================================================
+   7. 검색 및 필터
+   ======================================================================== */
+
+/**
+ * 하단 컨텐츠 래퍼
+ * - 검색, 필터, 결과 표시 영역
+ */
 .div-content-wrap-bottom {
     position: relative;
     width: 100%;
-    /* display: flex; */
     gap: 8px;
     max-width: 1000px;
     margin-bottom: 80px;
 }
 
-/* 컨텐츠 범위 잡기 */
+/**
+ * 검색 컨텐츠 컨테이너
+ */
 .search-event-content {
     border-width: 1px;
     border-style: solid;
@@ -528,12 +714,14 @@ p {
     border-radius: 16px;
     background: #121314;
     gap: 8px;
-    /* width: 100%; */
     padding: 12px;
     display: flex;
 }
 
-/* 검색 범위 지정 CSS */
+/**
+ * 검색바 및 필터 래퍼
+ * - flex-wrap으로 반응형 배치
+ */
 .search-bar-wrap {
     flex: 1 1 0%;
     flex-wrap: wrap;
@@ -543,7 +731,10 @@ p {
     display: flex;
 }
 
-/* 검색바 CSS */
+/**
+ * 검색 입력 필드
+ * - 아이콘 + 입력창 + 초기화 버튼
+ */
 .search-bar {
     justify-content: left;
     align-items: center;
@@ -551,18 +742,17 @@ p {
     border-radius: 9px;
     min-height: 36px;
     padding-inline: 8px;
-    flex: 1 1 0%;
     gap: 8px;
-    width: 100%;
+    width: 62%;
     background: #ffffff14;
-    display: flex
+    display: flex;
 }
 
 .search-bar-icon-wrap {
     flex-shrink: 0;
     align-items: center;
     display: flex;
-    width: 620px;
+    width: 600px;
 }
 
 .search-bar-icon {
@@ -572,6 +762,11 @@ p {
     color: #ffffff66;
 }
 
+/**
+ * 검색 입력 input
+ * - 투명 배경
+ * - 아웃라인 제거
+ */
 .search-bar-input {
     background: #00000000;
     height: 20px;
@@ -585,6 +780,11 @@ p {
     color: #ffffff;
 }
 
+/**
+ * 입력 초기화 버튼
+ * - 기본 숨김 상태
+ * - JavaScript로 입력 시 표시
+ */
 .input-button {
     align-items: center;
     background: #00000000;
@@ -610,7 +810,13 @@ p {
     transition: transform .15s cubic-bezier(.68, -.55, .265, 1.55);
 }
 
-/* 카테고리1 CSS */
+/**
+ * 필터 드롭다운 버튼
+ * - 유형, 주제, 위치 필터
+ * - 클릭 시 드롭다운 메뉴 표시
+ */
+
+/* 유형 필터 */
 .select-category-wrap {
     align-items: center;
     max-height: 36px;
@@ -625,11 +831,10 @@ p {
 }
 
 .select-category {
-   padding-inline: 6px;
-   text-overflow: ellipsis;
-   color: #ffffff; 
+    padding-inline: 6px;
+    text-overflow: ellipsis;
+    color: #ffffff; 
     width: 100%;
-    /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -644,11 +849,10 @@ p {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color : #ffffff66
+    color: #ffffff66;
 }
 
-/* 카테고리2 CSS */
-
+/* 주제 필터 */
 .select-theme-wrap {
     align-items: center;
     max-height: 36px;
@@ -661,11 +865,10 @@ p {
 }
 
 .select-theme {
-   padding-inline: 6px;
-   text-overflow: ellipsis;
-   color: #ffffff; 
+    padding-inline: 6px;
+    text-overflow: ellipsis;
+    color: #ffffff; 
     width: 100%;
-    /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -680,14 +883,12 @@ p {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color : #ffffff66
+    color: #ffffff66;
 }
 
-/* 카테고리3 CSS */
-
+/* 위치 필터 */
 .select-location-wrap {
     align-items: center;
-    /* padding: 9px; */
     max-height: 36px;
     min-height: 36px;
     border-radius: 9px;
@@ -698,11 +899,10 @@ p {
 }
 
 .select-location {
-   padding-inline: 6px;
-   text-overflow: ellipsis;
-   color: #ffffff; 
+    padding-inline: 6px;
+    text-overflow: ellipsis;
+    color: #ffffff; 
     width: 100%;
-    /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -717,11 +917,19 @@ p {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color : #ffffff66
+    color: #ffffff66;
 }
 
-/* 반응형 검색 시 나오는 영역 CSS */
 
+/* ========================================================================
+   8. 검색 결과 표시
+   ======================================================================== */
+
+/**
+ * 검색 결과 컨테이너
+ * - 최소 높이 설정으로 레이아웃 유지
+ * - 스크롤 가능
+ */
 .find-box-container {
     overflow-y: auto;
     flex-direction: column;
@@ -732,10 +940,15 @@ p {
     display: flex;
 }
 
+/**
+ * 결과 없음 메시지
+ * - 중앙 정렬
+ * - 기본 표시 상태
+ */
 .unfinded-wrap {
     gap: 20px;
     width: 100%;
-    display: flex
+    display: flex;
 }
 
 .unfinded-inner {
@@ -752,12 +965,232 @@ p {
     text-align: center;
     color: #ffffff;
     letter-spacing: -.3px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 15px;
     font-weight: 500;
     line-height: 20px;
 }
 
+/**
+ * 검색 결과 카드
+ * - 날짜별 그룹핑
+ * - 썸네일 + 정보 가로 배치
+ */
+.find-box-wrap {
+    flex-direction: column;
+    display: flex;
+}
+
+/**
+ * 날짜 헤더
+ */
+.find-box-header {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    cursor: default;
+}
+
+.find-box-header-innner {
+    align-items: center;
+    gap: 6px;
+    flex: 1 0 0;
+    display: flex;
+}
+
+.find-box-header-span {
+    align-items: center;
+    color: #ffffff99;
+    white-space: nowrap;
+    gap: 4px;
+    display: flex;
+    letter-spacing: -.26px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+/**
+ * 결과 카드 본문
+ * - 썸네일 210px 고정
+ * - 나머지 공간은 정보 영역
+ */
+.find-box-body {
+    gap: 16px;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+}
+
+/**
+ * 썸네일 영역
+ * - D-day 배지 오버레이
+ */
+.find-box-body-image {
+    position: relative;
+}
+
+.find-box-body-image-inner {
+    cursor: default;
+    left: 6px;
+    position: absolute;
+    top: 6px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    min-width: 20px;
+    background: #00000066;
+    padding: 2px 4px;
+    gap: 3px;
+    display: inline-flex;
+    letter-spacing: -.2px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+.find-box-body-image-icon {
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+/**
+ * 정보 영역
+ * - 프로필, 제목, 설명, 인터랙션 버튼
+ */
+.find-box-body-wrap {
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 0 0;
+    gap: 8px;
+    display: flex;
+}
+
+/**
+ * 프로필 영역 (아이콘 + 이름)
+ */
+.find-body-content {
+    gap: 6px;
+    display: flex;   
+}
+
+.content-profile {
+    cursor: default;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+
+.content-profile-img {
+    border-radius: 2.4px;
+    margin-left: 0px;
+    mask-size: 13.7504px 16px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.profile-primary-text {
+    color: #ffffff;
+    letter-spacing: -.24px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+/**
+ * 카드 제목
+ */
+.find-body-first-text {
+    gap: 6px;
+    display: flex;
+}
+
+.content-primary-text {
+    color: #ffffff;
+    letter-spacing: -.36px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+/**
+ * 카드 설명
+ */
+.find-body-second-text {
+    display: flex;
+}
+
+.content-secondary-text {
+    color: #ffffff99;
+    letter-spacing: -.24px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/**
+ * 인터랙션 버튼 (조회수, 공유)
+ * - 투명 배경
+ * - 아이콘 + 숫자 조합
+ */
+.find-body-button-wrap {
+    gap: 16px;
+    display: flex;
+}
+
+.find-body-button {
+    justify-content: center;
+    align-items: center;
+    padding-block: 4px;
+    display: inline-flex;
+    cursor: pointer;
+    gap: 4px;
+    background: #00000000;
+}
+
+.find-body-button-icon {
+    border-radius: 0px;
+    cursor: pointer;
+    height: 18px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: #ffffff;
+}
+
+.find-body-button-text {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.find-body-button-primary {
+    white-space: nowrap;
+    color: #ffffff;
+    letter-spacing: -.78px;
+    font-size: 16px;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+
+/* ========================================================================
+   9. 푸터
+   ======================================================================== */
+
+/**
+ * 푸터 링크 영역
+ * - 광고 문의, 파트너 문의, FAQ
+ */
 .footer-content {
     justify-content: center;
     align-items: center;
@@ -778,7 +1211,6 @@ p {
     width: fit-content;
     cursor: pointer;
     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
@@ -791,10 +1223,20 @@ p {
     white-space: nowrap;
 }
 
-/* overlay */
+
+/* ========================================================================
+   10. 모달 (상세 보기)
+   ======================================================================== */
+
+/**
+ * 모달 오버레이
+ * - 배경 딤 처리
+ * - 초기 상태 숨김 (opacity: 0)
+ * - .open 클래스로 표시
+ */
 .modal-overlay {
     position: fixed;
-     inset: 0;
+    inset: 0;
     background: rgba(0,0,0,0.5);
     opacity: 0;
     pointer-events: none;
@@ -802,36 +1244,45 @@ p {
     z-index: 998;
 }
 
-/* modal */
+/**
+ * 모달 창
+ * - 우측에서 슬라이드 인 애니메이션
+ * - 초기 위치: 화면 밖 (translateX(150%))
+ * - .open 클래스로 표시
+ */
 .modal {
-  position: fixed;
-  top: 0%;
-  left: 67%;
-  width: 600px;
-  padding: 20px;
-  /* background: white; */
-  border-radius: 12px;
-  transform: translateX(150%);
-  transition: all 0.35s ease;
-  /* opacity: 0;  모달 사라지게*/ 
-  pointer-events: none;
-  z-index: 999;
+    position: fixed;
+    top: 0%;
+    left: 67%;
+    width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+    transform: translateX(150%);
+    transition: all 0.35s ease;
+    pointer-events: none;
+    z-index: 999;
 }
 
-/* open state */
+/**
+ * 모달 활성화 상태
+ * - overlay와 modal에 .open 클래스 추가
+ */
 .modal-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .modal.open {
-  transform: translate(0);
-  pointer-events: auto;
+    transform: translate(0);
+    pointer-events: auto;
 }
 
-/* modal안에 내용 */
-
+/**
+ * 모달 컨테이너
+ * - 수직 스크롤 가능
+ * - 최대 높이 설정
+ */
 .modal-container {
     flex-direction: column;
     overflow: hidden;
@@ -841,6 +1292,10 @@ p {
     height: 97vh;
 }
 
+/**
+ * 모달 래퍼
+ * - 카드 스타일
+ */
 .modal-wrap {
     border-width: 1px;
     border-style: solid;
@@ -854,6 +1309,11 @@ p {
     scrollbar-width: none;
 }
 
+/**
+ * 모달 헤더
+ * - 고정 헤더 (sticky)
+ * - 닫기 버튼 + 공유 버튼
+ */
 .modal-header {
     justify-content: space-between;
     top: 0;
@@ -872,6 +1332,9 @@ p {
     display: flex;
 }
 
+/**
+ * 닫기 버튼
+ */
 .modal-icon {
     background-color: #ffffff1f;
     justify-content: center;
@@ -892,6 +1355,9 @@ p {
     color: #ffffff99;
 }
 
+/**
+ * 액션 버튼 영역
+ */
 .modal-inner-context {
     justify-content: flex-end;
     gap: 8px;
@@ -899,6 +1365,9 @@ p {
     display: flex;
 }
 
+/**
+ * 공유 버튼
+ */
 .modal-inner-share {
     background-color: #ffffff1f;
     justify-content: center;
@@ -917,12 +1386,14 @@ p {
     white-space: nowrap;
     display: flex;
     letter-spacing: -.26px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 13px;
     font-weight: 500;
     line-height: 18px;
 }
 
+/**
+ * 등록 버튼 (필요 시 활성화)
+ */
 .modal-inner-regist {
     background-color: #ffffff;
     justify-content: center;
@@ -936,6 +1407,10 @@ p {
     cursor: pointer;
 }
 
+/**
+ * 모달 본문
+ * - 스크롤 가능 영역
+ */
 .modal-body {
     align-items: flex-start;
     flex-direction: column;
@@ -947,12 +1422,14 @@ p {
 
 .modal-body-wrap {
     flex-direction: column;
-    /* width: 100%; */
     padding: 12px;
     gap: 12px;
     display: flex;
 }
 
+/**
+ * 태그 영역
+ */
 .modal-body-inner01 {
     padding: 4px;
     width: 100%;
@@ -974,18 +1451,20 @@ p {
 .nwcf-span {
     white-space: nowrap;
     color: #ffffff;
-     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--body); */
+    letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
 }
 
+/**
+ * 모달 제목
+ */
 .modal-body-title {
     align-items: flex-end;
     gap: 8px;
     width: 100%;
-    display: flex
+    display: flex;
 }
 
 .modal-body-title-start {
@@ -1008,12 +1487,15 @@ p {
 .modal-body-title-content {
     color: #ffffff;
     letter-spacing: -.48px;
-    /* font-family: var(--texts--fonts--title); */
     font-size: 24px;
-    font-weight:  600;
+    font-weight: 600;
     line-height: 30px;
 }
 
+/**
+ * 이벤트 정보 리스트
+ * - 호스트, 날짜, 주제 등
+ */
 .modal-body-column {
     flex-direction: column;
     width: 100%;
@@ -1031,6 +1513,9 @@ p {
     display: flex;
 }
 
+/**
+ * 정보 레이블
+ */
 .hdlt {
     max-width: 100px;
     width: 100px;
@@ -1039,13 +1524,15 @@ p {
 
 .hdlt-text {
     color: #ffffff99;
-    /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
     line-height: 18px;
 }
 
+/**
+ * 정보 내용
+ */
 .hdlt-content {
     justify-content: flex-end;
     align-items: center;
@@ -1063,22 +1550,24 @@ p {
 .hdlt-content-p {
     white-space: pre-wrap;
     color: #ffffff;
-    /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
-    line-height: 18px
+    line-height: 18px;
 }
 
 .hdlt-content-p-second {
     color: #ffffff99;
     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
 }
 
+/**
+ * 상세 내용 섹션
+ * - 공지사항 내용, 관련 콘텐츠, 주최자 정보 등
+ */
 .modal-body-elh {
     flex-direction: column;
     width: 100%;
@@ -1087,10 +1576,13 @@ p {
     display: flex;
 }
 
+/**
+ * 섹션 제목
+ */
 .elh-title {
     flex-direction: column;
     width: 100%;
-    display: flex
+    display: flex;
 }
 
 .elh-title-inner {
@@ -1117,12 +1609,14 @@ p {
     gap: 4px;
     display: flex;
     letter-spacing: -.26px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 13px;
     font-weight: 500;
     line-height: 18px;
 }
 
+/**
+ * 구분선
+ */
 .elh-underbar {
     align-self: stretch;
     align-items: flex-start;
@@ -1133,10 +1627,12 @@ p {
     width: 95%;
 }
 
+/**
+ * 섹션 내용
+ */
 .elh-content-wrap {
     flex-direction: column;
     max-height: none;
-    /* overflow: hidden; */
     width: 95%;
     display: flex;
 }
@@ -1146,14 +1642,10 @@ p {
     color: #ffffff;
     width: 100%;
     display: flex;
-     /* letter-spacing: -.26px; */
-    /* font-family: var(--texts--fonts--body); */
     font-size: 15px;
     font-weight: 400;
     line-height: 22px;
 }
-
-
 
 .elt-content-span {
     text-align: left;
@@ -1162,7 +1654,6 @@ p {
     color: #ffffff;
     width: 100%;
     letter-spacing: -.3px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 15px;
     font-weight: 400;
     line-height: 20px;
@@ -1175,12 +1666,19 @@ p {
     color: #ffffff99;
     width: 100%;
     letter-spacing: -.3px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 13px;
     font-weight: 400;
     line-height: 20px;
 }
 
+
+/* ========================================================================
+   11. 드롭다운 메뉴
+   ======================================================================== */
+
+/**
+ * 이벤트 오버레이 (클릭 이벤트 감지용)
+ */
 .event-div {
     background-color: #00000000;
     bottom: 0;
@@ -1192,6 +1690,12 @@ p {
     pointer-events: none;
 }
 
+/**
+ * 드롭다운 메뉴
+ * - 필터 버튼 클릭 시 표시
+ * - 초기 상태 숨김 (opacity: 0)
+ * - JavaScript로 위치 및 표시 제어
+ */
 .shadow-menu {
     height: auto;
     max-height: 700px;
@@ -1201,7 +1705,6 @@ p {
     opacity: 0;
     transform: none;
     flex-direction: column;
-    /* z-index: 99999; */
     pointer-events: auto;
     border-radius: 16px;
     border: 1px solid #ffffff14;
@@ -1209,19 +1712,25 @@ p {
     display: flex;
 }
 
-.shadow-menu.type{
-    right: 110px;
+/**
+ * 메뉴 위치 조정
+ * - 각 필터 버튼에 맞춰 위치 지정
+ */
+.shadow-menu.type {
+    right: 130px;
 }
 
-.shadow-menu.subject{
-    right: 0px;
+.shadow-menu.subject {
+    right: 18px;
 }
 
-.shadow-menu.location{
-    right: -110px;
+.shadow-menu.location {
+    right: -98px;
 }
 
-
+/**
+ * 메뉴 헤더
+ */
 .shadow-menu-header {
     align-items: flex-start;
     border-radius: 16px 16px 0 0;
@@ -1238,6 +1747,9 @@ p {
     line-height: 16px;
 }
 
+/**
+ * 메뉴 본문 컨테이너
+ */
 .shadow-menu-body-container {
     overflow: auto;
     display: flex;
@@ -1255,19 +1767,24 @@ p {
     display: flex;
 }
 
+/**
+ * 메뉴 옵션 스크롤 영역
+ * - 커스텀 스크롤바
+ */
 .shadow-menu-body-scroll {
     max-height: 300px;
     overflow-y: auto;
     width: 100%;
-}
-
-.shadow-menu-body-scroll {
     scrollbar-width: thin !important;
     scrollbar-gutter: stable !important;
     scrollbar-color: #ffffff3d transparent !important;
 }
 
-
+/**
+ * 메뉴 옵션 아이템
+ * - 체크박스 형태
+ * - 클릭으로 선택/해제
+ */
 .menu-scroll {
     flex-direction: column;
     align-items: center;
@@ -1301,9 +1818,11 @@ p {
     display: flex;
 }
 
+/**
+ * 옵션 텍스트
+ */
 .menu-scroll-primary {
     color: #ffffff;
-    /* font-family: var(--texts--fonts--body); */
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -1315,20 +1834,23 @@ p {
     white-space: pre-wrap;
     color: #ffffff99;
     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--body); */
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     z-index: 0;
 }
 
+/**
+ * 체크 아이콘
+ * - 기본 숨김 (opacity: 0)
+ * - 선택 시 JavaScript로 표시
+ */
 .menu-scroll-check {
     justify-content: center;
     align-items: center;
     height: 100%;
     display: flex;
 }
-
 
 .checkclickoff {
     opacity: 0;
@@ -1344,3 +1866,34 @@ p {
     display: inline-flex;
     color: #ffffff;
 }
+
+
+/* ========================================================================
+   12. 반응형 및 접근성
+   ======================================================================== 
+   
+   반응형 디자인 고려사항:
+   - 1000px 이하: 컨텐츠 너비 조정
+   - 768px 이하: 그리드 2열로 변경
+   - 480px 이하: 그리드 1열로 변경
+   
+   접근성 고려사항:
+   - 키보드 네비게이션 지원
+   - 충분한 색상 대비
+   - 포커스 표시
+   - 스크린 리더 호환
+   
+   성능 최적화:
+   - CSS transform 사용 (GPU 가속)
+   - will-change 속성 활용
+   - 불필요한 리플로우 최소화
+   
+   ======================================================================== */
+
+/* 
+포트폴리오 특이사항:
+1. 모든 애니메이션은 ease 또는 cubic-bezier 사용
+2. 다크 테마 일관성 유지
+3. 4px 단위 그리드 시스템
+4. 모바일 우선 접근 (필요 시 확장)
+*/

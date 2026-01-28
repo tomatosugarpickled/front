@@ -1,3 +1,4 @@
+<!-- 메인 페이지 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -288,13 +289,28 @@
                     <div class="header-text">
                         <p class="header-text-content">홈</p>
                     </div>
+                    <!-- 알림(모달) 부분 새로 따올거임 -->
+                     <div class="login-icon2-modal">
+                        <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24">
+                                <use href="#bell-outline"></use>
+                        </svg>
+                    </div>
+                     <!-- 로그인 후 -->
                     <div class="login-icon2">
+                        <div class="park">
+                            <div class="park-in">
+                                <img src="../../static/image/park.webp" class="park-img">
+                            </div>
+                        </div>
+                    </div>
+                     <!-- 로그인 전 -->
+                    <!-- <div class="login-icon2">
                         <a href="login">
                             <button class="login2">
                                 <span class="login2-text">로그인</span>
                             </button>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="center">
@@ -313,9 +329,480 @@
                     </div>
                     <img src="https://image.rocketpunch.com/ad_logo/2025/11/20/932ee246-55b1-438d-9ef2-cacf8d31a8ce.png" class="banner-img-small">
                 </div>
+                <div class="feed">
+                    <div class="feed-in">
+                        <div class="dashboard">
+                            <div class="dashboard-in">
+                                <div class="dashboard-part">
+                                    <div class="dashboard-part-in">
+                                        <div class="name">
+                                            <div class="name-icon1">
+                                                <a href="" style="height: 36px;">
+                                                    <div class="name-icon1-in">
+                                                        <div class="name-icon1-in-in">
+                                                            <img src="../../static/image/default.webp" class="name-img">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="name-text">
+                                                <div class="name-text-content">
+                                                    <div class="name-part">
+                                                        <div class="name-part-in">
+                                                            <div class="name-part-in-in">
+                                                                <a href="/@asap-express">
+                                                                    <p class="name-real">
+                                                                        조준호
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- sw개발.미들 경영/운영.c레벨 등등 -->
+                                                    <div class="career">
+                                                        <p class="p">서비스 · 신입</p>
+                                                        <p class="p">3일 전</p>
+                                                    </div>
+                                                </div>
+                                                <div class="three-dot">
+                                                    <button class="three-dot-button">
+                                                        <div class="three-dot-button-content">
+                                                            <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="18" role="img" width="18"><use href="#more-menu-vertical-outline"></use></svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-in">
+                                                <div class="content-in-in">
+                                                    <div class="content-text">
+                                                        <span class="span">퍼블렉시티 검색으로 알게되서 가입했는데, 역시 테크가 주(主)인가보네요.</span>
+                                                        <br>
+                                                        <span class="span">저는 한국에서 여행업 종사를 준비 중인데, 혹시 여행업계(여행사, 가이드 등) 종사자분들 계신가요?</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 아이콘들 (메세지 공유 등) -->
+                                        <!-- <div class="icons">
+                                            <div class="icons-in">
+                                                <div class="icons-parts">
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="dashboard-part">
+                                    <div class="dashboard-part-in">
+                                        <div class="name">
+                                            <div class="name-icon1">
+                                                <a href="" style="height: 36px;">
+                                                    <div class="name-icon1-in">
+                                                        <div class="name-icon1-in-in">
+                                                            <img src="../../static/image/default.webp" class="name-img">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="name-text">
+                                                <div class="name-text-content">
+                                                    <div class="name-part">
+                                                        <div class="name-part-in">
+                                                            <div class="name-part-in-in">
+                                                                <a href="/@asap-express">
+                                                                    <p class="name-real">
+                                                                        조준호
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- sw개발.미들 경영/운영.c레벨 등등 -->
+                                                    <div class="career">
+                                                        <p class="p">서비스 · 신입</p>
+                                                        <p class="p">3일 전</p>
+                                                    </div>
+                                                </div>
+                                                <div class="three-dot">
+                                                    <button class="three-dot-button">
+                                                        <div class="three-dot-button-content">
+                                                            <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="18" role="img" width="18"><use href="#more-menu-vertical-outline"></use></svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-in">
+                                                <div class="content-in-in">
+                                                    <div class="content-text">
+                                                        <span class="span">퍼블렉시티 검색으로 알게되서 가입했는데, 역시 테크가 주(主)인가보네요.</span>
+                                                        <br>
+                                                        <span class="span">저는 한국에서 여행업 종사를 준비 중인데, 혹시 여행업계(여행사, 가이드 등) 종사자분들 계신가요?</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 아이콘들 (메세지 공유 등) -->
+                                        <!-- <div class="icons">
+                                            <div class="icons-in">
+                                                <div class="icons-parts">
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="dashboard-part">
+                                    <div class="dashboard-part-in">
+                                        <div class="name">
+                                            <div class="name-icon1">
+                                                <a href="" style="height: 36px;">
+                                                    <div class="name-icon1-in">
+                                                        <div class="name-icon1-in-in">
+                                                            <img src="../../static/image/default.webp" class="name-img">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="name-text">
+                                                <div class="name-text-content">
+                                                    <div class="name-part">
+                                                        <div class="name-part-in">
+                                                            <div class="name-part-in-in">
+                                                                <a href="/@asap-express">
+                                                                    <p class="name-real">
+                                                                        조준호
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- sw개발.미들 경영/운영.c레벨 등등 -->
+                                                    <div class="career">
+                                                        <p class="p">서비스 · 신입</p>
+                                                        <p class="p">3일 전</p>
+                                                    </div>
+                                                </div>
+                                                <div class="three-dot">
+                                                    <button class="three-dot-button">
+                                                        <div class="three-dot-button-content">
+                                                            <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="18" role="img" width="18"><use href="#more-menu-vertical-outline"></use></svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-in">
+                                                <div class="content-in-in">
+                                                    <div class="content-text">
+                                                        <span class="span">퍼블렉시티 검색으로 알게되서 가입했는데, 역시 테크가 주(主)인가보네요.</span>
+                                                        <br>
+                                                        <span class="span">저는 한국에서 여행업 종사를 준비 중인데, 혹시 여행업계(여행사, 가이드 등) 종사자분들 계신가요?</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 아이콘들 (메세지 공유 등) -->
+                                        <!-- <div class="icons">
+                                            <div class="icons-in">
+                                                <div class="icons-parts">
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="dashboard-part">
+                                    <div class="dashboard-part-in">
+                                        <div class="name">
+                                            <div class="name-icon1">
+                                                <a href="" style="height: 36px;">
+                                                    <div class="name-icon1-in">
+                                                        <div class="name-icon1-in-in">
+                                                            <img src="../../static/image/default.webp" class="name-img">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="name-text">
+                                                <div class="name-text-content">
+                                                    <div class="name-part">
+                                                        <div class="name-part-in">
+                                                            <div class="name-part-in-in">
+                                                                <a href="/@asap-express">
+                                                                    <p class="name-real">
+                                                                        조준호
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- sw개발.미들 경영/운영.c레벨 등등 -->
+                                                    <div class="career">
+                                                        <p class="p">서비스 · 신입</p>
+                                                        <p class="p">3일 전</p>
+                                                    </div>
+                                                </div>
+                                                <div class="three-dot">
+                                                    <button class="three-dot-button">
+                                                        <div class="three-dot-button-content">
+                                                            <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="18" role="img" width="18"><use href="#more-menu-vertical-outline"></use></svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-in">
+                                                <div class="content-in-in">
+                                                    <div class="content-text">
+                                                        <span class="span">퍼블렉시티 검색으로 알게되서 가입했는데, 역시 테크가 주(主)인가보네요.</span>
+                                                        <br>
+                                                        <span class="span">저는 한국에서 여행업 종사를 준비 중인데, 혹시 여행업계(여행사, 가이드 등) 종사자분들 계신가요?</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 아이콘들 (메세지 공유 등) -->
+                                        <!-- <div class="icons">
+                                            <div class="icons-in">
+                                                <div class="icons-parts">
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="dashboard-part">
+                                    <div class="dashboard-part-in">
+                                        <div class="name">
+                                            <div class="name-icon1">
+                                                <a href="" style="height: 36px;">
+                                                    <div class="name-icon1-in">
+                                                        <div class="name-icon1-in-in">
+                                                            <img src="../../static/image/default.webp" class="name-img">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="name-text">
+                                                <div class="name-text-content">
+                                                    <div class="name-part">
+                                                        <div class="name-part-in">
+                                                            <div class="name-part-in-in">
+                                                                <a href="/@asap-express">
+                                                                    <p class="name-real">
+                                                                        조준호
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- sw개발.미들 경영/운영.c레벨 등등 -->
+                                                    <div class="career">
+                                                        <p class="p">서비스 · 신입</p>
+                                                        <p class="p">3일 전</p>
+                                                    </div>
+                                                </div>
+                                                <div class="three-dot">
+                                                    <button class="three-dot-button">
+                                                        <div class="three-dot-button-content">
+                                                            <svg aria-label="icon" color="foregrounds.neutral.tertiary" fill="currentColor" height="18" role="img" width="18"><use href="#more-menu-vertical-outline"></use></svg>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-in">
+                                                <div class="content-in-in">
+                                                    <div class="content-text">
+                                                        <span class="span">퍼블렉시티 검색으로 알게되서 가입했는데, 역시 테크가 주(主)인가보네요.</span>
+                                                        <br>
+                                                        <span class="span">저는 한국에서 여행업 종사를 준비 중인데, 혹시 여행업계(여행사, 가이드 등) 종사자분들 계신가요?</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 아이콘들 (메세지 공유 등) -->
+                                        <!-- <div class="icons">
+                                            <div class="icons-in">
+                                                <div class="icons-parts">
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                    <button></button>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 오른쪽 사이드 부분 -->
+                        <div class="profile-trend">
+                            <div class="profile">
+                                <!-- 로그인 전 -->
+                                <div class="profile-text">
+                                    <div class="profile-text-in">
+                                        <p class="profile-text-in-first">
+                                            기회를 발견하는
+                                            네트워킹의 시작
+                                        </p>
+
+                                        <p class="profile-text-in-second">
+                                            지금 프로필을 만들고 기회를 찾아보세요.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="profile-login">
+                                    <button class="profile-login-button">
+                                        <span class="profile-login-button-text">
+                                            로그인
+                                        </span>
+                                    </button>
+                                </div>
+
+
+                                <!-- 로그인 후 -->
+                                <!-- <div class="profile-text"> -->
+                                    <!-- 내프로필 경로일듯 -->
+                                    <!-- <a href="/@kausha">
+                                        <div class="profile-img">
+                                            <div class="profile-img-in">
+                                                <img alt="사용자 프로필 1" loading="lazy" width="52" height="52" decoding="async" data-nimg="1" style="color:transparent;border-radius:7.8px;height:52px;width:52px;object-fit:cover" srcset="/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fmember_profile%2F18012%2Fdefault.png&amp;w=64&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fmember_profile%2F18012%2Fdefault.png&amp;w=128&amp;q=75 2x" src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fmember_profile%2F18012%2Fdefault.png&amp;w=128&amp;q=75">
+                                            </div>
+                                        </div>
+                                    </a>
+                                    박하민 sw 개발신입
+                                    <div class="park-ha-min"></div>
+                                    게시물 팔로워 팔로잉
+                                    <div class="follow"></div>
+                                </div>
+                                글쓰기, 내 프로필
+                                <div class="profile=my"></div> -->
+                            </div>
+                            <div class="trend">
+                                <!-- 가장 인기있는 공고 -->
+                                <div class="popular">
+                                    <div class="popular-text">
+                                        <div class="popular-text-in">
+                                            <div class="popular-text-content">
+                                                <p class="popular-text-content-in">
+                                                    가장 인기있는 공고
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 공고들 -->
+                                <div class="popular-things">
+                                    <a href="" style="width: 100%;">
+                                        <div class="popular-thing">
+                                            <div class="popular-thing-in">
+                                                <div class="popular-thing-icon">
+                                                    <div class="popular-thing-icon-in">
+                                                        <img class="popular-img" src="../../static/image/colavoground_logo_1529923725.webp">
+                                                    </div>
+                                                </div>
+                                                <div class="popular-thing-text">
+                                                    <div class="popular-thing-text-content1">
+                                                        <div class="div-text-content1">
+                                                            <p class="text-content1">주식회사 비욘드메디슨</p>
+                                                        </div>
+                                                        <p class="text-content2">코틀린/스프링 백엔드 및 인프라 개발</p>
+                                                        <p class="text-content3">코틀린/스프링 백엔드 인프라 개발자</p>
+
+                                                    </div>
+                                                    <div class="popular-thing-text-content2">
+                                                        <div class="popular-thing-text-left">
+                                                            <span class="left-text">신입~시니어</span>
+                                                        </div>
+                                                        <div class="popular-thing-text-right">
+                                                            <span class="right-text">상시 출근</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" style="width: 100%;"></a>
+                                    <a href="" style="width: 100%;"></a>
+                                    <a href="" style="width: 100%;"></a>
+                                </div>
+                                <!-- 공고 더보기 -->
+                                <a class="more" href="/jobs">
+                                    <button class="more-button" type="button">
+                                        <span class="more-button-text">공고 더보기</span>
+                                    </button>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="login-icon3"></div>
         </main>
+    </div>
+    <!-- "박" 누르면 나오는 모달 -->
+    <div class="modal-park">
+        <div class="modal-park-name">
+            <div class="modal-park-name-text">박하민</div>
+        </div>
+        <div class="modal-park-content">
+            <div class="modal-park-content-in">
+                <div class="modal-park-content-in-in">
+                    <a href="/@kausha">
+                        <div class="my-profile">
+                            <div class="my-profile-in">
+                                <div class="my-profile-logo-text">
+                                    <div class="my-profile-logo">
+                                        <div class="my-profile-logo-in">
+                                            <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24"><use href="#user-outline"></use></svg>
+                                        </div>
+                                    </div>
+                                    <div class="my-profile-text">
+                                        <p class="my-profile-text-in">내 프로필</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="logout">
+                        <div class="logout-in">
+                            <div class="logout-logo-text">
+                                <div class="logout-logo">
+                                    <div class="logout-logo-in">
+                                        <svg aria-label="icon" color="foregrounds.neutral.primary" fill="currentColor" height="24" role="img" width="24"><use href="#login-outline"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="logout-text">
+                                    <p class="logo-text-in">로그아웃</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
         <svg style="display: none;">
             <symbol id="home-simple-2-solid" viewBox="0 0 24 24">
@@ -340,6 +827,17 @@
 
         <svg style="display: none;">
         <symbol id="layout-sidebar-left-outline" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M6 4.8A1.2 1.2 0 0 0 4.8 6v12A1.2 1.2 0 0 0 6 19.2h3.2V4.8zm4.8 0v14.4H18a1.2 1.2 0 0 0 1.2-1.2V6A1.2 1.2 0 0 0 18 4.8zM3.2 6A2.8 2.8 0 0 1 6 3.2h12A2.8 2.8 0 0 1 20.8 6v12a2.8 2.8 0 0 1-2.8 2.8H6A2.8 2.8 0 0 1 3.2 18z" fill-rule="evenodd"></path></symbol>
+        </svg>
+
+        <svg style="display: none;">
+        <symbol id="bell-outline" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 1.2a.8.8 0 0 1 .8.8v1.236c2.215.202 3.71 1.242 4.65 2.547C18.467 7.198 18.8 8.872 18.8 10v3c0 1.499.313 2.32.607 2.744.294.422.565.456.593.456a.8.8 0 0 1 0 1.6h-4.2v.2a4.15 4.15 0 0 1-.75 2.342c-.6.831-1.59 1.458-3.05 1.458s-2.45-.627-3.05-1.458A4.15 4.15 0 0 1 8.2 18v-.2H4a.8.8 0 0 1 0-1.6c.028 0 .3-.034.593-.456.294-.423.607-1.245.607-2.744v-3c0-2.66 1.127-4.4 2.583-5.45 1.109-.798 2.377-1.174 3.417-1.3V2a.8.8 0 0 1 .8-.8m-5.827 15h11.654c-.382-.766-.627-1.822-.627-3.2v-3c0-.872-.268-2.198-1.05-3.283C15.4 5.673 14.14 4.8 12 4.8c-.872 0-2.198.268-3.283 1.05C7.673 6.6 6.8 7.86 6.8 10v3c0 1.377-.245 2.434-.627 3.2M9.8 17.8v.2c0 .372.118.948.45 1.408.3.419.81.792 1.75.792s1.45-.373 1.75-.792A2.55 2.55 0 0 0 14.2 18v-.2z" fill-rule="evenodd"></path></symbol>
+        </svg>
+
+        <svg style="display: none;">
+        <symbol id="login-outline" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M8.2 3a.8.8 0 0 1 .8-.8h8A2.8 2.8 0 0 1 19.8 5v14a2.8 2.8 0 0 1-2.8 2.8H9a.8.8 0 0 1 0-1.6h8a1.2 1.2 0 0 0 1.2-1.2V5A1.2 1.2 0 0 0 17 3.8H9a.8.8 0 0 1-.8-.8m2.234 4.434a.8.8 0 0 1 1.132 0l4 4a.8.8 0 0 1 0 1.132l-4 4a.8.8 0 0 1-1.132-1.132L13.07 12.8H5a.8.8 0 0 1 0-1.6h8.069l-2.635-2.634a.8.8 0 0 1 0-1.132" fill-rule="evenodd"></path></symbol>
+        </svg>
+        <svg style="display: none;">
+        <symbol id="user-outline" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 3.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4M7.2 7a4.8 4.8 0 1 1 9.6 0 4.8 4.8 0 0 1-9.6 0M9 15.8A3.2 3.2 0 0 0 5.8 19v2a.8.8 0 0 1-1.6 0v-2A4.8 4.8 0 0 1 9 14.2h6a4.8 4.8 0 0 1 4.8 4.8v2a.8.8 0 0 1-1.6 0v-2a3.2 3.2 0 0 0-3.2-3.2z" fill-rule="evenodd"></path></symbol>
         </svg>
 </body>
 <script src="../../static/js/main/main.js"></script>

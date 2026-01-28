@@ -22,25 +22,43 @@ iconLinks.forEach((iconLink) => {
 });
 
 // 카테고리 파츠들 클릭하면 크기가 작아졌다 커짐
+// const categoryParts = document.querySelectorAll(
+//     ".first-wrap, .second-wrap, .third-wrap, .fourth-wrap, .fifth-wrap, .sixth-wrap"
+// );
+
+// categoryParts.forEach((wrap) => {
+//     wrap.addEventListener("click", (e) => {
+//         wrap.style.transform = "scale(0.3)";
+
+//         wrap.style.transition = "transform 0.3s ease";
+
+//         setTimeout(() => {
+//             wrap.style.transform = "scale(1)";
+//         });
+//     });
+// });
+
 const categoryParts = document.querySelectorAll(
-    ".first-wrap, .second-wrap, .third-wrap, .fourth-wrap, .fifth-wrap, .sixth-wrap"
+    ".first-wrap, .second-wrap, .third-wrap, .fourth-wrap, .fifth-wrap, .sixth-wrap",
 );
 
 categoryParts.forEach((wrap) => {
-    wrap.addEventListener("click", (e) => {
-        wrap.style.transform = "scale(0.3)";
+    // 꾹 누를 때 작아짐
+    wrap.addEventListener("mousedown", () => {
+        wrap.style.transition = "transform 0.2s ease";
+        wrap.style.transform = "scale(0.9)";
+    });
 
+    // 손을 뗄 때 커짐
+    wrap.addEventListener("mouseup", () => {
         wrap.style.transition = "transform 0.3s ease";
-
-        setTimeout(() => {
-            wrap.style.transform = "scale(1)";
-        });
+        wrap.style.transform = "scale(1)";
     });
 });
 // 펀딩 접기 펼치기   ".first-slide, .second-slide, .third-slide, .fourth-slide, .fifth-slide, .sixth-slide "    "a[href=slide]"
 const fundingFold = document.querySelector(".close");
 const fundings = document.querySelectorAll(
-    ".first-slide, .second-slide, .third-slide, .fourth-slide, .fifth-slide, .sixth-slide"
+    ".first-slide, .second-slide, .third-slide, .fourth-slide, .fifth-slide, .sixth-slide",
 );
 
 fundings.forEach((funding) => {
@@ -81,4 +99,16 @@ foldContent.addEventListener("click", (e) => {
     }
 });
 
-//사이드바 로그인 전/후 차이 "설정"이 로그인 후에 생김 "로그인"이 로그인 후엔 박하민으로 나옴
+//"박" 누르면 내프로필이랑 로그아웃 모달
+const loginIcon2 = document.querySelector(".login-icon2");
+const modalPark = document.querySelector(".modal-park");
+
+modalPark.style.display = "none";
+
+loginIcon2.addEventListener("click", (e) => {
+    if (modalPark.style.display === "none") {
+        modalPark.style.display = "block";
+    } else {
+        modalPark.style.display = "none";
+    }
+});
