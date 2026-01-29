@@ -204,6 +204,9 @@ textarea {
 }
 
 /* .category-container.show { display: flex; }  <-- JS용 클래스 제거 */
+.category-container.active {
+    display: flex;
+}
 
 .teamlist-header-section {
     max-height: 130px;
@@ -1194,8 +1197,8 @@ body > svg {
     display: flex;
 }
 
-.category-body-input-wrap .check-icon {
-    display: none;
+.category-body-input-wrap .check-icon.active {
+    display: block;
     color: #000000;
 }
 

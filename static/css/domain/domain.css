@@ -2179,7 +2179,7 @@ a {
 }
 .name-icon1-in {
     align-items: center;
-    cursor: default
+    cursor: default;
     transition: transform .15s cubic-bezier(.68, -.55, .265, 1.55);
     position: relative;
     display: flex;
@@ -2968,4 +2968,64 @@ a {
     letter-spacing: -.26px;
     font-size: var(--texts--font-size--body-m);
     line-height: var(--texts--line-heights--body-m);
+}
+
+/* Sidebar Dark Mode Override */
+.side-bar {
+    background-color: #000 !important;
+}
+
+.side-bar .logo-center {
+    background-color: #000 !important;
+}
+
+.side-bar .logo-center-text {
+    color: #fff !important;
+}
+
+.side-bar .home,
+.side-bar .event-text,
+.side-bar .employ,
+.side-bar .education,
+.side-bar .message-box,
+.side-bar .hub,
+.side-bar .option-service-text,
+.side-bar .company-service-text,
+.side-bar .help-service-text,
+.side-bar .user-login {
+    color: #fff !important;
+}
+
+.side-bar .news,
+.side-bar .event-conference-text,
+.side-bar .new-chance,
+.side-bar .boot,
+.side-bar .sosic,
+.side-bar .moa {
+    color: #9ca3af !important;
+}
+
+/* Icons relative to sidebar */
+.side-bar-category .first-part-icon,
+.side-bar-category .second-part-icon,
+.side-bar-category .third-part-icon,
+.side-bar-category .fourth-part-icon,
+.side-bar-category .fifth-part-icon,
+.side-bar-category .sixth-part-icon {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+/* Search box */
+.side-bar .serch {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+}
+
+/* Footer text */
+.side-bar .footer .bon-service-text,
+.side-bar .footer .two-five-text,
+.side-bar .footer .saupja-text-content,
+.side-bar .footer .fold-service {
+    color: #6b7280 !important;
 }
