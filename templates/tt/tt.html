@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./teamlist.css">
+    <link rel="stylesheet" href="../../static/css/tt/tt.css">
 </head>
 
 <body>
@@ -18,16 +18,16 @@
                     <div class="teamlist-header-inner-section">
                         <div class="keyword-section">
                             <div class="keyword">
-                                <label for="keyword-input" class="keyword-input">키워드
+                                <label for="keyword-input" class="keyword-input">선택
                                 </label>
-                                <div class="keyword-icon">
-                                    <div draggable="false" class="keyword-icon-svg">
+                                <!-- <div class="keyword-icon"> -->
+                                    <!-- <div draggable="false" class="keyword-icon-svg">
                                         <svg viewBox="0 0 24 24" fill="currentColor" height="12" width="12">
                                             <path
                                                 d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
                                         </svg>
-                                    </div>
-                                    <div class="tooltip-div-section">
+                                    </div> -->
+                                    <!-- <div class="tooltip-div-section">
                                         <div class="tooltip-inner-section">
                                             <div class="tooltip-title-section">
                                                 <div class="tooltip-title">
@@ -39,18 +39,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> -->
+                                <!-- </div> -->
                             </div>
-                            <input id="keyword-text-input" placeholder="팀명, 사업유형, 기술스택" type="text"
+                            <input id="keyword-text-input" placeholder="팀명, 승인, 보류" type="text"
                                 class="keyword-text-input">
                         </div>
-                        <div class="button-selector-1 selector">
-                            <p class="selector1 selector">사업유형</p>
-                            <p class="selector1-specific selector">전체</p>
+                        <div class="button-selector-1">
+                            <p class="selector1">승인 상태</p>
+                            <p class="selector1-specific">전체</p>
                             <div class="category-container">
                                 <div class="category-header">
-                                    <div class="category-header-title">사업유형</div>
+                                    <div class="category-header-title">승인 유형</div>
                                 </div>
                                 <div class="category-body-container">
                                     <div class="category-body-container-wrap">
@@ -60,48 +60,28 @@
                                                     <div class="category-body-input-container">
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
-                                                                <p class="category-body-item-text">SW 개발</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
+                                                                <p class="category-body-item-text">승인</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="category-body-input-container">
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
-                                                                <p class="category-body-item-text">데이터/AI</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
+                                                                <p class="category-body-item-text">보류</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="category-body-input-container">
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
-                                                                <p class="category-body-item-text">기획/전략</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
+                                                                <p class="category-body-item-text">거절</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="category-body-input-container">
+                                                    <!-- <div class="category-body-input-container">
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">디자인/UX</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -109,11 +89,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">마케팅/PR</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -121,11 +96,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">경영/운영</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -133,11 +103,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">HR/인사</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -145,14 +110,9 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">회계/재무</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                                 <div class="selector-all">
                                                     <button class="selet-all">
@@ -168,27 +128,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="button-selector-2 selector">
-                            <p class="selector2 selector">나의 기술</p>
-                            <p class="selector2-specific selector">전체</p>
+                        <div class="button-selector-2">
+                            <!-- <p class="selector2">날짜 입력</p>
+                            <p class="selector2-specific">날짜</p>
                             <div class="category-container">
                                 <div class="category-header">
-                                    <div class="category-header-title">나의 기술</div>
+                                    <div class="category-header-title">년/월/일</div>
                                 </div>
                                 <div class="category-body-container">
                                     <div class="category-body-container-wrap">
                                         <div class="category-body-wrap">
                                             <div class="category-body-section">
-                                                <div class="category-body-list">
-                                                    <div class="category-body-input-container">
+                                                <div class="category-body-list"> -->
+                                                    <!-- <div class="category-body-input-container">
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">신입</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -196,11 +151,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">경력</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -208,11 +158,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">책임</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -220,11 +165,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">수석</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -232,11 +172,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">이사</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -244,11 +179,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">사장</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -256,11 +186,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">연구원</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -268,11 +193,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">마스터</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -280,11 +200,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">인턴</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -292,15 +207,10 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">기타</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
+                                                    </div> -->
+                                                <!-- </div>
                                                 <div class="selector-all">
                                                     <button class="selet-all">
                                                         <span class="selector-all-text">전체 선택</span>
@@ -313,11 +223,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="button-selector-3 selector">
-                            <p class="selector3 selector">팀 인원</p>
-                            <p class="selector3-specific selector">전체</p>
+                        <!-- <div class="button-selector-3">
+                            <p class="selector3">팀 인원</p>
+                            <p class="selector3-specific">전체</p>
                             <div class="category-container">
                                 <div class="category-header">
                                     <div class="category-header-title">팀 인원</div>
@@ -331,11 +241,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">스타트업</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -343,11 +248,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">중소기업</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -355,11 +255,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">대기업</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -367,11 +262,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">중견기업</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -379,11 +269,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">공기업</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -391,11 +276,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">외국계</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -403,11 +283,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">비영리단체</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -415,11 +290,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">기타</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -438,9 +308,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="button-selector-4 selector">
-                            <p class="selector4 selector">경력</p>
-                            <p class="selector4-specific selector">전체</p>
+                        <div class="button-selector-4">
+                            <p class="selector4">경력</p>
+                            <p class="selector4-specific">전체</p>
                             <div class="category-container">
                                 <div class="category-header">
                                     <div class="category-header-title">근무 방식</div>
@@ -454,11 +324,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">원격 근무</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -466,11 +331,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">상근</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -478,11 +338,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">재택 근무</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -490,11 +345,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">유연 근무</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -502,11 +352,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">계약직</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -514,11 +359,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">프리랜서</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -526,11 +366,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">파트타임</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -538,11 +373,6 @@
                                                         <div class="category-body-input-wrap">
                                                             <div class="category-body-input-wrap-container">
                                                                 <p class="category-body-item-text">인턴</p>
-                                                                <div class="check-icon">
-                                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                                                                        <use href="#check-thick-outline"></use>
-                                                                    </svg>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -560,7 +390,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="button-section">
                             <button class="search-button" type="button">
                                 <div draggable="false" class="search-button-svg">
@@ -579,17 +409,20 @@
                         <div class="list-header-section">
                             <div class="list-category-section">
                                 <div class="list-category-left-section">
-                                    <div class="list-category-selector1 active">
-                                        <p class="list-category-text">적합순</p>
-                                    </div>
+                                    <!-- <div class="list-category-selector1 active">
+                                        <p class="list-category-text">승인</p>
+                                    </div> -->
                                     <div class="list-category-selector2">
-                                        <p class="list-category-text">인기순</p>
-                                    </div>
-                                    <div class="list-category-selector3">
                                         <p class="list-category-text">최신순</p>
                                     </div>
+                                    <div class="list-category-selector2">
+                                        <p class="list-category-text">오래된순</p>
+                                    </div>
+                                    <div class="list-category-selector3">
+                                        <p class="list-category-text">승인</p>
+                                    </div>
                                     <div class="list-category-selector4">
-                                        <p class="list-category-text">규모순</p>
+                                        <p class="list-category-text">보류</p>
                                     </div>
                                 </div>
                             </div>
@@ -603,6 +436,7 @@
                                                 <div class="team-select">
                                                     <div class="team-data">
                                                         <div class="team-logo">
+                                                            <input type="checkbox" class="check-box"/>
                                                             <div class="team-logo-image">
                                                                 <img src="https://api.dicebear.com/7.x/shapes/svg?seed=Hero&backgroundColor=4f46e5" alt="Hero Company Logo">
                                                             </div>
@@ -610,16 +444,16 @@
                                                         <div class="team-info">
                                                             <div class="team-info-left-section">
                                                                 <div class="team-info-left-section-top">
-                                                                    <p class="team-name">5명</p>
+                                                                    <p class="team-name">1시간 전</p>
                                                                 </div>
-                                                                <p class="team-major">tomatosugar</p>
-                                                                <p class="team-position">UI/UX Designer recruit </p>
+                                                                <p class="team-major">펀딩1</p>
+                                                                <p class="team-position">펀딩 내용 ~~~~~~~~ </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="specific-info">
                                                         <div class="specific-info-selector1">
-                                                            <p class="specific-info-text">직군</p>
+                                                            <p class="specific-info-text">승인</p>
                                                             <div draggable="false" class="check-svg">
                                                                 <svg aria-label="icon" role="img">
                                                                     <use href="#check-thick-outline"></use>
@@ -627,14 +461,14 @@
                                                             </div>
                                                         </div>
                                                         <div class="specific-info-selector2">
-                                                            <p class="specific-info-text">숙련도</p>
+                                                            <p class="specific-info-text">보류</p>
                                                             <div draggable="false" class="check-svg">
                                                                 <svg aria-label="icon" role="img">
                                                                     <use href="#check-thick-outline"></use>
                                                                 </svg>
                                                             </div>
                                                         </div>
-                                                        <div class="specific-info-selector3">
+                                                        <!-- <div class="specific-info-selector3">
                                                             <p class="specific-info-text">규모</p>
                                                             <div draggable="false" class="check-svg">
                                                                 <svg aria-label="icon" role="img">
@@ -649,8 +483,12 @@
                                                                     <use href="#check-thick-outline"></use>
                                                                 </svg>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
+                                                    <!-- 승인 보류 체크 후 확인 버튼 -->
+                                                    <!-- <div class="check-okay">
+                                                        <button class="check-button">확인</button>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                             <div class="team-separate-line">
@@ -662,6 +500,7 @@
                                                 <div class="team-select">
                                                     <div class="team-data">
                                                         <div class="team-logo">
+                                                            <input type="checkbox" class="check-box"/>
                                                             <div class="team-logo-image">
                                                                 <img src="https://api.dicebear.com/7.x/shapes/svg?seed=Rocket&backgroundColor=ec4899" alt="Rocket Company Logo">
                                                             </div>
@@ -669,16 +508,16 @@
                                                         <div class="team-info">
                                                             <div class="team-info-left-section">
                                                                 <div class="team-info-left-section-top">
-                                                                    <p class="team-name">로켓펀치</p>
+                                                                    <p class="team-name">1일 전</p>
                                                                 </div>
-                                                                <p class="team-major">Frontend Engineer</p>
-                                                                <p class="team-position">Frontend Engineer</p>
+                                                                <p class="team-major">펀딩2</p>
+                                                                <p class="team-position">펀딩 내용~~~~~~~~~</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="specific-info">
                                                         <div class="specific-info-selector1">
-                                                            <p class="specific-info-text">직군</p>
+                                                            <p class="specific-info-text">승인</p>
                                                             <div draggable="false" class="check-svg">
                                                                 <svg aria-label="icon" role="img">
                                                                     <use href="#check-thick-outline"></use>
@@ -686,14 +525,14 @@
                                                             </div>
                                                         </div>
                                                         <div class="specific-info-selector2">
-                                                            <p class="specific-info-text">숙련도</p>
+                                                            <p class="specific-info-text">보류</p>
                                                             <div draggable="false" class="check-svg">
                                                                 <svg aria-label="icon" role="img">
                                                                     <use href="#check-thick-outline"></use>
                                                                 </svg>
                                                             </div>
                                                         </div>
-                                                        <div class="specific-info-selector3">
+                                                        <!-- <div class="specific-info-selector3">
                                                             <p class="specific-info-text">규모</p>
                                                             <div draggable="false" class="check-svg">
                                                                 <svg aria-label="icon" role="img">
@@ -708,8 +547,12 @@
                                                                     <use href="#check-thick-outline"></use>
                                                                 </svg>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
+                                                    <!-- 승인 보류 체크 후 확인 버튼 -->
+                                                    <!-- <div class="check-okay">
+                                                        <button class="check-button">확인</button>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                             <div class="team-separate-line">
@@ -722,7 +565,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="advertisement-main-container">
+                <!-- <div class="advertisement-main-container">
                     <div class="advertisement-container">
                         <div class="advertisement-sticky-wrapper">
                             <div class="advertisement-content">
@@ -760,7 +603,7 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> -->
     </main>
 
 
@@ -776,6 +619,6 @@
         </symbol>
     </svg>
 </body>
-<script src="./event.js"></script>
+<script src="../../static/js/tt/tt.js"></script>
 
 </html>

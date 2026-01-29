@@ -204,9 +204,6 @@ textarea {
 }
 
 /* .category-container.show { display: flex; }  <-- JS용 클래스 제거 */
-.category-container.active {
-    display: flex;
-}
 
 .teamlist-header-section {
     max-height: 130px;
@@ -628,6 +625,7 @@ textarea {
 
 .list-category-left-section {
     align-items: center;
+    justify-content: flex-end;
     gap: 8px;
     display: flex;
 }
@@ -1188,28 +1186,13 @@ body > svg {
 }
 
 .category-body-input-wrap-container {
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     min-height: 24px;
     padding-inline: 4px;
     flex: 1 0 0;
     display: flex;
-}
-
-.category-body-input-wrap .check-icon.active {
-    display: block;
-    color: #000000;
-}
-
-.category-body-input-wrap.active .check-icon {
-    display: flex;
-    align-items: center;
-}
-
-.category-body-input-wrap.active .category-body-item-text {
-    color: black;
-    font-weight: 600;
 }
 
 .category-body-item-text {
@@ -1302,4 +1285,20 @@ body > svg {
     line-height: 18px;
     cursor: pointer;
 }
+/* <button class="check-button">확인</button> */
+.check-button {
+    cursor: pointer;
+}
+.check-okay {
+    width: 48px;
+}
+.check-box {
+    margin: 15px;
+}
 
+.list-category-selector3 {
+    margin-left: 720px;
+}
+.list-category-selector3, .list-category-selector4 {
+    background-color: yellowgreen;
+}

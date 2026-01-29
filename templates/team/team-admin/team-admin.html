@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Admin</title>
+    <!-- Reusing team-detail styles -->
+    <link rel="stylesheet" href="../team-detail/team-detail.css">
+    <!-- Admin specific styles -->
+    <link rel="stylesheet" href="./team-admin.css">
+</head>
+
+<body>
+    <main class="main-border">
+        <div class="div-header"></div>
+        <div class="div-container">
+            <div class="div-content-wrap">
+                <div id="team-detail" class="team-detail-container">
+                    <div class="team-detail-header">
+                        <div class="team-detail-banner-wrap">
+                            <div class="team-detail-banner">
+                                <img src="https://image.rocketpunch.com/images/company/new_cover.jpg" alt="banner"
+                                    loading="lazy" width="1000" height="200" class="bannerimg">
+                                <!-- Admin Action: Edit Banner -->
+                                <button class="admin-edit-btn banner-edit-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                        <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                                    </svg>
+                                    커버 편집
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-detail-maincontainer">
+                        <div class="team-detail-mainsection">
+                            <div class="team-profile-container">
+                                <div class="team-profile-wrap">
+                                    <div class="team-profile">
+                                        <div class="team-profile-img-wrap">
+                                            <div class="team-profile-img">
+                                                <img draggable="false" loading="lazy" width="60" height="60"
+                                                    src="../../../static/image/team_logo.png" alt="team-logo">
+                                            </div>
+                                            <!-- Admin Action: Edit Profile Image -->
+                                            <button class="admin-edit-btn profile-img-edit-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="team-profile-info">
+                                            <div class="team-profile-info-wrap">
+                                                <p class="team-title">JUNG BO SUNG</p>
+                                                <div class="team-profile-info-badge">
+                                                    <svg class="profile-logo-svg" xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none" viewBox="0 0 30 30" class="cursor_pointer p_2px"
+                                                        style="height: 20px; width: 20px;">
+                                                        <path fill="url(#verifiedBadge_svg__a)" fill-rule="evenodd"
+                                                            d="M11.713.995a4.17 4.17 0 0 1 5.41 0L18.89 2.5c.222.19.5.304.79.328l2.315.184a4.17 4.17 0 0 1 3.825 3.825l.185 2.315c.023.292.138.568.328.791l1.506 1.767a4.17 4.17 0 0 1 0 5.41l-1.506 1.767c-.19.223-.305.5-.328.791l-.185 2.315a4.17 4.17 0 0 1-3.825 3.825l-2.314.185a1.4 1.4 0 0 0-.791.327l-1.768 1.507a4.17 4.17 0 0 1-5.41 0L9.946 26.33a1.4 1.4 0 0 0-.79-.327l-2.315-.185a4.17 4.17 0 0 1-3.825-3.825l-.185-2.315a1.4 1.4 0 0 0-.328-.79L.996 17.12a4.17 4.17 0 0 1 0-5.41l1.506-1.767c.19-.223.305-.5.328-.79l.185-2.316A4.17 4.17 0 0 1 6.84 3.013l2.314-.184a1.4 1.4 0 0 0 .791-.328z"
+                                                            clip-rule="evenodd"></path>
+                                                        <path fill="#267789" fill-rule="evenodd"
+                                                            d="M4.092 24.474s1.143 1.246 1.755 1.701a4.16 4.16 0 0 0 2.158.812l2.315.184c.291.024.568.138.79.328l1.768 1.506a4.17 4.17 0 0 0 5.41 0l1.767-1.506c.222-.19.5-.304.79-.328l2.316-.184a4.17 4.17 0 0 0 3.825-3.825l.184-2.315a1.4 1.4 0 0 1 .328-.791l1.506-1.767a4.17 4.17 0 0 0 0-5.41l-1.506-1.767a1.4 1.4 0 0 1-.328-.791l-.184-2.315a4.16 4.16 0 0 0-.867-2.23c-.487-.625-1.381-1.424-1.381-1.424a4.16 4.16 0 0 1 1.083 2.486l.184 2.315c.024.292.138.568.328.791l1.506 1.767a4.17 4.17 0 0 1 0 5.41l-1.506 1.767c-.19.223-.304.5-.328.791l-.184 2.315a4.17 4.17 0 0 1-3.825 3.825l-2.315.185a1.4 1.4 0 0 0-.791.327l-1.768 1.507a4.16 4.16 0 0 1-2.924.99 4.16 4.16 0 0 1-2.485-.99L9.945 26.33a1.4 1.4 0 0 0-.79-.327l-2.315-.185c-.909-.072-2.098-.787-2.748-1.345"
+                                                            clip-rule="evenodd"
+                                                            style="fill: color(display-p3 0.1482 0.4661 0.5367); fill-opacity: 1;">
+                                                        </path>
+                                                        <path fill="#fff"
+                                                            d="M20.375 10.066a1.607 1.607 0 0 1 0 2.272l-6.428 6.429a1.607 1.607 0 0 1-2.273 0L8.46 15.553a1.607 1.607 0 1 1 2.273-2.273l2.077 2.078 5.292-5.292a1.607 1.607 0 0 1 2.273 0"
+                                                            style="fill: rgb(255, 255, 255); fill-opacity: 1;"></path>
+                                                        <path fill="#1A6B95"
+                                                            d="M20.402 10.095c.599.63.59 1.625-.029 2.243l-6.427 6.428a1.607 1.607 0 0 1-2.273 0l-2.726-2.725.073.078 3.214 3.214a1.607 1.607 0 0 0 2.273 0l6.428-6.428a1.607 1.607 0 0 0 0-2.273z"
+                                                            style="fill: color(display-p3 0.1006 0.4216 0.5835); fill-opacity: 1;">
+                                                        </path>
+                                                        <defs>
+                                                            <linearGradient id="verifiedBadge_svg__a" x1="0" x2="28.835"
+                                                                y1="-0.001" y2="28.834" gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#5856D6"
+                                                                    style="stop-color: color(display-p3 0.3451 0.3373 0.8392); stop-opacity: 1;">
+                                                                </stop>
+                                                                <stop offset="1" stop-color="#24D1D1"
+                                                                    style="stop-color: color(display-p3 0.1416 0.8179 0.8179); stop-opacity: 1;">
+                                                                </stop>
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="badge-background-text">인증된 계정</div>
+                                                </div>
+                                            </div>
+                                            <p class="team-profile-detail-info">기타 서비스업 · NewYork City · 팔로워 3.14M명</p>
+                                        </div>
+                                    </div>
+                                    <div class="team-profile-summary">
+                                        <div class="team-post-wrap">
+                                            <p class="team-post">게시물</p>
+                                            <p class="team-post-count">49</p>
+                                        </div>
+                                        <div class="team-follower-wrap">
+                                            <p class="team-follower">팔로워</p>
+                                            <p class="team-follower-count">3.14M명</p>
+                                        </div>
+                                        <div class="team-project-wrap">
+                                            <p class="team-project">프로젝트</p>
+                                            <p class="team-project-count">6</p>
+                                        </div>
+                                    </div>
+                                    <div class="team-profile-aboutus-container">
+                                        <div class="team-profile-aboutus">
+                                            <p class="team-profile-aboutus-content">JUNG BO SUNG은 인공지능과 데이터 과학의 최전선에서
+                                                기술의 새로운 지평을 열어갑니다. 우리는 단순한 소프트웨어 개발을 넘어, 인간의 가능성을 확장하고 사회적 가치를 창출하는 혁신적인
+                                                솔루션을 제공합니다. 열정적인 엔지니어와 창의적인 디자이너들이 모여 끊임없이 도전하며, 글로벌 무대에서 기술적 우위를 확보하고
+                                                있습니다. 미래를 선도하는 우리의 여정에 함께하여 더 나은 세상을 만들어가는 감동적인 순간을 경험해보세요.</p>
+                                        </div>
+                                        <p class="team-profile-aboutus-more">더보기</p>
+                                    </div>
+                                    <div class="team-profile-contact-wrap">
+                                        <div class="follow-button-wrap">
+                                            <!-- Admin View: Replace Follow with Edit Profile -->
+                                            <button class="follow-button admin-main-btn">
+                                                <span class="follow-button-text">프로필 편집</span>
+                                            </button>
+                                        </div>
+                                        <button class="contact-button">
+                                            <span class="contact-button-text">팀원 초대</span>
+                                        </button>
+                                        <button class="report-block-button">
+                                            <div draggable="false" class="report-block-svg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                                  </svg>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            <div class="team-detail-category-wrap">
+                                <div class="team-detail-category">
+                                    <div class="team-detail-category-home">
+                                        <p class="team-detail-category-home-text">홈</p>
+                                    </div>
+                                    <div class="team-detail-category-post">
+                                        <p class="team-detail-category-post-text">게시글</p>
+                                    </div>
+                                    <div class="team-detail-category-member">
+                                        <p class="team-detail-category-member-text">팀 관리</p>
+                                    </div>
+                                    <div class="team-detail-category-project">
+                                        <p class="team-detail-category-project-text">포트폴리오 관리</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="team-detail-content-container">
+
+
+                                <!-- 홈 탭 콘텐츠 -->
+                                <div class="tab-content" data-tab="home">
+                                    <div class="home-tab-container">
+                                        
+                                        <!-- 관련 사람 (Related People) Section -> Team Members -->
+                                        <div class="content-card">
+                                            <div class="card-header">
+                                                <div class="card-title-wrap">
+                                                    <p class="card-subtitle">TEAM MEMBERS</p>
+                                                    <p class="card-title">팀원 목록</p>
+                                                </div>
+                                                <button class="admin-sm-btn">관리</button>
+                                            </div>
+                                            <div class="related-people-list">
+                                                <!-- Person 1 -->
+                                                <div class="people-item">
+                                                    <div class="people-img-wrap">
+                                                        <img src="https://www.rocketpunch.com/_next/image?url=https%3A%2F%2Fimage.rocketpunch.com%2Fuser%2F226619%2F226619_1f5da2f20339.jpg&w=256&q=75" alt="임수진" class="people-img">
+                                                    </div>
+                                                    <div class="people-info">
+                                                        <div class="people-name">정보성</div>
+                                                        <div class="people-role">팀 리더</div>
+                                                    </div>
+                                                    <button class="people-follow-btn">수정</button>
+                                                </div>
+                                                <!-- Person 2 -->
+                                                <div class="people-item">
+                                                    <div class="people-img-wrap">
+                                                        <img src="../../../static/image/profiles/jensen_huang.png" alt="김만수" class="people-img">
+                                                    </div>
+                                                    <div class="people-info">
+                                                        <div class="people-name">젠슨 황</div>
+                                                        <div class="people-role">전기 설비</div>
+                                                    </div>
+                                                    <button class="people-follow-btn">수정</button>
+                                                </div>
+                                                <!-- Person 3 -->
+                                                <div class="people-item">
+                                                    <div class="people-img-wrap">
+                                                        <img src="../../../static/image/profiles/lee_jaeyong.png" alt="권한마로" class="people-img">
+                                                    </div>
+                                                    <div class="people-info">
+                                                        <div class="people-name">이재용</div>
+                                                        <div class="people-role">핸드폰 판매</div>
+                                                    </div>
+                                                    <button class="people-follow-btn">수정</button>
+                                                </div>
+                                                <!-- Person 4 -->
+                                                <div class="people-item">
+                                                    <div class="people-img-wrap">
+                                                        <img src="../../../static/image/profiles/elon_musk.png" alt="권성안" class="people-img">
+                                                    </div>
+                                                    <div class="people-info">
+                                                        <div class="people-name">일론 머스크</div>
+                                                        <div class="people-role">자동차 세일즈</div>
+                                                    </div>
+                                                    <button class="people-follow-btn">수정</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 기업 정보 (Company Info) Section -->
+                                        <div class="content-card">
+                                            <div class="card-header">
+                                                <div class="card-title-wrap">
+                                                    <div class="card-subtitle">TEAM INFO</div>
+                                                    <h3 class="card-title">팀 정보</h3>
+                                                </div>
+                                                <button class="admin-sm-btn">수정</button>
+                                            </div>
+                                            <div class="company-info-grid">
+                                                <div class="info-row">
+                                                    <div class="info-col">
+                                                        <div class="info-label">팀 리더</div>
+                                                        <div class="info-value">Donald Trump</div>
+                                                    </div>
+                                                    <div class="info-col">
+                                                        <div class="info-label">업종</div>
+                                                        <div class="info-value">솔루션/SI/ERP/CRM</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div class="info-col">
+                                                        <div class="info-label">정원</div>
+                                                        <div class="info-value">5명</div>
+                                                    </div>
+                                                    <div class="info-col">
+                                                        <div class="info-label">목표</div>
+                                                        <div class="info-value">-</div>
+                                                    </div>
+                                                </div>
+                                                <div class="info-row">
+                                                    <div class="info-col">
+                                                        <div class="info-label">구인상태</div>
+                                                        <div class="info-value">모집중</div>
+                                                    </div>
+                                                    <div class="info-col">
+                                                        <div class="info-label">모집 분야</div>
+                                                        <div class="info-value">Python, Django, React 개발자</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 게시글 탭 콘텐츠 -->
+                                <div class="tab-content" data-tab="posts" style="display: none;">
+                                    <div class="feed-container" >
+                                        <div class="feed-wrapper">
+                                            <!-- Admin Action: Write New Post -->
+                                            <div class="feed-card" style="padding:16px; align-items:flex-end;">
+                                                <button class="admin-main-btn" style="width:auto; padding:8px 16px;">+ 새 게시글 작성</button>
+                                            </div>
+
+                                            <!-- Donald Trump's Post -->
+                                            <div class="feed-card">
+                                                <div class="feed-section">
+                                                    <div class="feed-header">
+                                                        <div class="fead-profile">
+                                                            <div class="feed-profile-container">
+                                                                <div class="feed-profile-wrapper">
+                                                                    <img src="../../../static/image/profiles/donald_trump.png" alt="Donald Trump">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="feed-header-info">
+                                                            <div class="feed-header-info-wrapper">
+                                                                <div class="feed-header-info-name-section">
+                                                                    <div class="feed-header-info-name-wrapper">
+                                                                        <div class="feed-header-info-name">
+                                                                            <p class="name-tag">Donald Trump</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="feed-header-info-date-section">
+                                                                    <p class="feed-user-stack">미국 대통령</p>
+                                                                    <p class="feed-user-post-time">1시간전</p>
+                                                                </div>
+                                                            </div>
+                                                            <div style="margin-left:auto;">
+                                                                <button class="admin-sm-btn">수정</button>
+                                                                <button class="admin-sm-btn" style="color:red; border-color:red;">삭제</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="feed-content-container">
+                                                        <div class="feed-content-wrapper">
+                                                            <div class="feed-content-text-section">
+                                                                <div class="feed-content-text-wrapper">
+                                                                    <span>
+"존경하는 미국 국민 여러분, 대단히 감사합니다. 오늘 이 자리에 모인 엄청난 인파를 보십시오. 저 뒤쪽까지 끝이 보이지 않습니다. 정말 믿을 수가 없는 광경입니다! 하지만 저 뒤에 있는 '가짜 뉴스(Fake News)'들은 절대 카메라를 돌려서 이 장면을 보여주지 않을 겁니다. 그들은 아주 정직하지 않은 사람들이니까요. 그들은 실패했고, 우리는 승리했습니다. 아주 크게, 아주 아름답게 승리했습니다.
+
+지금 우리 나라는 어떻습니까? 솔직히 말해서, 엉망진창입니다. 국경은 완전히 뚫렸고, 범죄자들은 쏟아져 들어오고 있으며, 다른 나라들은 우리를 비웃고 있습니다. 이건 재앙입니다. 역사상 최악의 재앙입니다. 하지만 걱정하지 마십시오. 제가 모든 것을 고칠 것입니다. 취임 첫날부터, 우리는 국경을 폐쇄하고 범죄를 소탕할 것입니다. 우리는 그 어느 때보다 강력한 군대와 튼튼한 국경을 갖게 될 것입니다.
+
+경제는 또 어떻습니까? 제가 대통령이었을 때 우리는 역사상 가장 위대한 경제를 누렸습니다. 저는 다시 한번 세금을 깎고, 불필요한 규제를 모두 없앨 것입니다. 일자리가 다시 돌아올 것입니다. 자동차 공장, 철강 산업... 모든 것이 미국으로 돌아올 것입니다. 다른 나라들이 우리의 일자리를 훔쳐가게 두지 않을 것입니다. 우리는 다시 부자가 될 것입니다.
+
+그들은 저를 막으려고 온갖 마녀사냥을 벌였지만, 저는 여기 서 있습니다. 왜냐하면 여러분이 저와 함께하기 때문입니다. 우리는 멈추지 않을 것입니다. 우리는 포기하지 않을 것입니다. 우리는 이기고, 이기고, 또 이겨서 나중에는 승리하는 것이 지겨울 정도가 될 것입니다!
+
+우리는 미국을 다시 부유하게 만들 것입니다. 우리는 미국을 다시 안전하게 만들 것입니다. 우리는 미국을 다시 자랑스럽게 만들 것입니다. 그리고 마침내, 우리는 미국을 다시 위대하게 만들 것입니다 (Make America Great Again)!</span>
+                                                                </div>
+                                                                <p class="feed-content-seemore">더보기</p>
+                                                            </div>
+                                                            <div class="feed-content-image-container">
+                                                                <div class="feed-content-image-wrapper">
+                                                                    <div class="feed-content-image-section">
+                                                                        <div class="feed-content-image-box">
+                                                                            <img class="feed-content-image" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=800&fit=crop" alt="Tariff Policy">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Elon Musk's Post -->
+                                            <div class="feed-card">
+                                                <div class="feed-section">
+                                                    <div class="feed-header">
+                                                        <div class="fead-profile">
+                                                            <div class="feed-profile-container">
+                                                                <div class="feed-profile-wrapper">
+                                                                    <img src="https://i.pravatar.cc/150?img=12" alt="Elon Musk">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="feed-header-info">
+                                                            <div class="feed-header-info-wrapper">
+                                                                <div class="feed-header-info-name-section">
+                                                                    <div class="feed-header-info-name-wrapper">
+                                                                        <div class="feed-header-info-name">
+                                                                            <p class="name-tag">Elon Musk</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="feed-header-info-date-section">
+                                                                    <p class="feed-user-stack">CEO at Tesla & SpaceX</p>
+                                                                    <p class="feed-user-post-time">3시간전</p>
+                                                                </div>
+                                                            </div>
+                                                            <div style="margin-left:auto;">
+                                                                <button class="admin-sm-btn">수정</button>
+                                                                <button class="admin-sm-btn" style="color:red; border-color:red;">삭제</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="feed-content-container">
+                                                        <div class="feed-content-wrapper">
+                                                            <div class="feed-content-text-section">
+                                                                <div class="feed-content-text-wrapper">
+                                                                    <span>화성 이주 프로젝트가 예상보다 빠르게 진행되고 있습니다. Starship의 최신 테스트에서 놀라운 성과를 거뒀고, 이제 우리는 인류를 다행성 종으로 만드는 목표에 한 발 더 다가갔습니다. 지속 가능한 에너지와 우주 탐사, 이 두 가지가 인류의 미래를 결정할 것입니다.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 포트폴리오 탭 콘텐츠 -->
+                                <div class="tab-content" data-tab="portfolio" style="display: none;">
+                                    <div style="padding:16px; text-align: center;">
+                                        <button class="admin-main-btn" style="width:auto; padding:8px 16px;">+ 새 포트폴리오 추가</button>
+                                        <p style="margin-top:20px; color:#12131499;">등록된 포트폴리오가 없습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <svg style="display: none;">
+        <symbol id="more-menu-outline" viewBox="0 0 24 24">
+            <path clip-rule="evenodd"
+                d="M13.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m6.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M7 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                fill-rule="evenodd"></path>
+        </symbol>
+    </svg>
+
+    <script src="./team-admin.js"></script>
+</body>
+
+</html>

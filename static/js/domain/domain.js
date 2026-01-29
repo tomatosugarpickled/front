@@ -112,3 +112,10 @@ loginIcon2.addEventListener("click", (e) => {
         modalPark.style.display = "none";
     }
 });
+
+// 관리자모드에서 사이드 바 누르면 값 뿌리는 화면
+// const categorys = document.querySelectorAll(
+//     ".first-wrap, .second-wrap, .third-wrap, .fourth-wrap, .fifth-wrap, .sixth-wrap",
+// );
+
+// iamtot_ra
