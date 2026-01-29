@@ -68,8 +68,6 @@ removeMenu.addEventListener("scroll", (e) => {
 
 const checks = document.querySelectorAll(".menu-scroll");
 const checkicons = document.querySelectorAll(".checkclickoff");
-console.log(checks);
-console.log(checkicons);
 
 checks.forEach((check, i) => {
     check.addEventListener("click", (e) => {
