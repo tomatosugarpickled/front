@@ -11,15 +11,17 @@
     margin: 0px;
 }
 
-/* HTML 기본 텍스트 색상 설정 (흰색) */
+/* HTML 기본 텍스트 색상 설정 (라이트 모드) */
 html {
     color: var(--text-primary);
+    background-color: var(--bg-primary);
 }
 
 /* Body 전체 크기 설정 */
 body {
     height: 100%;
     width: 100%;
+    background-color: var(--bg-primary);
 }
 
 /* Body 마진 제거 */
@@ -70,10 +72,10 @@ textarea {
    메인 컨테이너 레이아웃
    ======================================== */
 
-/* 펀딩 등록 최상위 컨테이너 - 검은 배경, 좌우 스크롤 숨김 */
+/* 펀딩 등록 최상위 컨테이너 - 라이트 배경, 좌우 스크롤 숨김 */
 .funding-regist-container {
     display: flex;
-    background: var(--bg-page);
+    background: var(--bg-primary);
     direction: ltr;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -211,12 +213,12 @@ progress {
     top: -30%;
 }
 
-/* 구분선 라인 - 반투명 흰색 수평선 */
+/* 구분선 라인 - 라이트 모드 수평선 */
 .funding-regist-form-separator-line {
     position: absolute;
     width: 600px;
     height: 1px;
-    background-color: var(--bg-button-secondary);
+    background-color: var(--border-light);
     border: 0px;
     top: 50%;
 }
@@ -262,7 +264,7 @@ progress {
     margin-bottom: 8px;
 }
 
-/* 텍스트 입력 필드 - 다크 테마, 둥근 모서리, 그림자 효과 */
+/* 텍스트 입력 필드 - 라이트 테마, 둥근 모서리, 그림자 효과 */
 .funding-regist-form-input {
     margin-top: 15px;
     overflow: hidden;
@@ -271,15 +273,21 @@ progress {
     width: 95%;
     height: 48px;
     padding: 0px 16px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
-                rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
-                rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
-    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 1px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+                rgba(0, 0, 0, 0.04) 0px 2px 5px 0px;
+    border: 1px solid #d5d5d5;
     border-radius: 12px;
     outline: none;
-    background-color: var(--bg-button-secondary); /* 반투명 흰색 배경 */
+    background-color: #f8f8f8;
     color: var(--text-primary);
     caret-color: var(--text-primary); /* 커서 색상 */
+}
+
+/* Placeholder 텍스트 색상 */
+.funding-regist-form-input::placeholder {
+    color: #999999;
+    opacity: 1;
 }
 
 
@@ -400,9 +408,9 @@ progress {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: var(--bg-button-secondary);
+    background-color: #f8f8f8;
     cursor: pointer;
-    border: 1px dashed var(--border-light); /* 점선 테두리 */
+    border: 1px dashed #d5d5d5; /* 점선 테두리 */
     border-radius: 12px;
 }
 
@@ -519,7 +527,7 @@ progress {
     width: 100%;
 }
 
-/* 메모 텍스트영역 - 크기 조절 가능, 다크 테마 */
+/* 메모 텍스트영역 - 크기 조절 가능, 라이트 테마 */
 .funding-regist-form-memo-value {
     width: 100%;
     max-width: 100%;
@@ -528,11 +536,11 @@ progress {
     padding: 17px 16px;
     color: var(--text-primary);
     caret-color: var(--text-primary);
-    background-color: var(--bg-button-secondary);
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
-                rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
-                rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
-    border: 0px;
+    background-color: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 1px 0px,
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+                rgba(0, 0, 0, 0.04) 0px 2px 5px 0px;
+    border: 1px solid #d5d5d5;
     border-radius: 12px;
     outline: none;
 }
@@ -584,12 +592,12 @@ progress {
     border-radius: 8px;
     padding: 0px 0.9em;
     gap: 0.5em;
-    background: var(--bg-card); /* 흰색 배경 */
+    background: #000000; /* 검은색 배경 */
 }
 
-/* 제출 버튼 텍스트 - 검은색 */
+/* 제출 버튼 텍스트 - 흰색 */
 .funding-regist-form-submit-text {
-    color: var(--text-primary);
+    color: #ffffff;
     gap: 0.5em;
     display: inline-flex;
     flex-shrink: 0;
@@ -606,7 +614,7 @@ progress {
 .funding-regist-form-submit-icon-wrapper {
     margin-right: -0.15em;
     margin-left: -0.1em;
-    color: var(--text-primary);
+    color: #ffffff;
     gap: 0.5em;
     font-style: normal;
     display: inline-flex;
@@ -628,7 +636,7 @@ progress {
 
 /* 제출 중 로딩 인디케이터 - 기본적으로 숨김 */
 .funding-regist-form-submit-loading {
-    color: var(--text-primary);
+    color: #ffffff;
     gap: 0.5em;
     position: absolute;
     inset: 0px;
@@ -680,23 +688,23 @@ progress {
 @media (hover:hover) {
     /* 파일 업로드 영역 호버 시 그림자 강화 */
     .funding-regist-form-fileUpload:hover {
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
-                    rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
-                    rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, 
-                    rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 1px 0px,
+                    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
+                    rgba(0, 0, 0, 0.06) 0px 3px 9px 0px,
+                    rgba(0, 0, 0, 0.06) 0px 2px 5px 0px;
     }
 
     /* 입력 필드 호버 시 그림자 강화 */
     .funding-regist-form-input:hover {
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
-                    rgba(247, 247, 247, 0.16) 0px 0px 0px 1px, 
-                    rgba(247, 247, 247, 0.08) 0px 3px 9px 0px, 
-                    rgba(247, 247, 247, 0.08) 0px 2px 5px 0px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 1px 0px,
+                    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
+                    rgba(0, 0, 0, 0.06) 0px 3px 9px 0px,
+                    rgba(0, 0, 0, 0.06) 0px 2px 5px 0px;
     }
 
     /* 파일 업로드 래퍼 호버 시 버튼 배경 변경 */
     .funding-regist-form-fileUpload-wrapper:hover .funding-regist-form-fileUpload-inner {
-        background: var(--bg-button-secondary);
+        background: var(--bg-hover);
     }
 
     /* 필수 항목 아이콘 호버 시 툴팁 표시 */

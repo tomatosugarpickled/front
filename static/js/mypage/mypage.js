@@ -231,4 +231,82 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     initDateSelects();
+
+    // ===================================
+    // 팔로우 버튼 토글 기능
+    // ===================================
+
+    // 방문자용 팔로우 버튼 토글
+    const followButton = document.getElementById('follow-button');
+    if (followButton) {
+        followButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const buttonText = followButton.querySelector('.user-profile-edit-word');
+
+            if (buttonText.textContent === '팔로우') {
+                buttonText.textContent = '팔로잉';
+                followButton.classList.add('following');
+            } else {
+                buttonText.textContent = '팔로우';
+                followButton.classList.remove('following');
+            }
+        });
+    }
+
+    // 팔로워 리스트의 팔로우 버튼들 토글
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('follower-item-follow-btn')) {
+            e.preventDefault();
+            const button = e.target;
+
+            if (button.textContent === '팔로우') {
+                button.textContent = '팔로잉';
+                button.classList.add('following');
+            } else {
+                button.textContent = '팔로우';
+                button.classList.remove('following');
+            }
+        }
+    });
+
+    // ===================================
+    // 탭 전환 기능 - 관심 팀목록 클릭시 팔로워 리스트 표시
+    // ===================================
+
+    const interestTab = document.getElementById('tab-interest-text');
+    const followerListSection = document.getElementById('follower-list-section');
+    const postsTab = document.getElementById('tab-posts-text');
+
+    if (interestTab && followerListSection) {
+        // 팔로워 탭의 부모 요소에 클릭 이벤트 추가
+        const interestTabParent = interestTab.closest('.user-profile-tab-save-wrap');
+        const postsTabParent = postsTab ? postsTab.closest('.user-profile-tab-mypost') : null;
+
+        if (interestTabParent) {
+            interestTabParent.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // 모든 탭 콘텐츠 숨기기
+                const allTabs = document.querySelectorAll('[data-tab]');
+                allTabs.forEach(tab => tab.style.display = 'none');
+
+                // 팔로워 리스트 표시
+                followerListSection.style.display = 'flex';
+            });
+        }
+
+        if (postsTabParent) {
+            postsTabParent.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // 모든 탭 콘텐츠 숨기기
+                const allTabs = document.querySelectorAll('[data-tab]');
+                allTabs.forEach(tab => tab.style.display = 'none');
+
+                // 게시물 콘텐츠 표시
+                const postsContent = document.querySelector('[data-tab="posts"]');
+                if (postsContent) postsContent.style.display = 'block';
+            });
+        }
+    }
 });

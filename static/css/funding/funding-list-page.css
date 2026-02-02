@@ -1,6 +1,9 @@
 /* 전역 색상 변수 임포트 */
 @import url('../common/global-colors.css');
 
+/* 폰트 변수 임포트 */
+@import url('../common/font.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -143,7 +146,8 @@ body {
     gap: 8px;
     width: 97%;
     display: flex;
-    margin-top: 10px;
+    margin-top: 24px;
+    padding-bottom: 8px;
 }
 
 .search-text {
@@ -174,8 +178,8 @@ body {
 
 .funding-wrap {
     flex-direction: column;
-    gap: 8px;
-    padding: 12px;
+    gap: 16px;
+    padding: 20px;
     display: flex;
 }
 
@@ -186,7 +190,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
 }
 
 .funding-image-wrap {
@@ -194,19 +198,20 @@ body {
     width: 100%;
     max-width: 250px;
     cursor: pointer;
-    padding: 20px;
+    padding: 16px;
     gap: 12px;
     display: grid;
-}
-
-.funding-image-wrap {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    transition: transform 0.25s ease
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
 }
 
 .funding-image-wrap:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    transform: translateY(-6px)
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+    border-color: var(--border-primary);
 }
 
 .funding-image {
@@ -216,7 +221,7 @@ body {
 
 .funding-image-inner {
     color: transparent;
-    border-radius: 8px;
+    border-radius: 12px;
     height: auto;
     object-fit: cover;
     width: 100%;
@@ -239,18 +244,6 @@ body {
     line-height: 16px;
 }
 
-.funding-image {
-    position: relative;
-    width: 228px;
-}
-
-.funding-image-inner {
-    color: transparent;
-    border-radius: 8px;
-    height: 152px;
-    object-fit: cover;
-    width: 228px;
-}
 
 .funding-image-text {
     justify-content: flex-start;
@@ -414,7 +407,7 @@ body {
     align-items: flex-start;
     flex-direction: column;
     border-radius: 16px;
-    background: var(--bg-button-primary);
+    background: var(--bg-card);
     display: flex;
     scrollbar-width: none;
 }
@@ -446,7 +439,7 @@ body {
  * 닫기 버튼
  */
 .modal-icon {
-    background-color: var(--text-primary)1f;
+    background-color: var(--bg-button-secondary);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -462,7 +455,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: var(--text-primary)99;
+    color: var(--text-primary);
 }
 
 /**
@@ -479,7 +472,7 @@ body {
  * 공유 버튼
  */
 .modal-inner-share {
-    background-color: var(--text-primary)1f;
+    background-color: var(--bg-button-secondary);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -564,7 +557,7 @@ body {
  * 등록 버튼 (필요 시 활성화)
  */
 .modal-inner-regist {
-     background-color: var(--text-primary)1f;
+    background-color: var(--bg-button-secondary);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -612,7 +605,7 @@ body {
     align-items: center;
     padding: 3px 8px;
     min-width: 24px;
-    background: var(--bg-card)1f;
+    background: var(--bg-button-secondary);
     gap: 3px;
     border-radius: 6px;
     display: inline-flex;
@@ -791,7 +784,7 @@ body {
     align-self: stretch;
     align-items: flex-start;
     flex-direction: column;
-    background: var(--bg-card)14;
+    background: var(--border-light);
     height: 1px;
     display: flex;
     width: 95%;
