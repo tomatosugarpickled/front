@@ -1,22 +1,4 @@
-/* Admin specific styles */
-
-.admin-edit-btn {
-    position: absolute;
-    background: rgba(18, 19, 20, 0.6);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: background 0.2s;
-    backdrop-filter: blur(4px);
-    z-index: 100;
-}
+/* 전역 색상 변수 임포트 */@import url('../../common/global-colors.css');
 
 .admin-edit-btn:hover {
     background: rgba(18, 19, 20, 0.8);
@@ -39,7 +21,7 @@
 
 .admin-main-btn {
     /* Style re-using follow-button style but maybe different color */
-    background-color: #121314;
+    background-color: var(--text-primary);
     color: #fff;
     border: none;
     border-radius: 9px;
@@ -54,8 +36,8 @@
 }
 
 .admin-sm-btn {
-    background-color: #fff;
-    color: #121314;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     padding: 4px 10px;
@@ -65,5 +47,5 @@
 }
 
 .admin-sm-btn:hover {
-    background-color: #f1f4f8;
+    background-color: var(--bg-page);
 }

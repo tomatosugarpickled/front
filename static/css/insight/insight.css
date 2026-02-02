@@ -1,3 +1,6 @@
+/* 전역 색상 변수 임포트 */
+@import url('../common/global-colors.css');
+
 /*
 ============================================================================
 C&M Insight - 스타일시트
@@ -171,7 +174,7 @@ body {
     cursor: pointer;
     display: flex;
     width: 100%;
-    background-color: #121314;
+    background-color: var(--text-primary);
     overflow-y: auto;
 }
 
@@ -201,7 +204,7 @@ body {
  * - 높은 대비의 흰색
  */
 .banner-content-text01 {
-    color: #ffffff;
+    color: var(--text-primary);
     white-space: pre-wrap;
     letter-spacing: -.36px;
     font-size: 18px;
@@ -217,7 +220,7 @@ body {
 .banner-content-text02 {
     font-size: 8px;
     font-family: Pretendard Variable;
-    color: #ffffff66;
+    color: var(--text-primary)66;
 }
 
 /**
@@ -250,10 +253,10 @@ body {
 .event-container {
     border-width: 1px;
     border-style: solid;
-    border-color: #ffffff14;
+    border-color: var(--text-primary)14;
     border-radius: 16px;
     flex-direction: column;
-    background-color: #121314;
+    background-color: var(--text-primary);
     width: 100%;
     display: flex;
 }
@@ -303,7 +306,7 @@ body {
  * - 18px 볼드 폰트
  */
 .search-content {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.36px;
     font-size: 18px;
     font-weight: 600;
@@ -333,7 +336,7 @@ body {
 .right-arrow-button {
     opacity: .4;
     cursor: not-allowed;
-    background-color: #ffffff1f;
+    background-color: var(--bg-card)1f;
     justify-content: center;
     align-items: center;
     min-height: 28px;
@@ -349,7 +352,7 @@ body {
 .right-arrow-svg {
     width: 16px;
     height: 16px;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /**
@@ -413,7 +416,7 @@ body {
  */
 .primary-text-inner {
     letter-spacing: -.44999999999999996px;
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 15px;
     font-weight: 600;
     line-height: 18px;
@@ -425,7 +428,7 @@ body {
  * - 낮은 투명도
  */
 .secondary-text-inner {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -514,7 +517,7 @@ body {
 }
 
 .d-day-count-inner {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.2px;
     font-size: 10px;
     font-weight: 500;
@@ -557,7 +560,7 @@ body {
 }
 
 .header-text {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -574,7 +577,7 @@ body {
 }
 
 .image-text-middle-inner {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.26px;
     font-size: 13px;
     font-weight: 500;
@@ -590,7 +593,7 @@ body {
 }
 
 .image-text-footer-inner {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -653,12 +656,12 @@ body {
     padding: 7.2px;
     justify-content: center;
     align-items: center;
-    background: #ffffff1f;
+    background: var(--bg-card)1f;
     display: inline-flex;
 }
 
 .theme-icon-svg {
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /**
@@ -671,7 +674,7 @@ body {
 }
 
 .theme-inner-text-primary {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.3px;
     font-size: 15px;
     line-height: 20px;
@@ -679,7 +682,7 @@ body {
 }
 
 .theme-inner-text-secondary {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -709,7 +712,7 @@ body {
 .search-event-content {
     border-width: 1px;
     border-style: solid;
-    border-color: #ffffff14;
+    border-color: var(--text-primary)14;
     flex-direction: column;
     border-radius: 16px;
     background: #121314;
@@ -744,7 +747,7 @@ body {
     padding-inline: 8px;
     gap: 8px;
     width: 62%;
-    background: #ffffff14;
+    background: var(--bg-card)14;
     display: flex;
 }
 
@@ -759,7 +762,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff66;
+    color: var(--text-primary)66;
 }
 
 /**
@@ -777,7 +780,7 @@ body {
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /**
@@ -806,7 +809,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff66;
+    color: var(--text-primary)66;
     transition: transform .15s cubic-bezier(.68, -.55, .265, 1.55);
 }
 
@@ -825,7 +828,7 @@ body {
     display: inline-flex;
     padding-inline: 12px;
     cursor: pointer;
-    background: #ffffff14;
+    background: var(--bg-card)14;
     position: relative;
     z-index: 1;
 }
@@ -833,7 +836,7 @@ body {
 .select-category {
     padding-inline: 6px;
     text-overflow: ellipsis;
-    color: #ffffff; 
+    color: var(--text-primary); 
     width: 100%;
     font-weight: 400;
     letter-spacing: -.26px;
@@ -849,7 +852,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff66;
+    color: var(--text-primary)66;
 }
 
 /* 주제 필터 */
@@ -861,13 +864,13 @@ body {
     display: inline-flex;
     padding-inline: 12px;
     cursor: pointer;
-    background: #ffffff14;
+    background: var(--bg-card)14;
 }
 
 .select-theme {
     padding-inline: 6px;
     text-overflow: ellipsis;
-    color: #ffffff; 
+    color: var(--text-primary); 
     width: 100%;
     font-weight: 400;
     letter-spacing: -.26px;
@@ -883,7 +886,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff66;
+    color: var(--text-primary)66;
 }
 
 /* 위치 필터 */
@@ -895,13 +898,13 @@ body {
     display: inline-flex;
     padding-inline: 12px;
     cursor: pointer;
-    background: #ffffff14;
+    background: var(--bg-card)14;
 }
 
 .select-location {
     padding-inline: 6px;
     text-overflow: ellipsis;
-    color: #ffffff; 
+    color: var(--text-primary); 
     width: 100%;
     font-weight: 400;
     letter-spacing: -.26px;
@@ -917,7 +920,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff66;
+    color: var(--text-primary)66;
 }
 
 
@@ -963,7 +966,7 @@ body {
 .unfinded-inner-text {
     white-space: pre-line;
     text-align: center;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.3px;
     font-size: 15px;
     font-weight: 500;
@@ -1002,7 +1005,7 @@ body {
 
 .find-box-header-span {
     align-items: center;
-    color: #ffffff99;
+    color: var(--text-primary)99;
     white-space: nowrap;
     gap: 4px;
     display: flex;
@@ -1054,7 +1057,7 @@ body {
 
 .find-box-body-image-icon {
     white-space: nowrap;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 /**
@@ -1097,7 +1100,7 @@ body {
 }
 
 .profile-primary-text {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.24px;
     font-size: 14px;
     font-weight: 500;
@@ -1113,7 +1116,7 @@ body {
 }
 
 .content-primary-text {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.36px;
     font-size: 18px;
     font-weight: 600;
@@ -1128,7 +1131,7 @@ body {
 }
 
 .content-secondary-text {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -1163,7 +1166,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .find-body-button-text {
@@ -1174,7 +1177,7 @@ body {
 
 .find-body-button-primary {
     white-space: nowrap;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.78px;
     font-size: 16px;
     font-variant-numeric: lining-nums tabular-nums;
@@ -1219,7 +1222,7 @@ body {
 
 .footer-button-inner {
     padding-inline: 4px;
-    color: #ffffff99;
+    color: var(--text-primary)99;
     white-space: nowrap;
 }
 
@@ -1300,7 +1303,7 @@ body {
     border-width: 1px;
     border-style: solid;
     height: 100%;
-    border-color: #ffffff14;
+    border-color: var(--text-primary)14;
     align-items: flex-start;
     flex-direction: column;
     border-radius: 16px;
@@ -1336,7 +1339,7 @@ body {
  * 닫기 버튼
  */
 .modal-icon {
-    background-color: #ffffff1f;
+    background-color: var(--bg-card)1f;
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -1344,7 +1347,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
     cursor: pointer;
 }
 
@@ -1352,7 +1355,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff99;
+    color: var(--text-primary)99;
 }
 
 /**
@@ -1369,7 +1372,7 @@ body {
  * 공유 버튼
  */
 .modal-inner-share {
-    background-color: #ffffff1f;
+    background-color: var(--bg-card)1f;
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -1377,7 +1380,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
     cursor: pointer;
 }
 
@@ -1395,7 +1398,7 @@ body {
  * 등록 버튼 (필요 시 활성화)
  */
 .modal-inner-regist {
-    background-color: #ffffff;
+    background-color: var(--bg-card);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -1442,7 +1445,7 @@ body {
     align-items: center;
     padding: 3px 8px;
     min-width: 24px;
-    background: #ffffff1f;
+    background: var(--bg-card)1f;
     gap: 3px;
     border-radius: 6px;
     display: inline-flex;
@@ -1450,7 +1453,7 @@ body {
 
 .nwcf-span {
     white-space: nowrap;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 500;
@@ -1485,7 +1488,7 @@ body {
 }
 
 .modal-body-title-content {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.48px;
     font-size: 24px;
     font-weight: 600;
@@ -1523,7 +1526,7 @@ body {
 }
 
 .hdlt-text {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -1549,7 +1552,7 @@ body {
 
 .hdlt-content-p {
     white-space: pre-wrap;
-    color: #ffffff;
+    color: var(--text-primary);
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -1557,7 +1560,7 @@ body {
 }
 
 .hdlt-content-p-second {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -1604,7 +1607,7 @@ body {
 
 .elh-span {
     align-items: center;
-    color: #ffffff99;
+    color: var(--text-primary)99;
     white-space: nowrap;
     gap: 4px;
     display: flex;
@@ -1621,7 +1624,7 @@ body {
     align-self: stretch;
     align-items: flex-start;
     flex-direction: column;
-    background: #ffffff14;
+    background: var(--bg-card)14;
     height: 1px;
     display: flex;
     width: 95%;
@@ -1639,7 +1642,7 @@ body {
 
 .elt-content {
     flex-direction: column;
-    color: #ffffff;
+    color: var(--text-primary);
     width: 100%;
     display: flex;
     font-size: 15px;
@@ -1651,7 +1654,7 @@ body {
     text-align: left;
     white-space: pre-line;
     text-overflow: ellipsis;
-    color: #ffffff;
+    color: var(--text-primary);
     width: 100%;
     letter-spacing: -.3px;
     font-size: 15px;
@@ -1663,7 +1666,7 @@ body {
     text-align: left;
     white-space: pre-line;
     text-overflow: ellipsis;
-    color: #ffffff99;
+    color: var(--text-primary)99;
     width: 100%;
     letter-spacing: -.3px;
     font-size: 13px;
@@ -1740,7 +1743,7 @@ body {
 }
 
 .shadow-menu-header-inner {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 13px;
     font-weight: 400;
@@ -1777,7 +1780,7 @@ body {
     width: 100%;
     scrollbar-width: thin !important;
     scrollbar-gutter: stable !important;
-    scrollbar-color: #ffffff3d transparent !important;
+    scrollbar-color: var(--text-primary)3d transparent !important;
 }
 
 /**
@@ -1822,7 +1825,7 @@ body {
  * 옵션 텍스트
  */
 .menu-scroll-primary {
-    color: #ffffff;
+    color: var(--text-primary);
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -1832,7 +1835,7 @@ body {
 .menu-scroll-secondary {
     position: relative;
     white-space: pre-wrap;
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -1864,7 +1867,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 

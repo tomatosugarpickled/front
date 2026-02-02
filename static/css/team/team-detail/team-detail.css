@@ -1,66 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
-
-:root {
-    --fonts-korean:
-        "Pretendard Variable", "Pretendard", system-ui, -apple-system,
-        sans-serif; /* 🚀 Fixed: Font Name */
-    --texts--fonts--body: var(
-        --fonts-korean
-    ); /* 🚀 Added: Standard Font Variable */
-    --font-mono:
-        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-black: #000;
-    --spacing: 0.25rem;
-    --container-md: 28rem;
-    --global-color-border: #18253d0f; /* 🚀 Added: Missing variable for borders */
-    --text-xs: 0.75rem;
-    --text-xs--line-height: 1.33333;
-    --text-sm: 0.875rem;
-    --text-sm--line-height: 1.42857;
-    --text-base: 1rem;
-    --text-base--line-height: 1.5;
-    --text-lg: 1.125rem;
-    --text-lg--line-height: 1.55556;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: 1.33333;
-    --font-weight-extralight: 200;
-    --font-weight-normal: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --radius-sm: 0.25rem;
-    --radius-md: 0.375rem;
-    --ease-in: cubic-bezier(0.4, 0, 1, 1);
-    --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    --blur-sm: 8px;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --color-primary-light: oklch(0.547 0.2389 266.82);
-    --color-primary-dark: oklch(0.547 0.2389 266.82);
-    --color-primary-text-light: #fff;
-    --color-primary-text-dark: #fff;
-    --color-danger-light: oklch(0.65 0.1406 12.71);
-    --color-danger-dark: oklch(0.6088 0.1801 30.71);
-    --color-success-light: oklch(0.7231 0.1834 142.46);
-    --color-success-dark: oklch(0.7679 0.1603 152.74);
-    --color-button-light: #fff;
-    --color-button-dark: oklch(0.2532 0.0056 285.99);
-    --color-modal-background-light: oklch(0.9758 0.0057 264.53);
-    --color-modal-background-dark: oklch(0.15 0 0);
-    --color-modal-text-light: oklch(0 0.1 41);
-    --color-modal-text-dark: #fff;
-    --color-icon-background-light: oklch(0.928 0.006 264.531);
-    --color-icon-background-dark: oklch(0.3222 0.0053 286.1);
-    --color-icon-text-light: oklch(0.6066 0 0);
-    --color-icon-text-dark: oklch(0.7174 0.0029 286.32);
-    --animate-shake: shake 250ms ease-in-out;
-}
+/* 전역 색상 변수 임포트 */@import url('../../common/global-colors.css');
 
 * {
     margin: 0;
@@ -137,9 +75,9 @@ body {
     margin: 0;
     -webkit-overflow-scrolling: touch;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: var(--text-on-dark);
     background: #fff;
-    color: #09090b;
+    color: var(--text-body);
     font-family: var(
         --texts--fonts--body
     ); /* 🚀 Updated: Use standard variable */
@@ -154,7 +92,7 @@ body {
     height: 893px;
     border: none; /* 🚀 Fixed: Removed visible border line */
     border-radius: 16px;
-    background-color: #f1f4f8; /* Adapted for Light Mode */
+    background-color: var(--bg-page); /* Adapted for Light Mode */
     overflow: hidden;
 }
 
@@ -233,7 +171,7 @@ body {
     color: transparent;
     border-width: 1px;
     border-style: solid;
-    border-color: #ffffff00;
+    border-color: var(--border-transparent);
     object-fit: cover;
     aspect-ratio: 5 / 1;
     border-radius: 16px;
@@ -262,7 +200,7 @@ body {
     border-radius: 12px 12px 0 0; /* Rounded Top */
     align-items: flex-start;
     flex-direction: column;
-    background: #ffffff;
+    background: var(--bg-card);
     width: 100%;
     display: flex;
     margin-bottom: 0;
@@ -274,7 +212,7 @@ body {
     align-items: flex-start;
     flex-direction: column;
     border-radius: 12px 12px 0 0;
-    background: #ffffff;
+    background: var(--bg-card);
     width: 100%;
     display: flex;
     gap: 12px;
@@ -298,7 +236,7 @@ body {
     border-radius: 9px;
     height: 60px;
     width: 60px;
-    background-color: #fff;
+    background-color: var(--bg-card);
     justify-content: center;
     align-items: center;
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -323,7 +261,7 @@ body {
 }
 
 .team-title {
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.4px;
     font-size: 20px;
     font-weight: 600;
@@ -351,12 +289,12 @@ body {
 .badge-background-text {
     top: 100%;
     left: 50%;
-    border-color: #8c9fba1f;
+    border-color: var(--border-semi-transparent);
     transition: opacity 0.3s;
     padding: 1px 6px;
-    background: #12131499;
+    background: var(--bg-tooltip)99;
     visibility: hidden;
-    color: #ffffff;
+    color: var(--text-on-dark);
     transform: translateX(-50%);
     white-space: nowrap;
     opacity: 0;
@@ -372,7 +310,7 @@ body {
 }
 
 .team-profile-detail-info {
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.26px;
     font-size: 11px;
     font-weight: 600;
@@ -399,7 +337,7 @@ body {
     opacity: 0.9;
     white-space: pre-line;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     font-weight: 500;
     line-height: 18px;
     letter-spacing: -0.26px;
@@ -411,7 +349,7 @@ body {
 .team-post-count {
     white-space: pre-line;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.78px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;
@@ -434,7 +372,7 @@ body {
     opacity: 0.9;
     white-space: pre-line;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     font-weight: 500;
     line-height: 18px;
     letter-spacing: -0.26px;
@@ -446,7 +384,7 @@ body {
 .team-follower-count {
     white-space: pre-line;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.78px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;
@@ -469,7 +407,7 @@ body {
     opacity: 0.9;
     white-space: pre-line;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     font-weight: 500;
     line-height: 18px;
     letter-spacing: -0.26px;
@@ -481,7 +419,7 @@ body {
 .team-project-count {
     white-space: pre-line;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.78px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;
@@ -507,7 +445,7 @@ body {
 
 .team-profile-aboutus-content {
     white-space: pre-line;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: 0;
     font-size: 13px;
     font-weight: 400;
@@ -522,7 +460,7 @@ body {
 
 .team-profile-aboutus-more {
     padding-inline: 0px;
-    color: #12131466;
+    color: var(--text-primary)66;
     letter-spacing: -0.26px;
     font-size: 13px;
     font-weight: 400;
@@ -546,11 +484,11 @@ body {
 
 .follow-button {
     backdrop-filter: none;
-    background-color: #121314;
+    background-color: var(--text-primary);
     justify-content: center;
     align-items: center;
     padding: 9px;
-    color: #ffffff;
+    color: var(--text-on-dark);
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     max-height: 36px;
     border-radius: 9px;
@@ -582,11 +520,11 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #12131499;
+    color: var(--text-secondary);
     outline: none;
     cursor: pointer;
     border: 1px solid;
-    background-color: #ffffff;
+    background-color: var(--text-on-dark);
 }
 
 .contact-button-text {
@@ -604,7 +542,7 @@ body {
 }
 
 .report-block-button {
-    border-color: #8c9fba1f;
+    border-color: var(--border-semi-transparent);
     align-items: center;
     padding: 9px;
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -612,11 +550,11 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #12131499;
+    color: var(--text-secondary);
     outline: none;
     cursor: pointer;
     border: 1px solid;
-    background-color: #ffffff;
+    background-color: var(--text-on-dark);
 }
 
 .report-block-svg {
@@ -629,7 +567,7 @@ body {
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     display: inline-flex;
     -webkit-mask: none;
-    color: #12131499;
+    color: var(--text-secondary);
 }
 
 .team-detail-category-wrap {
@@ -640,7 +578,7 @@ body {
     z-index: 10;
     position: sticky;
     max-width: 1000px;
-    background: #ffffff;
+    background: var(--bg-card);
     width: 100%;
     display: flex;
     margin-top: 0;
@@ -657,7 +595,7 @@ body {
     border-bottom: 1px solid #e2e8f0;
     width: 100%;
     display: flex;
-    background: #ffffff;
+    background: var(--bg-card);
 }
 
 .team-detail-category-home {
@@ -673,7 +611,7 @@ body {
 .team-detail-category-home-text {
     user-select: none;
     white-space: nowrap;
-    color: #121314; /* Active color */
+    color: var(--text-primary); /* Active color */
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
@@ -728,7 +666,7 @@ body {
     flex-direction: column;
     gap: 16px;
     padding: 16px;
-    background: #ffffff;
+    background: var(--bg-card);
     width: 100%;
     display: flex;
 }
@@ -751,7 +689,7 @@ body {
 
 .member-relative-title-text {
     user-select: none;
-    color: #12131499;
+    color: var(--text-secondary);
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
@@ -769,7 +707,7 @@ body {
 
 .member-info-title-text {
     user-select: none;
-    color: #121314;
+    color: var(--text-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -805,13 +743,13 @@ body {
     font-size: 13px;
     font-weight: 500;
     line-height: 18px;
-    background-color: #ffffff;
+    background-color: var(--text-on-dark);
 }
 
 .member-info-seemore-button-text {
     padding-inline: 6px;
     user-select: none;
-    color: #12131499;
+    color: var(--text-secondary);
     white-space: nowrap;
 }
 
@@ -881,7 +819,7 @@ body {
     max-width: 100px;
     display: inline-flex;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
@@ -891,7 +829,7 @@ body {
 }
 
 .profile-stack {
-    color: #12131499;
+    color: var(--text-secondary);
     text-align: center;
     width: 100%;
     font-size: 13px;
@@ -904,7 +842,7 @@ body {
 .follow-button2 {
     backdrop-filter: blur(calc(var(--blurs-standard) / 2));
     justify-content: center;
-    border-color: #8c9fba1f;
+    border-color: var(--border-semi-transparent);
     align-items: center;
     min-height: 28px;
     max-height: 28px;
@@ -912,11 +850,11 @@ body {
     padding: 6px 12px;
     display: inline-flex;
     border-radius: 7px;
-    color: #12131499;
+    color: var(--text-secondary);
     outline: none;
     cursor: pointer;
     border: 1px solid;
-    background-color: #ffffff;
+    background-color: var(--text-on-dark);
 }
 
 .follow-button-text2 {
@@ -926,7 +864,7 @@ body {
     padding-inline: 4px;
     white-space: nowrap;
     display: flex;
-    color: #12131499;
+    color: var(--text-secondary);
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
@@ -958,7 +896,7 @@ body {
 
 /* 공통 섹션 타이틀 */
 .section-title {
-    color: #121314;
+    color: var(--text-primary);
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -971,8 +909,8 @@ body {
 .tag {
     display: inline-block;
     padding: 4px 8px;
-    background-color: #f1f4f8;
-    color: #121314;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
@@ -995,7 +933,7 @@ body {
 
 /* Common Card Style */
 .content-card {
-    background: #ffffff;
+    background: var(--bg-card);
     border-radius: 0 0 12px 12px; /* Bottom corners only */
     padding: 32px;
     /* Box shadow removed for cleaner flat look, or subtle if requested. 
@@ -1024,7 +962,7 @@ body {
 .card-title {
     font-size: 19px;
     font-weight: 700;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.4px;
 }
 
@@ -1092,7 +1030,7 @@ body {
 .people-name {
     font-size: 16px;
     font-weight: 700;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.3px;
 }
 
@@ -1108,7 +1046,7 @@ body {
     padding: 6px 20px;
     border-radius: 6px;
     border: 1px solid #e2e8f0;
-    background: #ffffff;
+    background: var(--bg-card);
     color: #475569;
     font-size: 13px;
     font-weight: 600;
@@ -1151,7 +1089,7 @@ body {
 
 .info-value {
     font-size: 15px;
-    color: #121314;
+    color: var(--text-primary);
     font-weight: 500;
     letter-spacing: -0.3px;
 }
@@ -1180,7 +1118,7 @@ body {
 }
 
 .feed-card {
-    background: #ffffff;
+    background: var(--bg-card);
     border-radius: 0;
     width: 100%;
     display: flex;
@@ -1290,7 +1228,7 @@ body {
 }
 
 .name-tag {
-    color: #121314;
+    color: var(--text-primary);
     font-weight: 600;
     font-size: 15px;
     letter-spacing: -0.3px;
@@ -1375,7 +1313,7 @@ body {
     line-clamp: 5;
     -webkit-box-orient: vertical;
     white-space: pre-line;
-    color: #121314;
+    color: var(--text-primary);
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0;
@@ -1465,8 +1403,8 @@ body {
     backdrop-filter: blur(calc(var(--blurs-standard) / 2));
     opacity: 1;
     transform: none;
-    border-color: #18253d0f;
-    box-shadow: 0px 4px 20px 0px #18253d0f;
+    border-color: var(--border-primary);
+    box-shadow: var(--shadow-sm);
     border-radius: 20px;
     border: 1px solid;
     background: #fff;
@@ -1560,7 +1498,7 @@ body {
     width: 100%;
     white-space: pre-line;
     text-overflow: ellipsis;
-    color: #121314;
+    color: var(--text-primary);
     font-weight: 500;
     font-size: 15px;
     letter-spacing: -0.3px;

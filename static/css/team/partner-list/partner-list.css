@@ -1,66 +1,5 @@
-:host,
-:root {
-    --fonts-korean:
-        "PretendardVariable", "PretendardVariable Fallback", system-ui,
-        -apple-system, sans-serif;
-    --texts--fonts--body: var(--fonts-korean);
-    --global-color-border: #18253d0f;
-    /* 🎨 전역 선 색상 (원본과 동일) */
-    --font-mono:
-        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-black: #000;
-    --spacing: 0.25rem;
-    --container-md: 28rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: 1.33333;
-    --text-sm: 0.875rem;
-    --text-sm--line-height: 1.42857;
-    --text-base: 1rem;
-    --text-base--line-height: 1.5;
-    --text-lg: 1.125rem;
-    --text-lg--line-height: 1.55556;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: 1.33333;
-    --font-weight-extralight: 200;
-    --font-weight-normal: 400;
-    --font-weight-medium: 500;
-    --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    --radius-sm: 0.25rem;
-    --radius-md: 0.375rem;
-    --ease-in: cubic-bezier(0.4, 0, 1, 1);
-    --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    --blur-sm: 8px;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --color-primary-light: oklch(0.547 0.2389 266.82);
-    --color-primary-dark: oklch(0.547 0.2389 266.82);
-    --color-primary-text-light: #fff;
-    --color-primary-text-dark: #fff;
-    --color-danger-light: oklch(0.65 0.1406 12.71);
-    --color-danger-dark: oklch(0.6088 0.1801 30.71);
-    --color-success-light: oklch(0.7231 0.1834 142.46);
-    --color-success-dark: oklch(0.7679 0.1603 152.74);
-    --color-button-light: #fff;
-    --color-button-dark: oklch(0.2532 0.0056 285.99);
-    --color-modal-background-light: oklch(0.9758 0.0057 264.53);
-    --color-modal-background-dark: oklch(0.15 0 0);
-    --color-modal-text-light: oklch(0 0.1 41);
-    --color-modal-text-dark: #fff;
-    --color-icon-background-light: oklch(0.928 0.006 264.531);
-    --color-icon-background-dark: oklch(0.3222 0.0053 286.1);
-    --color-icon-text-light: oklch(0.6066 0 0);
-    --color-icon-text-dark: oklch(0.7174 0.0029 286.32);
-    --animate-shake: shake 250ms ease-in-out;
-}
+/* 전역 색상 변수 임포트 */
+@import url('../../common/global-colors.css');
 
 * {
     box-sizing: border-box;
@@ -80,8 +19,8 @@ body {
     margin: 0;
     -webkit-overflow-scrolling: touch;
     overflow: hidden;
-    background: #f1f4f8;
-    color: #09090b;
+    background: var(--bg-page);
+    color: var(--text-body);
     font-family: var(--texts--fonts--body);
 }
 
@@ -105,7 +44,7 @@ textarea {
     font-variation-settings: inherit;
     letter-spacing: inherit;
     color: inherit;
-    background: #00000000;
+    background: var(--bg-input);
 }
 
 *,
@@ -192,12 +131,12 @@ textarea {
     width: 220px;
     opacity: 1;
     transform: none;
-    border-color: #18253d0f;
+    border-color: var(--border-primary);
     flex-direction: column;
     z-index: 99999;
-    box-shadow: 0px 4px 20px 0px #18253d0f;
+    box-shadow: var(--shadow-sm);
     pointer-events: auto;
-    background: #ffffff;
+    background: var(--bg-card);
     border-radius: 16px;
     display: none; /* 항상 보이게 설정 */
     font-family: var(--fonts-sans);
@@ -222,13 +161,13 @@ textarea {
 .teamlist-header-background-section {
     border-width: 1px;
     border-style: solid;
-    border-color: #ffffff00;
+    border-color: var(--border-transparent);
     justify-content: center;
     align-items: center;
     min-width: 600px;
     gap: 10px;
     border-radius: 16px;
-    background: #ffffff;
+    background: var(--bg-card);
     width: 100%;
     padding: 12px;
     display: flex;
@@ -258,7 +197,7 @@ textarea {
 }
 
 .keyword-input {
-    color: #12131499;
+    color: var(--text-secondary);
     cursor: pointer;
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
@@ -283,7 +222,7 @@ textarea {
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     display: inline-flex;
     -webkit-mask: none;
-    color: #12131499;
+    color: var(--text-secondary);
 }
 
 .tooltip-div-section {
@@ -312,9 +251,9 @@ textarea {
 
 .tooltip-title-section {
     backdrop-filter: blur(calc(60px / 2));
-    border-color: #8c9fba1f;
-    background: #121314;
-    box-shadow: 0px 4px 20px 0px #18253d0f;
+    border-color: var(--border-semi-transparent);
+    background: var(--bg-tooltip);
+    box-shadow: var(--shadow-sm);
     padding: 10px 14px;
     border-radius: 12px;
     border: 1px solid;
@@ -331,7 +270,7 @@ textarea {
 }
 
 .tooltip-title-text {
-    color: #ffffff;
+    color: var(--text-on-dark);
     letter-spacing: -0.26px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;
@@ -341,7 +280,7 @@ textarea {
 }
 
 .tooltip-body-text {
-    color: #ffffffcc;
+    color: var(--text-on-dark-secondary);
     font-family: var(--texts--fonts--body);
     font-size: 11px;
     font-weight: 400;
@@ -351,7 +290,7 @@ textarea {
 }
 
 .tooltip-example-text {
-    color: #ffffff88;
+    color: var(--text-on-dark-tertiary);
     font-family: var(--texts--fonts--body);
     font-size: 10px;
     font-weight: 400;
@@ -361,7 +300,7 @@ textarea {
 
 .tooltip-textinput {
     white-space: pre;
-    color: #ffffff;
+    color: var(--text-on-dark);
     text-align: left;
     user-select: none;
     letter-spacing: 0;
@@ -374,7 +313,7 @@ textarea {
 .keyword-text-input {
     border: none;
     outline: none;
-    color: #121314;
+    color: var(--text-primary);
     width: 100%;
     display: flex;
     font-family: var(--texts--fonts--body);
@@ -385,7 +324,7 @@ textarea {
 }
 
 .keyword-text-input::placeholder {
-    color: #9ca3af; /* 연한 회색 */
+    color: var(--text-tertiary); /* placeholder 색상 */
     opacity: 1; /* 브라우저 기본 투명도 제거 */
 }
 
@@ -401,13 +340,13 @@ textarea {
     padding: 4px 20px;
     max-width: 140px;
     cursor: pointer;
-    border-left: 1px solid #e5e7eb; /* 색상 직접 지정 */
+    border-left: 1px solid var(--border-light);
     flex: 1 0 0px;
     display: flex;
 }
 
 .selector1 {
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -418,7 +357,7 @@ textarea {
 }
 
 .selector1-specific {
-    color: #121314;
+    color: var(--text-primary);
     /* 🎨 연한 회색으로 변경 */
     font-family: var(--texts--fonts--body);
     letter-spacing: -0.26px;
@@ -436,13 +375,13 @@ textarea {
     padding: 4px 20px;
     max-width: 140px;
     cursor: pointer;
-    border-left: 1px solid #e5e7eb; /* 색상 직접 지정 */
+    border-left: 1px solid var(--border-light);
     flex: 1 0 0px;
     display: flex;
 }
 
 .selector2 {
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -453,7 +392,7 @@ textarea {
 }
 
 .selector2-specific {
-    color: #121314;
+    color: var(--text-primary);
     /* 🎨 연한 회색으로 변경 */
     letter-spacing: -0.26px;
     font-family: var(--texts--fonts--body);
@@ -471,13 +410,13 @@ textarea {
     padding: 4px 20px;
     max-width: 140px;
     cursor: pointer;
-    border-left: 1px solid #e5e7eb; /* 색상 직접 지정 */
+    border-left: 1px solid var(--border-light);
     flex: 1 0 0px;
     display: flex;
 }
 
 .selector3 {
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -488,7 +427,7 @@ textarea {
 }
 
 .selector3-specific {
-    color: #121314;
+    color: var(--text-primary);
     /* 🎨 연한 회색으로 변경 */
     letter-spacing: -0.26px;
     font-family: var(--texts--fonts--body);
@@ -506,13 +445,13 @@ textarea {
     padding: 4px 20px;
     max-width: 140px;
     cursor: pointer;
-    border-left: 1px solid #e5e7eb; /* 색상 직접 지정 */
+    border-left: 1px solid var(--border-light);
     flex: 1 0 0px;
     display: flex;
 }
 
 .selector4 {
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -523,7 +462,7 @@ textarea {
 }
 
 .selector4-specific {
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.26px;
     font-family: var(--texts--fonts--body);
     font-size: 11px;
@@ -540,7 +479,7 @@ textarea {
 
 .search-button {
     backdrop-filter: none;
-    background-color: #121314;
+    background-color: var(--bg-button-primary);
     justify-content: center;
     align-items: center;
     padding: 14px;
@@ -563,11 +502,11 @@ textarea {
     align-items: center;
     display: inline-flex;
     -webkit-mask: none;
-    color: #12131499;
+    color: var(--text-secondary);
 }
 
 .search-button-svg svg {
-    fill: #ffffff;
+    fill: var(--text-on-dark);
     height: 20px;
     width: 20px;
 }
@@ -575,12 +514,12 @@ textarea {
 .list-main-container {
     border-style: solid;
     border-width: 1px;
-    border-color: #ffffff00;
+    border-color: var(--border-transparent);
     border-radius: 16px;
     max-width: 1000px;
     flex: 1 1 0%;
     overflow: hidden;
-    background: #ffffff;
+    background: var(--bg-card);
     width: 100%;
     height: 100%;
     display: flex;
@@ -591,7 +530,7 @@ textarea {
     backface-visibility: hidden;
     will-change: auto;
     width: 100%;
-    border-color: #18253d0f;
+    border-color: var(--border-primary);
     flex-direction: column;
     min-width: 320px;
     height: 100%;
@@ -638,7 +577,7 @@ textarea {
     align-items: center;
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     background: transparent;
-    border: 1px solid #8c9fba1f;
+    border: 1px solid var(--border-semi-transparent);
     padding: 2px 6px;
     height: 30px; /* 버튼 박스 상하 크기 직접 지정 */
     display: inline-flex;
@@ -651,13 +590,13 @@ textarea {
 .list-category-selector2.active,
 .list-category-selector3.active,
 .list-category-selector4.active {
-    background: #121314;
+    background: var(--bg-tooltip);
     border-color: transparent;
 }
 
 /* 카테고리 텍스트 - 기본 상태 */
 .list-category-text {
-    color: #12131499;
+    color: var(--text-secondary);
     user-select: none;
     padding-inline: 2px; /* 4px → 2px로 줄임 */
     text-align: center;
@@ -676,7 +615,7 @@ textarea {
 .list-category-selector2.active .list-category-text,
 .list-category-selector3.active .list-category-text,
 .list-category-selector4.active .list-category-text {
-    color: #ffffff;
+    color: var(--text-on-dark);
 }
 
 /* SVG 심볼 정의 숨김 */
@@ -756,7 +695,7 @@ body > svg {
     border-radius: 4.8px;
     height: 32px;
     width: 32px;
-    background-color: #fff;
+    background-color: var(--bg-card);
     justify-content: center;
     align-items: center;
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -789,7 +728,7 @@ body > svg {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -807,7 +746,7 @@ body > svg {
     border: solid 1px; 
     border-radius: 16px;
     border-color: var(--global-color-border); /* Adapted for Light Mode */
-    background-color: #f1f4f8; /* Adapted for Light Mode */
+    background-color: var(--bg-page); /* Light Mode 배경 */
     overflow: hidden;
 }
 
@@ -850,7 +789,7 @@ body > svg {
 }
 
 .team-major {
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.26px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;
@@ -865,7 +804,7 @@ body > svg {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.26px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -919,7 +858,7 @@ body > svg {
 .specific-info-text {
     align-self: stretch;
     text-align: center;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -938,11 +877,11 @@ body > svg {
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     display: inline-flex;
     -webkit-mask: none;
-    color: #0088ff;
+    color: var(--accent-primary);
 }
 
 .check-svg svg {
-    fill: #0088ff;
+    fill: var(--accent-primary);
     width: 16px;
     height: 16px;
 }
@@ -955,7 +894,7 @@ body > svg {
     align-self: stretch;
     align-items: flex-start;
     flex-direction: column;
-    background: #18253d0f;
+    background: var(--border-separator);
     height: 1px;
     display: flex;
 }
@@ -964,7 +903,7 @@ body > svg {
     flex-direction: column;
     flex: 1 1 0%;
     display: flex;
-    border-left: 1px solid #e5e7eb;
+    border-left: 1px solid var(--border-light);
 }
 
 .advertisement-container {
@@ -1006,7 +945,7 @@ body > svg {
     position: relative;
     display: flex;
     cursor: pointer;
-    background: #f8f9fb;
+    background: var(--bg-card-secondary);
     overflow: hidden;
 }
 
@@ -1017,7 +956,7 @@ body > svg {
     left: 0;
     border-radius: 12px;
     position: absolute;
-    background: #8c9fba0f;
+    background: var(--border-semi-transparent);
     cursor: pointer;
 }
 
@@ -1040,7 +979,7 @@ body > svg {
 
 .ad-content {
     white-space: normal;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.9px;
     font-family: var(--texts--fonts--body);
     font-size: 18px;
@@ -1054,7 +993,7 @@ body > svg {
 
 .ad-sub-content {
     white-space: pre-line;
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 11px;
@@ -1074,7 +1013,7 @@ body > svg {
     border-radius: 6px; /* 50% → 6px로 변경하여 둥근 네모 */
     height: 28px;
     width: 28px;
-    background-color: #121314;
+    background-color: var(--bg-button-primary);
     justify-content: center;
     align-items: center;
     transition: transform 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -1109,7 +1048,7 @@ body > svg {
 
 .category-header-title {
     user-select: none;
-    color: #12131499;
+    color: var(--text-secondary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 12px;
@@ -1153,7 +1092,7 @@ body > svg {
     flex: 1;
     /* 스크롤바 커스터마이징 (더 잘 보이게 수정) */
     scrollbar-width: thin;
-    scrollbar-color: #d1d5db transparent; 
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); 
 }
 
 /* 스크롤바 웹킷 (Chrome, Safari 등) 호환성 추가 - list에 적용 */
@@ -1164,7 +1103,7 @@ body > svg {
     background: transparent;
 }
 .category-body-list::-webkit-scrollbar-thumb {
-    background-color: #d1d5db;
+    background-color: var(--scrollbar-thumb);
     border-radius: 3px;
 }
 
@@ -1200,7 +1139,7 @@ body > svg {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     user-select: none;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;
@@ -1216,8 +1155,8 @@ body > svg {
 }
 
 .select-all {
-    /* '전체 선택' 버튼 배경색을 좀 더 진하게 변경 (#8c9fba14 -> #f2f4f7) */
-    background-color: #f2f4f7;
+    /* '전체 선택' 버튼 배경색 */
+    background-color: var(--bg-button-secondary);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -1227,13 +1166,13 @@ body > svg {
     min-height: 36px;
     display: inline-flex;
     outline: none;
-    color: #121314;
+    color: var(--text-primary);
     cursor: pointer;
     width: 100%;
     border: 1px solid transparent; /* 테두리 공간 확보 */
 }
 .select-all:hover {
-    background-color: #e5e7eb; /* 호버 시 약간 더 진하게 */
+    background-color: var(--bg-button-secondary-hover); /* 호버 상태 */
 }
 
 .selector-all-text{
@@ -1243,7 +1182,7 @@ body > svg {
     user-select: none;
     white-space: nowrap;
     display: flex;
-    color: #121314;
+    color: var(--text-primary);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;
@@ -1254,7 +1193,7 @@ body > svg {
 
 .apply-button{
     backdrop-filter: none;
-    background-color: #121314;
+    background-color: var(--bg-button-primary);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -1264,7 +1203,7 @@ body > svg {
     min-height: 36px;
     display: inline-flex;
     outline: none;
-    color: #ffffff;
+    color: var(--text-on-dark);
     cursor: pointer;
     width: 100%;
 }
@@ -1276,7 +1215,7 @@ body > svg {
     user-select: none;
     white-space: nowrap;
     display: flex;
-    color: #ffffff;
+    color: var(--text-on-dark);
     letter-spacing: -0.24px;
     font-family: var(--texts--fonts--body);
     font-size: 13px;

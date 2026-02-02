@@ -1,16 +1,8 @@
-/* ========================================
-   전역 리셋 및 기본 설정
-   ======================================== */
-
-/* 모든 요소의 기본 패딩과 마진 제거 */
-* {
-    padding: 0px;
-    margin: 0px;
-}
+/* 전역 색상 변수 임포트 */@import url('../../common/global-colors.css');
 
 /* HTML 기본 텍스트 색상 설정 (흰색) */
 html {
-    color: #ffffff;
+    color: var(--text-on-dark);
 }
 
 /* Body 전체 크기 설정 */
@@ -729,7 +721,7 @@ progress {
     top: calc(100% + 4px);
     left: 0;
     right: 0;
-    background: #121314;
+    background: var(--bg-tooltip);
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -780,7 +772,7 @@ progress {
 }
 
 .custom-dropdown::-webkit-scrollbar-track {
-    background: #ffffff13;
+    background: var(--bg-card)13;
     border-radius: 3px;
 }
 
@@ -791,4 +783,263 @@ progress {
 
 .custom-dropdown::-webkit-scrollbar-thumb:hover {
     background: #aaa;
+}
+
+/* ========================================
+   팀 등록 폼 추가 레이아웃
+   ======================================== */
+
+/* 팀 규모 & 팀 단계 2열 레이아웃 */
+.team-regist-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.team-regist-row > div {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 2열 레이아웃 내부 제목 */
+.team-regist-row .funding-regist-form-tab-title-icon-wrap {
+    width: 100% !important;
+}
+
+/* 2열 레이아웃 내부 입력 필드 */
+.team-regist-row .funding-regist-form-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.team-regist-row .custom-select-container {
+    width: 100%;
+}
+
+/* 모집 포지션 드롭다운 컨테이너 */
+.position-dropdown-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.position-dropdown-item {
+    flex: 1;
+    min-width: 170px;
+    max-width: calc(33.333% - 12px);
+}
+
+.position-dropdown-item .custom-select-container {
+    width: 100%;
+}
+
+.position-dropdown-item .funding-regist-form-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.position-dropdown-item .custom-dropdown {
+    max-height: 300px;
+}
+
+/* 포지션 선택 라벨 */
+.position-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 8px;
+    margin-top: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+/* URL 입력 필드 프리픽스 스타일 */
+.url-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.url-prefix {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-right: 0;
+}
+
+.url-input-wrapper .funding-regist-form-input {
+    margin-top: 0;
+    flex: 1;
+    min-width: 200px;
+    width: 100%;
+    max-width: none;
+}
+
+/* 카테고리 2열 레이아웃 */
+.category-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.category-row > div {
+    flex: 1;
+    min-width: 0;
+    max-width: calc(50% - 10px);
+}
+
+.category-row .custom-select-container {
+    width: 100%;
+}
+
+.category-row .funding-regist-form-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.category-row .custom-dropdown {
+    width: 100% !important;
+}
+
+.category-row .funding-regist-form-input-finalvalue {
+    margin-top: 5px;
+}
+
+/* 반응형 - 모바일 */
+@media (max-width: 600px) {
+    .team-regist-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .category-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .position-dropdown-item {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .position-dropdown-container {
+        flex-direction: column;
+    }
+}
+
+/* ========================================
+   인라인 스타일을 대체하는 CSS 클래스
+   ======================================== */
+
+/* 제목 너비 변형 */
+.title-wrap-width-25 {
+    width: 25%;
+}
+
+.title-wrap-width-22 {
+    width: 22%;
+}
+
+.title-wrap-width-30 {
+    width: 30%;
+}
+
+.title-wrap-width-35 {
+    width: 35%;
+}
+
+.title-wrap-width-42 {
+    width: 42%;
+}
+
+/* 필수 항목 별표 위치 */
+.required-asterisk {
+    top: unset;
+    bottom: 11.6875px;
+    right: unset;
+    left: 244.883px;
+}
+
+/* 툴팁 위치 */
+.tooltip-position {
+    top: -31.562px;
+    left: -21.539px;
+}
+
+.tooltip-position-alt {
+    top: -29.562px;
+    left: -20.539px;
+}
+
+/* 하이라이트된 텍스트 (볼드 + 파란색) */
+.highlight-text {
+    font-weight: bold;
+    color: rgb(128, 189, 255);
+}
+
+/* 볼드 텍스트 */
+.bold-text {
+    font-weight: bold;
+}
+
+/* 마진 유틸리티 */
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+/* 파일 업로드 래퍼 위치 */
+.file-upload-relative {
+    position: relative;
+}
+
+/* 시각적으로 숨겨진 파일 입력 (접근성 유지) */
+.visually-hidden-input {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: 0 -1px -1px 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/* 파일 업로드 에러 메시지 위치 */
+.file-error-position {
+    position: absolute;
+    left: -16%;
+    bottom: 27px;
+}
+
+/* 텍스트영역 높이 */
+.textarea-height {
+    height: 218px;
+}
+
+/* 숨김 상태 */
+.hidden {
+    display: none;
 }

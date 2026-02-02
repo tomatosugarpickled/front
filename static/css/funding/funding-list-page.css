@@ -1,3 +1,6 @@
+/* 전역 색상 변수 임포트 */
+@import url('../common/global-colors.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +16,7 @@ svg {
 
 body {
     overflow: hidden;
-    background-color: rgba(18,19,20,1);
+    background-color: var(--bg-page);
 }
 
 .main-border {
@@ -23,8 +26,8 @@ body {
     height: 893px;
     border: solid 1px; 
     border-radius: 16px;
-    border-color: rgba(255,255,255,0.0800);
-    background-color: #0e0f10;
+    border-color: var(--border-primary);
+    background-color: var(--bg-page);
     overflow: hidden;
 }
 
@@ -32,9 +35,9 @@ body {
     width: 1614px;
     height: 52px;
     flex-direction: column;
-    border-color: rgba(255,255,255,0.0800);
+    border-color: var(--border-primary);
     align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.0800);
+    border-bottom: 1px solid var(--border-light);
     width: 100%;
     display: flex;
 }
@@ -66,14 +69,14 @@ body {
 .banner-container {
     align-items: flex-end;
     border: 1px solid;
-    border-color: rgba(255,255,255,0.0800);
+    border-color: var(--border-primary);
     border-radius: 12px;
     min-height: fit-content;
     max-width: 1000px;
     cursor: pointer;
     display: flex;
     width: 100%;
-    background-color: #121314;
+    background-color: var(--bg-card);
     overflow-y: auto;
 }
 
@@ -95,7 +98,7 @@ body {
 }
 
 .banner-content-text01 {
-    color: #ffffff;
+    color: var(--text-primary);
     white-space: pre-wrap;
     letter-spacing: -.36px;
     font-size: 18px;
@@ -106,7 +109,7 @@ body {
 .banner-content-text02 {
     font-size: 8px;
     font-family: Pretendard Variable;
-    color: #ffffff66;
+    color: var(--text-primary)66;
 }
 
 .banner-content-image {
@@ -126,10 +129,10 @@ body {
 .funding-container {
     border-width: 1px;
     border-style: solid;
-    border-color: #ffffff14;
+    border-color: var(--border-light);
     border-radius: 16px;
     flex-direction: column;
-    background-color: #121314;
+    background-color: var(--bg-card);
     width: 100%;
     display: flex;
     margin-bottom: 100px;
@@ -161,7 +164,7 @@ body {
 }
 
 .search-content {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.36px;
     font-size: 25px;
     font-weight: 600;
@@ -221,7 +224,7 @@ body {
 
 .primary-text-inner {
     letter-spacing: -.44999999999999996px;
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 15px;
     font-weight: 600;
     line-height: 18px;
@@ -229,7 +232,7 @@ body {
 
 
 .secondary-text-inner {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -278,7 +281,7 @@ body {
 }
 
 .header-text {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -292,7 +295,7 @@ body {
 }
 
 .image-text-middle-inner {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.26px;
     font-size: 13px;
     font-weight: 500;
@@ -306,7 +309,7 @@ body {
 
 .image-text-footer-inner1 {
     
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 15px;
     font-weight: 700;
@@ -315,7 +318,7 @@ body {
 
 .image-text-footer-inner2 {
     text-align: right;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.24px;
     font-size: 15px;
     font-weight: 400;
@@ -324,7 +327,7 @@ body {
 
 .image-text-footer-inner3 {
     text-align: right;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.24px;
     font-size: 13px;
     font-weight: 400;
@@ -344,7 +347,7 @@ body {
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.3);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
@@ -407,11 +410,11 @@ body {
     border-width: 1px;
     border-style: solid;
     height: 100%;
-    border-color: #ffffff14;
+    border-color: var(--border-light);
     align-items: flex-start;
     flex-direction: column;
     border-radius: 16px;
-    background: #121314;
+    background: var(--bg-button-primary);
     display: flex;
     scrollbar-width: none;
 }
@@ -443,7 +446,7 @@ body {
  * 닫기 버튼
  */
 .modal-icon {
-    background-color: #ffffff1f;
+    background-color: var(--text-primary)1f;
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -451,7 +454,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
     cursor: pointer;
 }
 
@@ -459,7 +462,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: #ffffff99;
+    color: var(--text-primary)99;
 }
 
 /**
@@ -476,7 +479,7 @@ body {
  * 공유 버튼
  */
 .modal-inner-share {
-    background-color: #ffffff1f;
+    background-color: var(--text-primary)1f;
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -484,7 +487,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
     cursor: pointer;
 }
 
@@ -514,7 +517,7 @@ body {
 }
 
 .modal-banner-icon {
-    background-color: #121314;
+    background-color: var(--bg-card);
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -522,7 +525,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
     cursor: pointer;
     position: absolute;
     z-index: 100;
@@ -561,7 +564,7 @@ body {
  * 등록 버튼 (필요 시 활성화)
  */
 .modal-inner-regist {
-     background-color: #ffffff1f;
+     background-color: var(--text-primary)1f;
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -569,7 +572,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: #ffffff;
+    color: var(--text-primary);
     cursor: pointer;
 }
 
@@ -609,7 +612,7 @@ body {
     align-items: center;
     padding: 3px 8px;
     min-width: 24px;
-    background: #ffffff1f;
+    background: var(--bg-card)1f;
     gap: 3px;
     border-radius: 6px;
     display: inline-flex;
@@ -617,7 +620,7 @@ body {
 
 .nwcf-span {
     white-space: nowrap;
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 500;
@@ -652,7 +655,7 @@ body {
 }
 
 .modal-body-title-content {
-    color: #ffffff;
+    color: var(--text-primary);
     letter-spacing: -.48px;
     font-size: 24px;
     font-weight: 600;
@@ -690,7 +693,7 @@ body {
 }
 
 .hdlt-text {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -716,7 +719,7 @@ body {
 
 .hdlt-content-p {
     white-space: pre-wrap;
-    color: #ffffff;
+    color: var(--text-primary);
     font-weight: 400;
     letter-spacing: -.26px;
     font-size: 13px;
@@ -724,7 +727,7 @@ body {
 }
 
 .hdlt-content-p-second {
-    color: #ffffff99;
+    color: var(--text-primary)99;
     letter-spacing: -.24px;
     font-size: 12px;
     font-weight: 400;
@@ -771,7 +774,7 @@ body {
 
 .elh-span {
     align-items: center;
-    color: #ffffff99;
+    color: var(--text-primary)99;
     white-space: nowrap;
     gap: 4px;
     display: flex;
@@ -788,7 +791,7 @@ body {
     align-self: stretch;
     align-items: flex-start;
     flex-direction: column;
-    background: #ffffff14;
+    background: var(--bg-card)14;
     height: 1px;
     display: flex;
     width: 95%;
@@ -807,7 +810,7 @@ body {
 .elt-content {
     white-space: pre-line;
     flex-direction: column;
-    color: #ffffff;
+    color: var(--text-primary);
     width: 100%;
     display: flex;
     font-size: 15px;
@@ -819,7 +822,7 @@ body {
     text-align: left;
     white-space: pre-line;
     text-overflow: ellipsis;
-    color: #ffffff;
+    color: var(--text-primary);
     width: 100%;
     letter-spacing: -.3px;
     font-size: 15px;
@@ -831,7 +834,7 @@ body {
     text-align: left;
     white-space: pre-line;
     text-overflow: ellipsis;
-    color: #ffffff99;
+    color: var(--text-primary)99;
     width: 100%;
     letter-spacing: -.3px;
     font-size: 13px;

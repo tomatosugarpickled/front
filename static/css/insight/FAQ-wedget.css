@@ -1,3 +1,6 @@
+/* 전역 색상 변수 임포트 */
+@import url('../common/global-colors.css');
+
 .chat-widget {
     position: relative;
 }
@@ -64,7 +67,7 @@
 
 .chat-widget-header-inner-FAQ-icon {
     background-color: #000000;
-    color: #ffffff;
+    color: var(--text-primary);
     margin-right: 3px;
 }
 
@@ -73,7 +76,7 @@
     text-overflow: ellipsis !important;
     overflow: hidden !important;
     font-size: 12px !important;
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: 18px;
 }
 
@@ -96,7 +99,7 @@
     overflow: hidden !important;
     white-space: nowrap !important;
     font-size: 12.8px !important;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .chat-widget-header-inner-close {
@@ -119,7 +122,7 @@
     inset-inline-end: 12px !important;
     top: 10px !important;
     border-radius: 5px !important;
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .chat-widget-body {
@@ -164,7 +167,7 @@
     top: 0 !important;
     bottom: 58px !important;
     z-index: 1 !important;
-    background: #ffffff;
+    background: var(--bg-card);
     position: absolute !important;
     inset-inline: 0 !important;
     overflow-y: auto;
@@ -244,7 +247,7 @@ li:after {
     padding: 0 12px !important;
     bottom: 0 !important;
     z-index: 2 !important;
-    background: #ffffff !important;
+    background: var(--bg-card) !important;
     position: absolute !important;
     inset-inline: 0 !important;
 }

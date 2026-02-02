@@ -1,0 +1,176 @@
+/* ========================================
+   🎨 Global Color Variables
+   ========================================
+
+   이 파일은 전체 사이트의 색상 표준을 정의합니다.
+   모든 CSS 파일은 이 변수들을 사용해야 합니다.
+
+   기준: partner-list.css의 라이트 테마
+   ======================================== */
+
+:root {
+    /* ========================================
+       폰트 설정
+       ======================================== */
+    --fonts-korean: "PretendardVariable", "PretendardVariable Fallback", system-ui, -apple-system, sans-serif;
+    --texts--fonts--body: var(--fonts-korean);
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    /* ========================================
+       배경 색상 (Backgrounds)
+       ======================================== */
+    --bg-page: #f1f4f8;                    /* 페이지 전체 배경 */
+    --bg-card: #ffffff;                    /* 카드/박스 배경 (흰색) */
+    --bg-card-secondary: #f8f9fb;          /* 보조 카드 배경 (광고 등) */
+    --bg-button-primary: #121314;          /* 주요 버튼 배경 (다크) */
+    --bg-button-secondary: #f2f4f7;        /* 보조 버튼 배경 (라이트) */
+    --bg-button-secondary-hover: #e5e7eb;  /* 보조 버튼 호버 */
+    --bg-tooltip: #121314;                 /* 툴팁 배경 */
+    --bg-dropdown: #ffffff;                /* 드롭다운 배경 */
+    --bg-input: #00000000;                 /* 입력 필드 배경 (투명) */
+
+    /* ========================================
+       텍스트 색상 (Text Colors)
+       ======================================== */
+    --text-primary: #121314;               /* 주요 텍스트 */
+    --text-secondary: #12131499;           /* 보조 텍스트 (투명도 60%) */
+    --text-tertiary: #9ca3af;              /* 3차 텍스트 (placeholder 등) */
+    --text-on-dark: #ffffff;               /* 다크 배경 위의 텍스트 */
+    --text-on-dark-secondary: #ffffffcc;   /* 다크 배경 위의 보조 텍스트 */
+    --text-on-dark-tertiary: #ffffff88;    /* 다크 배경 위의 3차 텍스트 */
+    --text-body: #09090b;                  /* body 기본 텍스트 */
+
+    /* ========================================
+       테두리 색상 (Borders)
+       ======================================== */
+    --border-primary: #18253d0f;           /* 전역 기본 테두리 */
+    --border-light: #e5e7eb;               /* 연한 테두리 */
+    --border-semi-transparent: #8c9fba1f;  /* 반투명 테두리 */
+    --border-transparent: #ffffff00;       /* 투명 테두리 */
+    --border-separator: #18253d0f;         /* 구분선 */
+
+    /* ========================================
+       액센트/강조 색상 (Accent Colors)
+       ======================================== */
+    --accent-primary: #0088ff;             /* 체크마크, 강조 색상 (파란색) */
+    --accent-primary-hover: #0077ee;       /* 강조 색상 호버 */
+
+    /* ========================================
+       시맨틱 색상 (Semantic Colors)
+       ======================================== */
+    --color-primary-light: oklch(0.547 0.2389 266.82);
+    --color-primary-dark: oklch(0.547 0.2389 266.82);
+    --color-primary-text-light: #fff;
+    --color-primary-text-dark: #fff;
+    --color-danger-light: oklch(0.65 0.1406 12.71);
+    --color-danger-dark: oklch(0.6088 0.1801 30.71);
+    --color-success-light: oklch(0.7231 0.1834 142.46);
+    --color-success-dark: oklch(0.7679 0.1603 152.74);
+    --color-button-light: #fff;
+    --color-button-dark: oklch(0.2532 0.0056 285.99);
+    --color-modal-background-light: oklch(0.9758 0.0057 264.53);
+    --color-modal-background-dark: oklch(0.15 0 0);
+    --color-modal-text-light: oklch(0 0.1 41);
+    --color-modal-text-dark: #fff;
+    --color-icon-background-light: oklch(0.928 0.006 264.531);
+    --color-icon-background-dark: oklch(0.3222 0.0053 286.1);
+    --color-icon-text-light: oklch(0.6066 0 0);
+    --color-icon-text-dark: oklch(0.7174 0.0029 286.32);
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-black: #000;
+
+    /* ========================================
+       그림자 (Shadows)
+       ======================================== */
+    --shadow-sm: 0px 4px 20px 0px #18253d0f;
+    --shadow-md: 0px 4px 20px 0px rgba(24, 37, 61, 0.1);
+    --shadow-lg: 0px 8px 30px 0px rgba(24, 37, 61, 0.15);
+
+    /* ========================================
+       스크롤바 색상 (Scrollbar)
+       ======================================== */
+    --scrollbar-thumb: #d1d5db;
+    --scrollbar-track: transparent;
+
+    /* ========================================
+       타이포그래피 (Typography)
+       ======================================== */
+    --text-xs: 0.75rem;
+    --text-xs--line-height: 1.33333;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: 1.42857;
+    --text-base: 1rem;
+    --text-base--line-height: 1.5;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: 1.55556;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: 1.33333;
+
+    /* ========================================
+       폰트 굵기 (Font Weights)
+       ======================================== */
+    --font-weight-extralight: 200;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* ========================================
+       간격 (Spacing)
+       ======================================== */
+    --spacing: 0.25rem;
+    --container-md: 28rem;
+
+    /* ========================================
+       테두리 반경 (Border Radius)
+       ======================================== */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+
+    /* ========================================
+       트랜지션 (Transitions)
+       ======================================== */
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ========================================
+       애니메이션 (Animations)
+       ======================================== */
+    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    --animate-shake: shake 250ms ease-in-out;
+
+    /* ========================================
+       블러 (Blur)
+       ======================================== */
+    --blur-sm: 8px;
+    --blur-md: 16px;
+    --blur-lg: 30px;
+
+    /* ========================================
+       호환성을 위한 별칭 (Aliases)
+       ======================================== */
+    --global-color-border: var(--border-primary);
+}
+
+/* ========================================
+   다크 모드 지원 (향후 필요시)
+   ======================================== */
+/*
+[data-theme="dark"] {
+    --bg-page: #0e0f10;
+    --bg-card: #121314;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff99;
+    --border-primary: rgba(255,255,255,0.0800);
+}
+*/

@@ -112,3 +112,36 @@ loginIcon2.addEventListener("click", (e) => {
         modalPark.style.display = "none";
     }
 });
+
+// 피드 게시글 더보기 기능
+const feedCards = document.querySelectorAll('.feed-card');
+
+feedCards.forEach((card) => {
+    const textWrapper = card.querySelector('.feed-content-text-wrapper');
+    const seeMoreBtn = card.querySelector('.feed-content-seemore');
+
+    if (textWrapper && seeMoreBtn) {
+        // 텍스트가 잘렸는지 확인
+        if (textWrapper.scrollHeight > textWrapper.clientHeight) {
+            seeMoreBtn.classList.add('visible');
+        }
+
+        // 더보기 버튼 클릭 이벤트
+        seeMoreBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const seeMoreText = seeMoreBtn.querySelector('.seemore-text');
+
+            if (textWrapper.classList.contains('expanded')) {
+                // 접기
+                textWrapper.classList.remove('expanded');
+                seeMoreBtn.classList.remove('expanded');
+                seeMoreText.textContent = '더보기';
+            } else {
+                // 펼치기
+                textWrapper.classList.add('expanded');
+                seeMoreBtn.classList.add('expanded');
+                seeMoreText.textContent = '접기';
+            }
+        });
+    }
+});

@@ -1,163 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>funding-regist</title>
-    <!-- 펀딩 등록 페이지 전용 스타일시트 -->
+    <title>팀 등록 - C&M</title>
+    <!-- 팀 등록 페이지 전용 스타일시트 -->
     <link rel="stylesheet" href="../../../static/css/team/regist/team-regist..css">
 </head>
 <body data-iframe-size="true">
     <div id="__next">
-        <!-- 펀딩 등록 메인 컨테이너 -->
+        <!-- 팀 등록 메인 컨테이너 -->
         <div class="funding-regist-container">
             <main class="funding-regist-wrapper">
                 <!-- 상단 배너 영역 -->
                 <div class="funding-regist-banner-container">
                     <img src="../../static/image/funding/Black background wit.png" alt="" class="funding-regist-banner">
                 </div>
-                
-                <!-- 펀딩 등록 폼 섹션 -->
+
+                <!-- 팀 등록 폼 섹션 -->
                 <section class="funding-regist-section">
                     <!-- 파일 업로드를 포함한 멀티파트 폼 -->
                     <form id="funding-regist-form" action="" enctype="multipart/form-data">
-                        <!-- 진행률 표시 바 (현재 1/2 페이지) -->
+                        <!-- 진행률 표시 바 -->
                         <progress max="2" value="1">1 / 2 페이지</progress>
-                        
+
                         <div class="funding-regist-from-container">
                             <!-- 폼 제목 영역 -->
                             <div class="funding-regist-form-title-wrapper">
                                 <h1 class="funding-regist-form-title">
-                                    C&M : 
-                                    새로운 팀 등록 
+                                    C&M : 새로운 팀 등록
                                 </h1>
                             </div>
-                            
+
                             <!-- 폼 설명 영역 -->
                             <div class="funding-regist-form-content-wrapper">
                                 <h4 class="funding-regist-form-content">
-                                    새로운 팀을 등록하시는가요?
-                                    팀을 등록하려면 등록 양식에 맞춰 내용을 작성해주세요.
+                                    스타트업 팀을 등록하고 최적의 공동창업자와 팀원을 찾아보세요.
+                                    팀 인증 후 프로필이 공개되며, 투자자와 파트너 매칭이 시작됩니다.
                                 </h4>
                             </div>
-                            
+
                             <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
                             </div>
-                            
-                            <!-- 작성 폼 시작 -->
-                            <!-- 1. 프로젝트명 입력 필드 -->
-                            <div class="funding-regist-form-tab-title-icon-wrap" style="width: 25%;">
+
+                            <!-- ========== 1. 사업 분야 ========== -->
+                            <div class="funding-regist-form-tab-title-icon-wrap title-wrap-width-25">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title">
-                                    1. 업종 카테고리
+                                    1. 사업 분야
                                 </h3>
-                                <!-- 필수 항목 아이콘 및 툴팁 -->
                                 <div class="funding-regist-form-tab-title-icon">
                                     <div>
-                                        <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                        <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
+                                        <span class="required-asterisk">*</span>
+                                        <div class="funding-regist-form-tab-title-alter tooltip-position">
                                             <span>필수항목</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 입력 예시 안내 -->
-                            <div>
-                                <div style="display: flex; justify-content: space-between;">
-                                    <div style="display: flex;flex-direction: column; width: 45%;">    
-                                        <div class="funding-regist-form-ex-wrapper">
-                                            <span class="funding-regist-form-ex">(필수)</span>
-                                            <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 카테고리</span>
+                            <div class="category-row">
+                                <!-- 메인 카테고리 (필수) -->
+                                <div>
+                                    <div class="funding-regist-form-ex-wrapper">
+                                        <span class="funding-regist-form-ex">(필수)</span>
+                                        <span class="funding-regist-form-ex highlight-text"> 메인 카테고리</span>
+                                    </div>
+                                    <div class="custom-select-container">
+                                        <input
+                                            class="funding-regist-form-input data-validata"
+                                            type="text"
+                                            name="category_main"
+                                            id="input01"
+                                            placeholder="메인 분야 선택"
+                                            value=""
+                                            autocomplete="off"
+                                            readonly>
+                                        <div class="custom-dropdown" id="dropdown01">
+                                            <div class="dropdown-item" data-value="saas">SaaS/B2B</div>
+                                            <div class="dropdown-item" data-value="fintech">핀테크</div>
+                                            <div class="dropdown-item" data-value="healthcare">헬스케어</div>
+                                            <div class="dropdown-item" data-value="ecommerce">이커머스</div>
+                                            <div class="dropdown-item" data-value="edtech">에듀테크</div>
+                                            <div class="dropdown-item" data-value="social">소셜/커뮤니티</div>
+                                            <div class="dropdown-item" data-value="entertainment">엔터테인먼트</div>
+                                            <div class="dropdown-item" data-value="ai">AI/머신러닝</div>
+                                            <div class="dropdown-item" data-value="other">기타</div>
                                         </div>
-                                         <div class="custom-select-container">
-                                            <input 
-                                                class="funding-regist-form-input" 
-                                                type="text" 
-                                                name="category1" 
-                                                id="input01" 
-                                                placeholder="카테고리를 선택하세요" 
-                                                value="" 
-                                                autocomplete="off"
-                                                readonly>
-                                            <div class="custom-dropdown" id="dropdown01" style="width: 300px;">
-                                                <div class="dropdown-item" data-value="tech">테크/가전</div>
-                                                <div class="dropdown-item" data-value="fashion">패션/잡화</div>
-                                                <div class="dropdown-item" data-value="food">푸드</div>
-                                                <div class="dropdown-item" data-value="beauty">뷰티</div>
-                                                <div class="dropdown-item" data-value="living">리빙/홈데코</div>
-                                                <div class="dropdown-item" data-value="sports">스포츠/아웃도어</div>
-                                            </div>
-                                        </div>
-                                    </div>    
-                                        <div style="display: flex;flex-direction: column; width: 45%;">    
-                                        <div class="funding-regist-form-ex-wrapper">
-                                            <span class="funding-regist-form-ex">(선택)</span>
-                                            <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 카테고리</span>
-                                        </div>
-                                         <div class="custom-select-container">
-                                            <input 
-                                                class="funding-regist-form-input" 
-                                                type="text" 
-                                                name="category1" 
-                                                id="input01" 
-                                                placeholder="카테고리를 선택하세요" 
-                                                value="" 
-                                                autocomplete="off"
-                                                readonly>
-                                            <div class="custom-dropdown" id="dropdown01" style="width: 300px;">
-                                                <div class="dropdown-item" data-value="tech">테크/가전</div>
-                                                <div class="dropdown-item" data-value="fashion">패션/잡화</div>
-                                                <div class="dropdown-item" data-value="food">푸드</div>
-                                                <div class="dropdown-item" data-value="beauty">뷰티</div>
-                                                <div class="dropdown-item" data-value="living">리빙/홈데코</div>
-                                                <div class="dropdown-item" data-value="sports">스포츠/아웃도어</div>
-                                            </div>
+                                    </div>
+                                    <div class="funding-regist-form-input-finalvalue">
+                                        <span>카테고리를 선택하세요</span>
+                                    </div>
+                                </div>
+                                <!-- 서브 카테고리 (선택) -->
+                                <div>
+                                    <div class="funding-regist-form-ex-wrapper">
+                                        <span class="funding-regist-form-ex">(선택)</span>
+                                        <span class="funding-regist-form-ex highlight-text"> 서브 카테고리</span>
+                                    </div>
+                                    <div class="custom-select-container">
+                                        <input
+                                            class="funding-regist-form-input"
+                                            type="text"
+                                            name="category_sub"
+                                            id="input02"
+                                            placeholder="추가 분야 선택"
+                                            value=""
+                                            autocomplete="off"
+                                            readonly>
+                                        <div class="custom-dropdown" id="dropdown02">
+                                            <div class="dropdown-item" data-value="saas">SaaS/B2B</div>
+                                            <div class="dropdown-item" data-value="fintech">핀테크</div>
+                                            <div class="dropdown-item" data-value="healthcare">헬스케어</div>
+                                            <div class="dropdown-item" data-value="ecommerce">이커머스</div>
+                                            <div class="dropdown-item" data-value="edtech">에듀테크</div>
+                                            <div class="dropdown-item" data-value="social">소셜/커뮤니티</div>
+                                            <div class="dropdown-item" data-value="entertainment">엔터테인먼트</div>
+                                            <div class="dropdown-item" data-value="ai">AI/머신러닝</div>
+                                            <div class="dropdown-item" data-value="other">기타</div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 1. 프로젝트명 입력 필드 -->
-                                <div class="funding-regist-form-tab-title-icon-wrap" style="width: 22%;">
-                                    <h3 class="funding-regist-form-tab-title fist-tab-title">
-                                        2. 새로운 팀명
-                                    </h3>
-                                    <!-- 필수 항목 아이콘 및 툴팁 -->
-                                    <div class="funding-regist-form-tab-title-icon">
-                                        <div>
-                                            <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                            <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
-                                                <span>필수항목</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    
                             </div>
-                            <!-- 입력 예시 안내 -->
-                            <div class="funding-regist-form-ex-wrapper">
-                                <span class="funding-regist-form-ex">(예시)</span>
-                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 커밋앤머지</span>
-                            </div>
-                            <div class="funding-regist-form-input-finalvalue-wrapper">
-                                <input class="funding-regist-form-input data-validata" type="text" name="user" id="input03" placeholder="프로젝트 이름을 입력하세요" value="" autocomplete="off">
-                                <!-- 유효성 검사 실패 시 표시되는 메시지 -->
-                                <div class="funding-regist-form-input-finalvalue">
-                                    <span>값을 입력하세요</span>
-                                </div>
-                            </div>
-                            
-                            <!-- 2. 기업 프로필 URL 입력 필드 -->
-                            <div class="funding-regist-form-tab-title-icon-wrap" style="width: 45%;">
+
+                            <!-- ========== 2. 팀명 ========== -->
+                            <div class="funding-regist-form-tab-title-icon-wrap title-wrap-width-22">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title">
-                                    3. C&M내 사용 할 팀 URL 입력
+                                    2. 팀명
                                 </h3>
-                                <!-- 필수 항목 아이콘 및 툴팁 -->
                                 <div class="funding-regist-form-tab-title-icon">
                                     <div>
-                                        <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                        <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
+                                        <span class="required-asterisk">*</span>
+                                        <div class="funding-regist-form-tab-title-alter tooltip-position">
                                             <span>필수항목</span>
                                         </div>
                                     </div>
@@ -165,94 +141,319 @@
                             </div>
                             <div class="funding-regist-form-ex-wrapper">
                                 <span class="funding-regist-form-ex">(예시)</span>
-                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> www.Commit&Merge.com/teams/samsung-electronics</span>
+                                <span class="funding-regist-form-ex highlight-text"> 커밋앤머지</span>
                             </div>
                             <div class="funding-regist-form-input-finalvalue-wrapper">
-                                <input class="funding-regist-form-input data-validata" type="text" name="user" id="input03" placeholder="www.Commit&Merge.com/teams/samsung-electronics" value="" autocomplete="off">
-                                <!-- 유효성 검사 실패 시 표시되는 메시지 -->
+                                <input class="funding-regist-form-input data-validata" type="text" name="team_name" id="input03" placeholder="팀 이름을 입력하세요" value="" autocomplete="off">
                                 <div class="funding-regist-form-input-finalvalue">
-                                    <span>값을 입력하세요</span>
+                                    <span>팀명을 입력하세요</span>
                                 </div>
                             </div>
-                            
-                            <!-- 구분선 -->
-                            <div class="funding-regist-form-separator-wrapper">
-                                <div class="funding-regist-form-separator">
-                                    <hr class="funding-regist-form-separator-line">
-                                </div>
-                            </div>
-                            
-                            <!-- 3. 담당자 직책/직급 입력 필드 (필수) -->
-                            <div class="funding-regist-form-tab-title-icon-wrap" style="width: 26%;">
+
+                            <!-- ========== 3. 팀 URL ========== -->
+                            <div class="funding-regist-form-tab-title-icon-wrap title-wrap-width-35">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title">
-                                    4. 팀 한줄 소개
+                                    3. 팀 프로필 URL
                                 </h3>
-                                <!-- 필수 항목 아이콘 및 툴팁 -->
                                 <div class="funding-regist-form-tab-title-icon">
                                     <div>
-                                        <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                        <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
+                                        <span class="required-asterisk">*</span>
+                                        <div class="funding-regist-form-tab-title-alter tooltip-position">
                                             <span>필수항목</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="funding-regist-form-ex-wrapper">
-                                <span class="funding-regist-form-ex">(필독)</span>
-                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);"> 혁신적인 아이디어로 세상을 변화시키는 팀.</span>
+                                <span class="funding-regist-form-ex">(예시)</span>
+                                <span class="funding-regist-form-ex highlight-text"> commitmerge (영문, 숫자, 하이픈만 가능)</span>
                             </div>
-                            <!-- 유효성 검사 포함 입력 필드 -->
-                            <div class="funding-regist-form-input-finalvalue-wrapper">
-                                <input class="funding-regist-form-input data-validata" type="text" name="user" id="input03" placeholder="목표금액을 입력하세요" value="" autocomplete="off">
-                                <!-- 유효성 검사 실패 시 표시되는 메시지 -->
-                                <div class="funding-regist-form-input-finalvalue">
-                                    <span>값을 입력하세요</span>
-                                </div>
-                            </div>            
+                            <div class="url-input-wrapper">
+                                <span class="url-prefix">c-m.com/teams/</span>
+                                <input class="funding-regist-form-input data-validata" type="text" name="team_url" id="input04" placeholder="your-team-name" value="" autocomplete="off">
+                            </div>
+                            <div class="funding-regist-form-input-finalvalue">
+                                <span>URL을 입력하세요</span>
+                            </div>
+
                             <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
                             </div>
-                            
-                            <!-- 5. 재직 증명 서류 업로드 (필수) -->
-                            <div class="funding-regist-form-tab-title-icon-wrap" style="width: 42%;">
-                                <h3 class="funding-regist-form-tab-title fist-tab-title" style="margin-top: 40px;">
-                                    6. 팀 프로필 이미지 등록
+
+                            <!-- ========== 4. 팀 규모 & 5. 팀 단계 ========== -->
+                            <div class="team-regist-row">
+                                <!-- 4. 팀 규모 -->
+                                <div>
+                                    <div class="funding-regist-form-tab-title-icon-wrap">
+                                        <h3 class="funding-regist-form-tab-title fist-tab-title">
+                                            4. 현재 팀 규모
+                                        </h3>
+                                        <div class="funding-regist-form-tab-title-icon">
+                                            <div>
+                                                <span>*</span>
+                                                <div class="funding-regist-form-tab-title-alter tooltip-position">
+                                                    <span>필수항목</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-select-container">
+                                        <input
+                                            class="funding-regist-form-input data-validata"
+                                            type="text"
+                                            name="team_size"
+                                            id="input05"
+                                            placeholder="팀 인원 선택"
+                                            value=""
+                                            autocomplete="off"
+                                            readonly>
+                                        <div class="custom-dropdown" id="dropdown03">
+                                            <div class="dropdown-item" data-value="1">1명 (솔로 파운더)</div>
+                                            <div class="dropdown-item" data-value="2-3">2-3명</div>
+                                            <div class="dropdown-item" data-value="4-5">4-5명</div>
+                                            <div class="dropdown-item" data-value="6-10">6-10명</div>
+                                            <div class="dropdown-item" data-value="11+">11명 이상</div>
+                                        </div>
+                                    </div>
+                                    <div class="funding-regist-form-input-finalvalue">
+                                        <span>팀 규모를 선택하세요</span>
+                                    </div>
+                                </div>
+
+                                <!-- 5. 팀 단계 -->
+                                <div>
+                                    <div class="funding-regist-form-tab-title-icon-wrap">
+                                        <h3 class="funding-regist-form-tab-title fist-tab-title">
+                                            5. 현재 단계
+                                        </h3>
+                                        <div class="funding-regist-form-tab-title-icon">
+                                            <div>
+                                                <span>*</span>
+                                                <div class="funding-regist-form-tab-title-alter tooltip-position">
+                                                    <span>필수항목</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-select-container">
+                                        <input
+                                            class="funding-regist-form-input data-validata"
+                                            type="text"
+                                            name="team_stage"
+                                            id="input06"
+                                            placeholder="팀 단계 선택"
+                                            value=""
+                                            autocomplete="off"
+                                            readonly>
+                                        <div class="custom-dropdown" id="dropdown04">
+                                            <div class="dropdown-item" data-value="idea">아이디어 단계</div>
+                                            <div class="dropdown-item" data-value="mvp">MVP 개발 중</div>
+                                            <div class="dropdown-item" data-value="beta">베타 서비스 운영</div>
+                                            <div class="dropdown-item" data-value="launch">정식 서비스 출시</div>
+                                            <div class="dropdown-item" data-value="growth">성장 단계</div>
+                                        </div>
+                                    </div>
+                                    <div class="funding-regist-form-input-finalvalue">
+                                        <span>팀 단계를 선택하세요</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ========== 6. 모집 포지션 ========== -->
+                            <div class="funding-regist-form-tab-title-icon-wrap title-wrap-width-30">
+                                <h3 class="funding-regist-form-tab-title fist-tab-title">
+                                    6. 모집 포지션
                                 </h3>
                                 <div class="funding-regist-form-tab-title-icon">
-                                    <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                    <div class="funding-regist-form-tab-title-alter" style="top: -29.562px;left: -20.539px;">
+                                    <div>
+                                        <span class="required-asterisk">*</span>
+                                        <div class="funding-regist-form-tab-title-alter tooltip-position">
+                                            <span>필수항목</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="funding-regist-form-ex-wrapper">
+                                <span class="funding-regist-form-ex">찾고 있는 포지션을 선택하세요</span>
+                                <span class="funding-regist-form-ex highlight-text"> (최대 3개)</span>
+                            </div>
+                            <div class="position-dropdown-container">
+                                <!-- 포지션 1 (필수) -->
+                                <div class="position-dropdown-item">
+                                    <span class="position-label">포지션 1 (필수)</span>
+                                    <div class="custom-select-container">
+                                        <input
+                                            class="funding-regist-form-input data-validata"
+                                            type="text"
+                                            name="position_1"
+                                            id="position01"
+                                            placeholder="포지션 선택"
+                                            value=""
+                                            autocomplete="off"
+                                            readonly>
+                                        <div class="custom-dropdown" id="dropdown-position01">
+                                            <div class="dropdown-item" data-value="none">모집 안함</div>
+                                            <div class="dropdown-item" data-value="frontend">프론트엔드 개발자</div>
+                                            <div class="dropdown-item" data-value="backend">백엔드 개발자</div>
+                                            <div class="dropdown-item" data-value="fullstack">풀스택 개발자</div>
+                                            <div class="dropdown-item" data-value="mobile">모바일 개발자</div>
+                                            <div class="dropdown-item" data-value="ai_ml">AI/ML 엔지니어</div>
+                                            <div class="dropdown-item" data-value="data">데이터 엔지니어</div>
+                                            <div class="dropdown-item" data-value="devops">DevOps 엔지니어</div>
+                                            <div class="dropdown-item" data-value="designer">UI/UX 디자이너</div>
+                                            <div class="dropdown-item" data-value="graphic">그래픽 디자이너</div>
+                                            <div class="dropdown-item" data-value="pm">PM/PO</div>
+                                            <div class="dropdown-item" data-value="planner">서비스 기획자</div>
+                                            <div class="dropdown-item" data-value="marketer">마케터</div>
+                                            <div class="dropdown-item" data-value="growth">그로스 해커</div>
+                                            <div class="dropdown-item" data-value="biz">비즈니스 개발</div>
+                                            <div class="dropdown-item" data-value="sales">세일즈</div>
+                                            <div class="dropdown-item" data-value="finance">재무/회계</div>
+                                            <div class="dropdown-item" data-value="legal">법무</div>
+                                            <div class="dropdown-item" data-value="hr">HR/채용</div>
+                                            <div class="dropdown-item" data-value="cs">CS/운영</div>
+                                            <div class="dropdown-item" data-value="content">콘텐츠 크리에이터</div>
+                                            <div class="dropdown-item" data-value="other">기타</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 포지션 2 (선택) -->
+                                <div class="position-dropdown-item">
+                                    <span class="position-label">포지션 2 (선택)</span>
+                                    <div class="custom-select-container">
+                                        <input
+                                            class="funding-regist-form-input"
+                                            type="text"
+                                            name="position_2"
+                                            id="position02"
+                                            placeholder="포지션 선택"
+                                            value=""
+                                            autocomplete="off"
+                                            readonly>
+                                        <div class="custom-dropdown" id="dropdown-position02">
+                                            <div class="dropdown-item" data-value="">선택 안함</div>
+                                            <div class="dropdown-item" data-value="frontend">프론트엔드 개발자</div>
+                                            <div class="dropdown-item" data-value="backend">백엔드 개발자</div>
+                                            <div class="dropdown-item" data-value="fullstack">풀스택 개발자</div>
+                                            <div class="dropdown-item" data-value="mobile">모바일 개발자</div>
+                                            <div class="dropdown-item" data-value="ai_ml">AI/ML 엔지니어</div>
+                                            <div class="dropdown-item" data-value="data">데이터 엔지니어</div>
+                                            <div class="dropdown-item" data-value="devops">DevOps 엔지니어</div>
+                                            <div class="dropdown-item" data-value="designer">UI/UX 디자이너</div>
+                                            <div class="dropdown-item" data-value="graphic">그래픽 디자이너</div>
+                                            <div class="dropdown-item" data-value="pm">PM/PO</div>
+                                            <div class="dropdown-item" data-value="planner">서비스 기획자</div>
+                                            <div class="dropdown-item" data-value="marketer">마케터</div>
+                                            <div class="dropdown-item" data-value="growth">그로스 해커</div>
+                                            <div class="dropdown-item" data-value="biz">비즈니스 개발</div>
+                                            <div class="dropdown-item" data-value="sales">세일즈</div>
+                                            <div class="dropdown-item" data-value="finance">재무/회계</div>
+                                            <div class="dropdown-item" data-value="legal">법무</div>
+                                            <div class="dropdown-item" data-value="hr">HR/채용</div>
+                                            <div class="dropdown-item" data-value="cs">CS/운영</div>
+                                            <div class="dropdown-item" data-value="content">콘텐츠 크리에이터</div>
+                                            <div class="dropdown-item" data-value="other">기타</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 포지션 3 (선택) -->
+                                <div class="position-dropdown-item">
+                                    <span class="position-label">포지션 3 (선택)</span>
+                                    <div class="custom-select-container">
+                                        <input
+                                            class="funding-regist-form-input"
+                                            type="text"
+                                            name="position_3"
+                                            id="position03"
+                                            placeholder="포지션 선택"
+                                            value=""
+                                            autocomplete="off"
+                                            readonly>
+                                        <div class="custom-dropdown" id="dropdown-position03">
+                                            <div class="dropdown-item" data-value="">선택 안함</div>
+                                            <div class="dropdown-item" data-value="frontend">프론트엔드 개발자</div>
+                                            <div class="dropdown-item" data-value="backend">백엔드 개발자</div>
+                                            <div class="dropdown-item" data-value="fullstack">풀스택 개발자</div>
+                                            <div class="dropdown-item" data-value="mobile">모바일 개발자</div>
+                                            <div class="dropdown-item" data-value="ai_ml">AI/ML 엔지니어</div>
+                                            <div class="dropdown-item" data-value="data">데이터 엔지니어</div>
+                                            <div class="dropdown-item" data-value="devops">DevOps 엔지니어</div>
+                                            <div class="dropdown-item" data-value="designer">UI/UX 디자이너</div>
+                                            <div class="dropdown-item" data-value="graphic">그래픽 디자이너</div>
+                                            <div class="dropdown-item" data-value="pm">PM/PO</div>
+                                            <div class="dropdown-item" data-value="planner">서비스 기획자</div>
+                                            <div class="dropdown-item" data-value="marketer">마케터</div>
+                                            <div class="dropdown-item" data-value="growth">그로스 해커</div>
+                                            <div class="dropdown-item" data-value="biz">비즈니스 개발</div>
+                                            <div class="dropdown-item" data-value="sales">세일즈</div>
+                                            <div class="dropdown-item" data-value="finance">재무/회계</div>
+                                            <div class="dropdown-item" data-value="legal">법무</div>
+                                            <div class="dropdown-item" data-value="hr">HR/채용</div>
+                                            <div class="dropdown-item" data-value="cs">CS/운영</div>
+                                            <div class="dropdown-item" data-value="content">콘텐츠 크리에이터</div>
+                                            <div class="dropdown-item" data-value="other">기타</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="funding-regist-form-input-finalvalue mt-8">
+                                <span>최소 1개의 포지션을 선택하세요</span>
+                            </div>
+
+                            <!-- ========== 7. 기술 스택 ========== -->
+                            <div class="funding-regist-form-tab-title-icon-wrap title-wrap-width-25">
+                                <h3 class="funding-regist-form-tab-title fist-tab-title">
+                                    7. 기술 스택
+                                </h3>
+                            </div>
+                            <div class="funding-regist-form-ex-wrapper">
+                                <span class="funding-regist-form-ex">(예시)</span>
+                                <span class="funding-regist-form-ex highlight-text"> React, Node.js, Python, AWS (쉼표로 구분)</span>
+                            </div>
+                            <div class="funding-regist-form-input-finalvalue-wrapper">
+                                <input class="funding-regist-form-input" type="text" name="tech_stack" id="input07" placeholder="사용하는 기술 스택을 입력하세요" value="" autocomplete="off">
+                            </div>
+
+                            <!-- 구분선 -->
+                            <div class="funding-regist-form-separator-wrapper">
+                                <div class="funding-regist-form-separator">
+                                    <hr class="funding-regist-form-separator-line">
+                                </div>
+                            </div>
+
+                            <!-- ========== 8. 팀 프로필 이미지 ========== -->
+                            <div class="funding-regist-form-tab-title-icon-wrap title-wrap-width-42">
+                                <h3 class="funding-regist-form-tab-title fist-tab-title mt-40">
+                                    8. 팀 프로필 이미지
+                                </h3>
+                                <div class="funding-regist-form-tab-title-icon">
+                                    <span class="required-asterisk">*</span>
+                                    <div class="funding-regist-form-tab-title-alter tooltip-position-alt">
                                         <span>필수항목</span>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- 필요 서류 안내 -->
+
                             <div class="funding-regist-form-tab-spanBox">
-                                <span style="tag: span; font-weight: bold;">
-                                    -  <span style="tag: span; color: rgb(128, 189, 255);">최소 1개, 최대 5개까지 업로드 가능</span>
+                                <span class="bold-text">
+                                    -  <span class="highlight-text">최소 1개, 최대 5개까지 업로드 가능</span>
                                 </span>
-                                <span style="tag: span; font-weight: bold;">
-                                    -  <span style="tag: span; color: rgb(128, 189, 255);">파일 형식: jpg 또는 png/ 용량 : 5MB 이하/ 사이즈 : 가로 세로 각각 1,000px 이상 <strong style="font-weight: bold;">가로 세로 비율 1:1</strong></span>
+                                <span class="bold-text">
+                                    -  <span class="highlight-text">파일 형식: jpg 또는 png / 용량: 5MB 이하 / 사이즈: 1,000px 이상 <strong>(가로세로 1:1 권장)</strong></span>
                                 </span>
-                                <span style="tag: span; font-weight: bold;">
-                                    -  <span style="tag: span; color: rgb(128, 189, 255);">이미지를 등록하면 즉시 반영됩니다.</span>
-                                </span>
-                                <span>
-                                    * 프로필은 마이팀에서 변경할 수 있습니다.
+                                <span class="bold-text">
+                                    -  <span class="highlight-text">팀 로고, 제품 스크린샷, 프로토타입 등 팀을 대표하는 이미지를 업로드하세요.</span>
                                 </span>
                             </div>
-                            
-                            <!-- 파일 업로드 영역 (첫 번째) -->
-                            <div class="funding-regist-form-fileUpload-wrapper" style="position: relative;">
+
+                            <!-- 파일 업로드 영역 -->
+                            <div class="funding-regist-form-fileUpload-wrapper file-upload-relative">
                                 <div class="funding-regist-form-fileUpload">
-                                    <!-- 숨겨진 파일 입력 필드 (다중 파일 선택 가능) -->
-                                    <input class="data-validata" multiple type="file" name="file" id="input05" style="border:0;clip:rect(0, 0, 0, 0);clip-path:inset(50%);height:1px;margin:0 -1px -1px 0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" value="" autocomplete="none">
-                                    <!-- 파일 업로드 버튼 UI -->
+                                    <input class="data-validata visually-hidden-input" multiple type="file" name="team_images" id="input08" accept="image/*" value="" autocomplete="none">
                                     <button type="button" id="upload_button01" class="funding-regist-form-fileUpload-inner">
-                                        <!-- 업로드 아이콘 -->
                                         <i class="funding-regist-form-fileUpload-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" class="bi bi-upload" viewBox="0 0 24 24">
                                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
@@ -260,14 +461,11 @@
                                             </svg>
                                         </i>
                                         <span class="funding-regist-form-fileUpload-inner-span">클릭하여 파일을 선택하거나 여기로 드래그 하세요</span>
-                                        <span></span>
                                     </button>
-                                    <!-- 이미지 미리보기 영역 -->
                                     <div class="funding-regist-form-preview" id="imagePreviewF"></div>
                                 </div>
-                                <!-- 파일 업로드 필수 안내 메시지 -->
-                                <div class="funding-regist-form-input-finalvalue" style="position: absolute; left: -16%; bottom: 27px;">
-                                    <span>사진을 업로드하세요</span>
+                                <div class="funding-regist-form-input-finalvalue file-error-position">
+                                    <span>팀 이미지를 업로드하세요</span>
                                 </div>
                             </div>
 
@@ -276,88 +474,81 @@
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
-                            </div>   
-                            
-                            <!-- 메모 입력 영역 (선택사항) -->
+                            </div>
+
+                            <!-- ========== 9. 팀 상세 소개 ========== -->
                             <div class="funding-regist-form-memo-wrapper">
-                                <h3 class="funding-regist-form-memo">7. 팀 상세 소개</h3>
+                                <h3 class="funding-regist-form-memo">9. 팀 상세 소개</h3>
                             </div>
                             <div class="funding-regist-form-tab-spanBox">
-                                <span style="tag: span; font-weight: bold;">
-                                    <span style="tag: span; color: rgb(128, 189, 255);">Q. 무엇을 만들기 위한 프로젝트인가요?</span>
+                                <span class="bold-text">
+                                    <span class="highlight-text">Q. 우리 팀이 해결하고자 하는 문제는 무엇인가요?</span>
                                 </span>
-                                <span style="tag: span; font-weight: bold;">
-                                    <span style="tag: span; color: rgb(128, 189, 255);">Q. 프로젝트를 간단히 소개한다면?</span>
+                                <span class="bold-text">
+                                    <span class="highlight-text">Q. 제품/서비스를 간단히 소개한다면?</span>
                                 </span>
-                                <span style="tag: span; font-weight: bold;">
-                                    <span style="tag: span; color: rgb(128, 189, 255);">Q. 이 프로젝트가 왜 의미있나요?</span>
+                                <span class="bold-text">
+                                    <span class="highlight-text">Q. 현재 팀 구성과 필요한 역량은 무엇인가요?</span>
                                 </span>
-                                <span style="tag: span; font-weight: bold;">
-                                    <span style="tag: span; color: rgb(128, 189, 255);">Q. 이 프로젝트를 시작하게 된 배경이 무엇인가요?</span>
+                                <span class="bold-text">
+                                    <span class="highlight-text">Q. 우리 팀의 비전과 목표는 무엇인가요?</span>
                                 </span>
                                 <span>
-                                    * 후원자 분들이 프로젝트를 이해할 수 있도록 소개해주세요.
+                                    * 공동창업자와 투자자가 팀을 이해할 수 있도록 상세히 작성해주세요.
                                 </span>
                             </div>
-                            <div class="funding-regist-form-memo-value-wrappper" style="margin-bottom: 40px;">
+                            <div class="funding-regist-form-memo-value-wrappper mb-40">
                                 <div class="funding-regist-form-memo-value-area">
-                                    <!-- 메모 입력 텍스트 영역 -->
-                                    <textarea name="" id="funding-regist-form-memo" style="height: 218px;" class="funding-regist-form-memo-value"></textarea>
+                                    <textarea name="team_description" id="funding-regist-form-memo" class="funding-regist-form-memo-value textarea-height" placeholder="팀의 비전, 목표, 현재 진행 상황 등을 자세히 소개해주세요."></textarea>
                                 </div>
                             </div>
-                            
+
                             <!-- 구분선 -->
                             <div class="funding-regist-form-separator-wrapper">
                                 <div class="funding-regist-form-separator">
                                     <hr class="funding-regist-form-separator-line">
                                 </div>
-                            </div>   
-                            
-                            <!-- 7. 이메일 입력 필드 (필수) -->
-                            <div class="funding-regist-form-tab-title-icon-wrap" style="width: 39%;">
+                            </div>
+
+                            <!-- ========== 10. 연락처 이메일 ========== -->
+                            <div class="funding-regist-form-tab-title-icon-wrap title-wrap-width-35">
                                 <h3 class="funding-regist-form-tab-title fist-tab-title">
-                                    7. 결과를 전달 받을 이메일
+                                    10. 연락처 이메일
                                 </h3>
                                 <div class="funding-regist-form-tab-title-icon">
                                     <div>
-                                        <span style="top: unset; bottom: 11.6875px; right: unset; left: 244.883px;">*</span>
-                                        <div class="funding-regist-form-tab-title-alter" style="top: -31.562px;left: -21.539px;">
+                                        <span class="required-asterisk">*</span>
+                                        <div class="funding-regist-form-tab-title-alter tooltip-position">
                                             <span>필수항목</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="funding-regist-form-ex-wrapper">
-                                <span class="funding-regist-form-ex">(예시)</span>
-                                <span class="funding-regist-form-ex" style="font-weight: bold; color: rgb(128, 189, 255);">  example@domain.com</span>
+                                <span class="funding-regist-form-ex">팀 등록 결과 및 파트너 연락을 받을 이메일 주소</span>
                             </div>
-                            <!-- 이메일 형식 유효성 검사 포함 -->
-                            <div class="funding-regist-form-input-finalvalue-wrapper" style="margin-bottom: 30px;">
-                                <input class="funding-regist-form-input data-validata" type="text" name="email" id="input07" placeholder="example@domain.com" value="" autocomplete="off">
-                                <!-- 빈 값 유효성 검사 메시지 -->
+                            <div class="funding-regist-form-input-finalvalue-wrapper mb-30">
+                                <input class="funding-regist-form-input data-validata" type="email" name="email" id="input09" placeholder="example@domain.com" value="" autocomplete="off">
                                 <div class="funding-regist-form-input-finalvalue">
-                                    <span>값을 입력하세요</span>
+                                    <span>이메일을 입력하세요</span>
                                 </div>
-                                <!-- 이메일 형식 유효성 검사 메시지 -->
-                                <div class="funding-regist-form-input-finalvalue finalvalue-email" style="display: none;">
+                                <div class="funding-regist-form-input-finalvalue finalvalue-email hidden">
                                     <span>이메일 양식에 맞게 입력하세요</span>
                                 </div>
                             </div>
-                            
+
                             <!-- 폼 제출 버튼 영역 -->
                             <div class="funding-regist-form-submit-wrapper">
                                 <div>
                                     <button type="submit" tabindex="0" class="funding-regist-form-submit">
-                                        <span class="funding-regist-form-submit-text">제출하기</span>
-                                        <!-- 화살표 아이콘 -->
+                                        <span class="funding-regist-form-submit-text">팀 등록 신청하기</span>
                                         <i class="funding-regist-form-submit-icon-wrapper">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 13 13">
                                                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
                                             </svg>
                                         </i>
-                                        <!-- 로딩 인디케이터 (제출 중 표시) -->
                                         <span class="funding-regist-form-submit-loading">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader sc-500dd495-0 leDWoT activity-indicator" aria-hidden="true" data-sentry-element="Loader" data-sentry-component="ActivityIndicator" data-sentry-source-file="index.tsx">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader">
                                                 <path d="M12 2v4"></path>
                                                 <path d="m16.2 7.8 2.9-2.9"></path>
                                                 <path d="M18 12h4"></path>
@@ -372,13 +563,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div></div>
                     </form>
                 </section>
             </main>
         </div>
     </div>
 </body>
-<!-- 펀딩 등록 페이지 JavaScript 파일 -->
+<!-- 팀 등록 페이지 JavaScript 파일 -->
 <script src="../../../static/js/team/regist/regist.js"></script>
 </html>

@@ -1,3 +1,6 @@
+/* 전역 색상 변수 임포트 */
+@import url('../common/global-colors.css');
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
     margin: 0;
     padding: 0;
@@ -82,7 +85,7 @@ header .guide-wrapper {
 }
 
 .guide-header-main-actions-websites {
-    background-color: #ffffff33;
+    background-color: var(--bg-card)33;
     color: #fff;
     font-size: 13.5px;
     padding: 0 22px;
@@ -150,7 +153,7 @@ header .guide-wrapper {
     line-height: 62px;
     font-size: 15.75px;
     letter-spacing: -.1px;
-    background-color: #ffffff40;
+    background-color: var(--bg-card)40;
     border: 0 none;
     width: 100%;
     text-align: center;   

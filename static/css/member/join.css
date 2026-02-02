@@ -1,3 +1,6 @@
+/* 전역 색상 변수 임포트 */
+@import url('../common/global-colors.css');
+
 /* 공통 부분 */
 * {
     box-sizing: border-box;
@@ -245,7 +248,7 @@ svg {
     outline: none;
     color: #ffffff;
     width: 100%;
-    background-color: #ffffff1f;
+    background-color: var(--bg-card)1f;
 }
 .goingbutton {
     backdrop-filter: blur(calc(60px / 2));
@@ -261,7 +264,7 @@ svg {
     outline: none;
     color: #ffffff;
     width: 100%;
-    background-color: #ffffff1f;
+    background-color: var(--bg-card)1f;
 }
 
 .goingword {
@@ -306,7 +309,7 @@ svg {
 
 .first-button {
     backdrop-filter: none;
-    background-color: #ffffff14;
+    background-color: var(--bg-card)14;
     justify-content: center;
     align-items: center;
     padding: 14px;
@@ -326,7 +329,7 @@ svg {
 
 .second-button{
     backdrop-filter: none;
-    background-color: #ffffff14;
+    background-color: var(--bg-card)14;
     justify-content: center;
     align-items: center;
     padding: 14px;
@@ -421,7 +424,7 @@ svg {
 }
 
 .x-button {
-    background-color: #ffffff1f;
+    background-color: var(--bg-card)1f;
     /* justify-content: center;  */
     align-items: center; 
     padding: 14px;
