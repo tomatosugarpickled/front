@@ -145,3 +145,63 @@ feedCards.forEach((card) => {
         });
     }
 });
+
+// 알림 모달 기능
+const notificationBell = document.getElementById('notification-bell');
+const notificationModal = document.getElementById('notification-modal');
+const clearAllBtn = document.getElementById('clear-all-notifications');
+const notificationItems = document.querySelectorAll('.notification-item');
+const notificationEmpty = document.querySelector('.notification-empty');
+
+// 알림 벨 버튼 클릭
+if (notificationBell && notificationModal) {
+    notificationBell.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notificationModal.classList.toggle('show');
+    });
+
+    // 모달 외부 클릭시 닫기
+    document.addEventListener('click', (e) => {
+        if (!notificationModal.contains(e.target) && !notificationBell.contains(e.target)) {
+            notificationModal.classList.remove('show');
+        }
+    });
+
+    // 모달 내부 클릭시 이벤트 전파 방지
+    notificationModal.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+}
+
+// 모두 지우기 버튼
+if (clearAllBtn) {
+    clearAllBtn.addEventListener('click', () => {
+        const items = document.querySelectorAll('.notification-item');
+        items.forEach(item => {
+            item.remove();
+        });
+
+        // 알림이 없을 때 메시지 표시
+        if (notificationEmpty) {
+            notificationEmpty.style.display = 'flex';
+        }
+    });
+}
+
+// 개별 알림 삭제 버튼
+notificationItems.forEach(item => {
+    const deleteBtn = item.querySelector('.notification-item-delete');
+
+    if (deleteBtn) {
+        deleteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            item.remove();
+
+            // 모든 알림이 삭제되었는지 확인
+            const remainingItems = document.querySelectorAll('.notification-item');
+            if (remainingItems.length === 0 && notificationEmpty) {
+                notificationEmpty.style.display = 'flex';
+            }
+        });
+    }
+});

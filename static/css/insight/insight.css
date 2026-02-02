@@ -76,7 +76,7 @@ svg {
  */
 body {
     overflow: hidden;
-    background-color: rgba(18,19,20,1);
+    background-color: var(--bg-card); /* 전역 변수 사용 */
 }
 
 
@@ -95,10 +95,10 @@ body {
     margin-top: 10px;    /* 상단 여백 */
     width: 1614px;
     height: 893px;
-    border: solid 1px; 
+    border: solid 1px;
     border-radius: 16px;
-    border-color: rgba(255,255,255,0.0800);
-    background-color: #0e0f10;
+    border-color: var(--border-semi-transparent); /* 전역 변수 사용 */
+    background-color: var(--bg-page); /* 전역 변수 사용 */
     overflow: hidden;
 }
 
@@ -111,9 +111,9 @@ body {
     width: 1614px;
     height: 52px;
     flex-direction: column;
-    border-color: rgba(255,255,255,0.0800);
+    border-color: var(--border-semi-transparent); /* 전역 변수 사용 */
     align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.0800);
+    border-bottom: 1px solid var(--border-semi-transparent); /* 전역 변수 사용 */
     width: 100%;
     display: flex;
 }
@@ -167,14 +167,14 @@ body {
 .banner-container {
     align-items: flex-end;
     border: 1px solid;
-    border-color: rgba(255,255,255,0.0800);
+    border-color: var(--border-semi-transparent); /* 전역 변수 사용 */
     border-radius: 12px;
     min-height: fit-content;
     max-width: 1000px;
     cursor: pointer;
     display: flex;
     width: 100%;
-    background-color: var(--text-primary);
+    background-color: var(--bg-card); /* 전역 변수 사용 */
     overflow-y: auto;
 }
 
@@ -219,8 +219,8 @@ body {
  */
 .banner-content-text02 {
     font-size: 8px;
-    font-family: Pretendard Variable;
-    color: var(--text-primary)66;
+    font-family: var(--fonts-korean); /* 전역 변수 사용 */
+    color: var(--text-secondary); /* 전역 변수 사용 */
 }
 
 /**
@@ -253,10 +253,10 @@ body {
 .event-container {
     border-width: 1px;
     border-style: solid;
-    border-color: var(--text-primary)14;
+    border-color: var(--border-primary); /* 전역 변수 사용 */
     border-radius: 16px;
     flex-direction: column;
-    background-color: var(--text-primary);
+    background-color: var(--bg-card); /* 전역 변수 사용 */
     width: 100%;
     display: flex;
 }
@@ -508,7 +508,7 @@ body {
     top: 6px;
     border-radius: 5px;
     padding: 3px 6px;
-    background: #00000066;
+    background: var(--text-secondary); /* 전역 변수 사용 */
     gap: 3px;
     letter-spacing: -.2px;
     font-size: 10px;
@@ -715,7 +715,7 @@ body {
     border-color: var(--text-primary)14;
     flex-direction: column;
     border-radius: 16px;
-    background: #121314;
+    background: var(--bg-card); /* 전역 변수 사용 */
     gap: 8px;
     padding: 12px;
     display: flex;
@@ -771,7 +771,7 @@ body {
  * - 아웃라인 제거
  */
 .search-bar-input {
-    background: #00000000;
+    background: transparent; /* 투명 배경 */
     height: 20px;
     border: none;
     outline: none;
@@ -790,7 +790,7 @@ body {
  */
 .input-button {
     align-items: center;
-    background: #00000000;
+    background: transparent; /* 투명 배경 */
     padding: 0;
     border: none;
     cursor: pointer;
@@ -1045,7 +1045,7 @@ body {
     align-items: center;
     border-radius: 5px;
     min-width: 20px;
-    background: #00000066;
+    background: var(--text-secondary); /* 전역 변수 사용 */
     padding: 2px 4px;
     gap: 3px;
     display: inline-flex;
@@ -1155,7 +1155,7 @@ body {
     display: inline-flex;
     cursor: pointer;
     gap: 4px;
-    background: #00000000;
+    background: transparent; /* 투명 배경 */
 }
 
 .find-body-button-icon {
@@ -1217,7 +1217,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    background: #00000000;
+    background: transparent; /* 투명 배경 */
 }
 
 .footer-button-inner {
@@ -1240,7 +1240,7 @@ body {
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5); /* 모달 오버레이 배경 */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
@@ -1307,7 +1307,7 @@ body {
     align-items: flex-start;
     flex-direction: column;
     border-radius: 16px;
-    background: #121314;
+    background: var(--bg-card); /* 전역 변수 사용 */
     display: flex;
     scrollbar-width: none;
 }
@@ -1339,7 +1339,7 @@ body {
  * 닫기 버튼
  */
 .modal-icon {
-    background-color: var(--bg-card)1f;
+    background-color: var(--bg-button-secondary); /* 밝은 회색 배경 */
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -1347,7 +1347,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: var(--text-primary);
+    color: var(--text-primary); /* 검은색 텍스트 */
     cursor: pointer;
 }
 
@@ -1355,7 +1355,7 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    color: var(--text-primary)99;
+    color: var(--text-secondary); /* 반투명 검은색 */
 }
 
 /**
@@ -1372,7 +1372,7 @@ body {
  * 공유 버튼
  */
 .modal-inner-share {
-    background-color: var(--bg-card)1f;
+    background-color: var(--bg-button-secondary); /* 밝은 회색 배경 */
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -1380,7 +1380,7 @@ body {
     border-radius: 9px;
     min-height: 36px;
     display: inline-flex;
-    color: var(--text-primary);
+    color: var(--text-primary); /* 검은색 텍스트 */
     cursor: pointer;
 }
 
@@ -1402,7 +1402,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 9px;
-    color: #000000;
+    color: var(--color-black); /* 전역 변수 사용 */
     max-height: 36px;
     border-radius: 9px;
     min-height: 36px;
@@ -1683,7 +1683,7 @@ body {
  * 이벤트 오버레이 (클릭 이벤트 감지용)
  */
 .event-div {
-    background-color: #00000000;
+    background-color: transparent; /* 투명 배경 */
     bottom: 0;
     top: 0;
     right: 0;
@@ -1710,8 +1710,8 @@ body {
     flex-direction: column;
     pointer-events: auto;
     border-radius: 16px;
-    border: 1px solid #ffffff14;
-    background: #121314;
+    border: 1px solid var(--border-primary); /* 전역 변수 사용 */
+    background: var(--bg-card); /* 전역 변수 사용 */
     display: flex;
 }
 

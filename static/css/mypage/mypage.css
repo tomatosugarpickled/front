@@ -41,7 +41,7 @@ img, video {
     padding: 0 12px 12px;
     gap: 16px;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     background-color: var(--bg-page);
     overflow-y: auto;
@@ -49,10 +49,13 @@ img, video {
 
 .bg-wrap {
     padding-top: 12px;
+    padding-bottom: 12px;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 1000px;
     display: flex;
+    margin: 0 auto;
 }
 
 .bg-img-wrap {
@@ -64,11 +67,13 @@ img, video {
 
 .img-file {
     display: none;
-} 
+}
 
 .bg-img {
     position: relative;
     display: flex;
+    width: auto;
+    justify-content: center;
 }
 
 .user-bg-img {
@@ -81,6 +86,7 @@ img, video {
     border-radius: 16px;
     width: 1000px;
     height: 200px;
+    max-width: 100%;
 }
 
 .bg-button-wrap {
@@ -119,11 +125,14 @@ img, video {
 }
 
 .bottom-wrap {
+    display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     max-width: 1000px;
     gap: 16px;
     width: 100%;
-    display: flex;
+    margin: 0 auto;
 }
 
 .left-wrap {
@@ -132,7 +141,6 @@ img, video {
     align-items: center;
     position: relative;
     flex: 1 0 0;
-    width: 100%;
     display: flex;
 }
 
@@ -339,6 +347,12 @@ img, video {
     color: var(--text-primary);
     cursor: pointer;
     width: 100%;
+    transition: all 0.2s;
+}
+
+.user-prorfile-edit-button.following {
+    background-color: #94a3b8;
+    color: var(--text-on-primary);
 }
 
 .user-profile-edit-word {
@@ -453,6 +467,9 @@ img, video {
 
 .user-content-wrap {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .user-content-inner-wrap {
@@ -1353,20 +1370,18 @@ img, video {
 }
 
 .ad-word1 {
-    color: var(--text-primary);
+    color: var(--text-on-dark);
     white-space: pre-line;
     letter-spacing: -.4px;
-    /* font-family: var(--texts--fonts--title); */
     font-size: var(--texts--font-size--title-m);
     font-weight: 600;
     line-height: 26PX;
 }
 
 .ad-word2 {
-    color: var(--text-primary);
+    color: var(--text-on-dark);
     white-space: pre-line;
     letter-spacing: -.24px;
-    /* font-family: var(--texts--fonts--title); */
     font-size: var(--texts--font-size--title-m);
     font-weight: 300;
     line-height: 8PX;
@@ -1374,9 +1389,8 @@ img, video {
 
 .ad-word3 {
     font-size: 8px;
-    /* font-family: Pretendard Variable; */
     white-space: pre-wrap;
-    color: var(--text-primary)99;
+    color: var(--text-on-dark)99;
 }
 
 .footer-wrap {
@@ -2568,4 +2582,107 @@ img, video {
     border-top: 1px solid;
     gap: 8px;
     display: flex;
+}
+
+/* Follower List Section - removed as we're using feed-container styles */
+
+.follower-list-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid #e8ecf0;
+}
+
+.follower-list-title {
+    display: flex;
+    align-items: center;
+}
+
+.follower-title-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.follower-list-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 32px;
+}
+
+.follower-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #e8ecf0;
+}
+
+.follower-item:last-child {
+    border-bottom: none;
+}
+
+.follower-item:hover {
+    background-color: var(--bg-hover);
+}
+
+.follower-item-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.follower-item-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.follower-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.follower-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.follower-job {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.follower-period {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+.follower-item-follow-btn {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 9px;
+    background-color: #8c9fba14;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.follower-item-follow-btn:hover {
+    background-color: #8c9fba24;
+}
+
+.follower-item-follow-btn.following {
+    background-color: var(--text-primary);
+    color: white;
 }

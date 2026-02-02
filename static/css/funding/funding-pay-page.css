@@ -300,7 +300,7 @@ button {
 }
 
 .funding-pay-body-button-wrapper {
-    background-color: rgba(18, 19, 20, 0.12);
+    background-color: var(--bg-button-primary); /* 검은색 배경 */
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -310,7 +310,7 @@ button {
     border-radius: 9px;
     display: inline-flex;
     outline: none;
-    color: var(--text-primary);
+    color: var(--text-on-dark); /* 흰색 텍스트 */
     cursor: pointer;
     width: 100%;
 }
@@ -447,7 +447,7 @@ button {
 /* 주소 */
 
 .find-postNum {
-    background-color: rgba(18, 19, 20, 0.12);
+    background-color: var(--bg-button-primary); /* 검은색 배경 */
     justify-content: center;
     align-items: center;
     padding: 9px;
@@ -457,7 +457,7 @@ button {
     border-radius: 9px;
     display: inline-flex;
     outline: none;
-    color: var(--text-primary);
+    color: var(--text-on-dark); /* 흰색 텍스트 */
     cursor: pointer;
     width: 150px;
     height: 42px;
@@ -484,6 +484,7 @@ button {
     padding: 5px;
     gap: 12px;
     display: inline-grid;
+    margin-top: 60px; /*스크롤이 필요하도록 상단 여백 추가 */
     margin-bottom: 30px;
 }
 

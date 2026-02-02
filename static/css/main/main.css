@@ -3257,3 +3257,304 @@ a {
     border-radius: 12px;
     display: block;
 }
+
+/* ========================================
+   프로필 UI 섹션 스타일
+   ======================================== */
+
+.profile-user-section {
+    width: 100%;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+}
+
+.profile-user-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.profile-user-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.profile-user-avatar {
+    flex-shrink: 0;
+}
+
+.profile-avatar-img {
+    color: transparent;
+    border-radius: 7.8px;
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border: 1px solid var(--border-light);
+}
+
+.profile-user-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-user-name {
+    display: flex;
+    align-items: center;
+}
+
+.profile-username {
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+
+.profile-user-role {
+    display: flex;
+    align-items: center;
+}
+
+.profile-role-text {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.26px;
+}
+
+.profile-user-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.profile-stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-stat-label {
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.26px;
+}
+
+.profile-user-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.profile-action-button {
+    width: 100%;
+    padding: 10px 16px;
+    background-color: var(--bg-button-primary);
+    color: var(--text-on-dark);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.profile-action-secondary {
+    background-color: var(--bg-button-secondary);
+    color: var(--text-primary);
+}
+
+.profile-action-text {
+    display: block;
+    text-align: center;
+}
+
+/* ========================================
+   알림 모달 스타일
+   ======================================== */
+
+.notification-wrapper {
+    position: relative;
+}
+
+.notification-bell-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.notification-bell-button:hover {
+    background-color: var(--bg-button-secondary);
+}
+
+.notification-modal {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 400px;
+    max-height: 500px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.notification-modal.show {
+    display: flex;
+}
+
+.notification-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.notification-modal-title h3 {
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+}
+
+.notification-clear-all {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.notification-clear-all span {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.notification-clear-all:hover {
+    background-color: var(--bg-button-secondary);
+}
+
+.notification-modal-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 440px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-light);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: var(--bg-button-secondary);
+}
+
+.notification-item-avatar {
+    flex-shrink: 0;
+}
+
+.notification-item-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-light);
+}
+
+.notification-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.notification-item-text p {
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
+
+.notification-item-text strong {
+    font-weight: 600;
+}
+
+.notification-item-time span {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.notification-item-delete {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: var(--text-secondary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.notification-item-delete:hover {
+    background-color: var(--bg-button-secondary);
+    color: var(--text-primary);
+}
+
+.notification-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.notification-empty p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+}
