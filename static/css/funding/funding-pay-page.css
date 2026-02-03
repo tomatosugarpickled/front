@@ -79,6 +79,7 @@ button {
     max-height: 800px;
     height: 480px;
     display: flex;
+    padding-bottom: 30px;
 }
 
 .funding-pay-header-container {
